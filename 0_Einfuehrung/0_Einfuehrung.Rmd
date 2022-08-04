@@ -1,0 +1,145 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics("../Abbildungen/glmi_otto.png")
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{6mm}
+\large
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Kursmaterialien zur Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\huge
+\textcolor{black}{(0) Einführung}
+\vfill
+
+
+
+# Fit für Psychologie
+\setstretch{1.7}
+
+Elementares Basiswissen für die datenanalytischen Module des BSc Psychologie
+
+\small
+* Modul A2 Forschungsmethoden
+* Modul B1 Deskriptive Statistik
+* Modul B2 Inferenzstatistik
+* Modul C2 Computergestützte Datenanalyse
+
+\normalsize
+Studien- und Prüfungsordnung BSc Psychologie § 4(2) Zulassung zum Studium
+
+\small
+"Studierende, deren Englisch-, EDV- bzw. Mathematikkenntnisse gering sind,
+sollten sich vor Aufnahme des Studiums entsprechend weiterbilden."
+
+\normalsize
+Elementares Basiswissen für die datenanalytischen Module des MSc Psychologie
+
+\small
+* Modul A1 Multivariate Verfahren
+* Modul A3 Computergestützte Datenanalyse
+
+
+
+# Fit für Psychologies
+\setstretch{2}
+\large
+\vfill
+
+(1) Mengen
+
+(2) Summen, Produkte, Potenzen
+
+\textcolor{gray}{(3) Folgen, Reihen, Grenzwerte}
+
+(4) Funktionen
+
+(5) Differentialrechnung
+
+(6) Integralrechnung
+
+(7) Grundbegriffe der Informatik
+\vfill
+
+# Fit für Psychologie {.t}
+
+[\textcolor{blue}{Webseite des Kurses (Folien, Videos)}](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html)
+
+\vspace{5mm}
+
+```{r, echo = FALSE, out.width = "75%"}
+knitr::include_graphics("../Abbildungen/glmi_0_kursseite.png")
+```
+
+# Fit für Psychologie {.t}
+
+[\textcolor{blue}{Probabilistische Datenanalyse für die Wissenschaftliche Psychologie}](https://wasd.urz.uni-magdeburg.de/dostwald/)
+
+\vspace{7mm}
+
+```{r, echo = FALSE, out.width = "80%"}
+knitr::include_graphics("../Abbildungen/glmi_0_pdwp.png")
+```
+
+# Fit für Psychologie {.t}
+
+[\textcolor{blue}{Bärwolff, G (2017) Höhere Mathematik}](https://www.springer.com/de/book/9783662550212)
+
+\vspace{5mm}
+
+```{r, echo = FALSE, out.width = "35%"}
+knitr::include_graphics("../Abbildungen/glmi_0_baerwolff.pdf")
+```
+
+# Fit für Psychologie {.t}
+
+[\textcolor{blue}{Herold, H et al. (2017) Grundlagen der Informatik}](https://www.pearson.de/grundlagen-der-informatik-9783863268039)
+
+\vspace{5mm}
+
+```{r, echo = FALSE, out.width = "35%"}
+knitr::include_graphics("../Abbildungen/glmi_0_herold.jpg")
+```
+
+# Fit für Psychologie
+\Huge
+\vfill
+\center
+Q & A
+\vfill
+
+

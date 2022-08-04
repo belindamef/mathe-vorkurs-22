@@ -1,0 +1,384 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../header.tex
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics("../Abbildungen/glmi_otto.png")
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{6mm}
+\large
+Belinda Fleischmann
+
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Kursmaterialien zur Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\huge
+\textcolor{black}{(1) Mengen}
+\vfill
+
+
+# Mengen
+
+Formen mathematischer Aussagen
+
+\small
+\textbf{Definition.} Eine Definition (oder auch ein \textit{Axiom}) ist ein 
+Grundsatz eines logischen Systems, der innerhalb dieses Systems weder begründet 
+noch deduktiv abgeleitet wird. Definitionen können nur nach ihrer Nützlichkeit 
+innerhalb eines logischen Systems bewertet werden. Eine Definition lernt man am 
+besten erst einmal auswendig und hinterfragt sie erst dann, wenn man ihren Nutzen 
+in der Anwendung verstanden hat oder von diesem nicht überzeugt ist. Etwas Entspannung
+beim Umgang mit Definitionen ist generell hilfreich.
+\vspace{3mm}
+
+\textbf{Theorem.} Ein Theorem (oder auch \textit{Satz}) ist eine Aussage, die 
+mittels eines Beweises als richtig erkannt, dass heißt, aus Definitionen und/oder
+bereits bekannten Sätzen hergeleitet werden kann. Theoreme sind die ``empirischen Ergebnisse'' 
+der Mathematik. Theoreme sind in der angewandten Mathematik oft für Berechnungen
+hilfreich, es lohnt sich also, sie auswendig zu lernen.
+\vspace{3mm}
+
+\textbf{Beweis.} Ein Beweis ist eine logische Argumentationskette, die auf bekannte
+Definitionen und Theoreme zurückgreift, um die Richtigkeit eines Theorems zu belegen. 
+Kurze Beweise tragen oft zum Verständnis eines Theorems bei, lange Beweise eher nicht.
+Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt 
+(``Warum ist das so?''). Beweise lernt man nicht auswendig. Wenn sie lang sind, 
+ist es sinnvoller sie beim ersten Lesen zu übergehen, um sich nicht in Details zu 
+verlieren. 
+
+# Mengen
+Als bekannt vorausgesetzte Symbole
+\vspace{5mm}
+
+\begin{table}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ll|ll}
+$A := B$ 
+& A ist definiert als B 
+& $A = B$ 
+& A ist gleich B 
+\\\hline 
+$A \Leftrightarrow B$ 
+& A ist äquivalent mit B 
+& $A \Rightarrow B$ 
+& Aus A folgt B  
+\\\hline 
+$a < b$
+& a ist kleiner als b
+& $a \le b$
+& a ist kleiner oder gleich b
+\\\hline 
+$a > b$
+& a ist größer als b
+& $a \ge b$
+& a ist größer oder gleich b
+\\\hline
+$n!$ 
+& Fakultät von $n$
+& $|a|$
+& Betrag von $a$
+\end{tabular} 
+\end{table}
+
+# Mengen
+\small
+\begin{definition}[Mengen und Mengendefinition]
+\justifying
+Nach Cantor (1895) ist eine \textit{Menge} definiert als
+``eine Zusammenfassung $M$ von bestimmten wohlunterschiedenen Objekten $m$
+unsere Anschauung oder unseres Denken (welche die Elemente der Menge genannt werden)
+zu einem Ganzen''. Wir schreiben
+\begin{equation}
+m \in M \mbox{ bzw. } m \notin M
+\end{equation}
+um auszudrücken, dass $m$ ein Element bzw. kein Element von $M$ ist. Zur 
+Definition von Mengen gibt es mindestens folgende Möglichkeiten:
+\begin{itemize}
+\item[(1)] Auflisten der Elemente in geschweiften Klammern, z.B. $M := \{1,2,3\}$.
+\item[(2)] Angabe der Eigenschaften der Elemente, z.B. $M := \{x \in \mathbb{N}|x < 4\}$.
+\item[(3)] Gleichsetzen mit einer anderen eindeutig definierten Menge, z.B. $M := \mathbb{N}_3$.
+\end{itemize}
+\end{definition}
+
+Bemerkungen
+
+* $\{x \in \mathbb{N}|x < 4\}$ wird als "$x \in \mathbb{N}$, für die gilt, dass $x < 4$ ist" gelesen.
+* Die Bedeutung von $\mathbb{N}$ und $\mathbb{N}_3$ wird im Folgenden erläutert.
+* Mengen sind \textit{ungeordnet}, d.h. $\{1,2,3\} = \{1,3,2\} = \{2,3,1\}$ etc.
+
+
+# Mengen
+\small
+\begin{definition}[Teilmengen und Mengengleichheit]
+\begin{itemize}
+\item Eine Menge $A$ heißt \textit{Teilmenge} einer Menge $B$, wenn für jedes
+Element $a \in A$ gilt, dass auch $a\in B$. Ist $A$ eine Teilmenge von $B$ ist, so 
+schreibt man
+\begin{equation}
+A \subseteq B
+\end{equation}
+und nennt $A$ \textit{Untermenge} von $B$ und $B$ \textit{Obermenge} von $A$.
+\item Eine Menge $A$ heißt \textit{echte Teilmenge} einer Menge $B$, wenn für 
+jedes Element $a \in A$ gilt, dass auch $a\in B$, es aber zumindest ein Element
+$b \in B$ gibt, für das gilt $b \notin A$. Ist $A$ eine echte Teilmenge von $B$, 
+so schreibt man
+\begin{equation}
+A \subset B.
+\end{equation}
+\item Zwei Mengen $A$ und $B$ heißen \textit{gleich}, wenn für jedes Element 
+$a \in A$ gilt, dass auch $a \in B$, und wenn für jedes Element $b \in B$ gilt, 
+dass auch $b \in A$. Sind die Mengen $A$ und $B$ gleich, so schreibt man
+\begin{equation}
+A = B.
+\end{equation}
+\end{itemize}
+\end{definition}
+
+\footnotesize
+Bemerkung
+
+* Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. Dann gilt $A \subset B, B \subseteq C, C \subseteq B$ und $B = C$.
+
+# Mengen
+\small
+\begin{definition}[Kardinalität, leere Menge]
+\justifying
+Die Anzahl der Elemente einer Menge $M$ heißt \textit{Kardinalität} und wird 
+mit $|M|$ bezeichnet. Eine Menge mit Kardinalität 0 heißt \textit{leere Menge} 
+und wird mit $\emptyset$ bezeichnet.
+\end{definition}
+
+Beispiele
+
+* Für $M := \{1,2,3\}$ gilt $|M| = 3$.
+* Für $M := \{a,b\}$ gilt $|M| = 2$.
+* Für $M := \{x,y,z,\pi\}$ gilt $|M| = 4$.
+* Für $M := \emptyset$ gilt $|M| = 0$.
+
+# Mengen
+\small
+\begin{definition}[Potenzmenge]
+\justifying
+Die Menge aller Teilmengen einer Menge $M$ heißt \textit{Potenzmenge von $M$} 
+und wird mit $\mathcal{P}(M)$ bezeichnet. Die leere Untermenge von $M$ und $M$ 
+selbst sind immer Elemente von $\mathcal{P}(M)$.
+\end{definition}
+
+Bemerkungen
+
+* Für $M := \{1,2,3\}$ gilt $\mathcal{P}(M) = \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\} \}$.
+* Ohne Beweis halten wir fest, dass gilt $|M| = n \Rightarrow |\mathcal{P}(M)| = 2^n$.
+
+# Mengen
+\footnotesize
+\begin{definition}[Mengenoperationen]
+\setstretch{1}
+$M$ und $N$ seien zwei Mengen.
+\justifying
+\begin{itemize}
+\item Die \textit{Vereinigung von $M$ und $N$} ist definiert als die Menge
+\begin{equation}
+M \cup N := \{x | x \in M \mbox{ oder } x \in N\},
+\end{equation}
+wobei \textit{oder} im inklusiven Sinne als \textit{und/oder} zu verstehen ist.
+\item Der \textit{Durchschnitt von $M$ und $N$} ist definiert als die Menge
+\begin{equation}
+M \cap N := \{x | x \in M \mbox{ und } x \in N\}.
+\end{equation}
+\item Die \textit{Differenz von $M$ und $N$} ist definiert als die Menge
+\begin{equation}
+M\setminus N := \{x | x \in M \mbox{ und } x \notin N\}.
+\end{equation}
+\item Die \textit{symmetrische Differenz von $M$ und $N$} ist definiert als die Menge
+\begin{equation}
+M \Delta N := \{x|x \in M \mbox{ oder } x \in N, \mbox{ aber } x \notin M \cap N\},
+\end{equation}
+wobei \textit{oder} hier also im exklusiven Sinne zu verstehen ist.
+\end{itemize}
+\end{definition}
+
+\footnotesize
+Beispiel
+
+* Für $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$ gilt
+\begin{equation*}
+M \cup N = \{1,2,3,4,5\}, M \cap N = \{2,3\}, M \setminus N = \{1\}, N \setminus M = \{4,5\}, M \Delta N = \{1,4,5\}.
+\end{equation*}
+
+# Mengen
+\small
+\begin{definition}[Partition]
+$M$ sei eine Menge und $P := \{N_i\}$ sei eine Menge von Mengen $N_i$ mit $i = 1,...,n$,
+so dass gilt
+\begin{equation}
+M = \cup_{i=1}^n N_i \mbox{ und } N_i \cap N_j = \emptyset \mbox{ für } i = 1,...,n, j = 1,..., n, i \neq j.
+\end{equation}
+Dann heißt $P$ eine \textit{Partition} (oder \textit{Zerlegung}) von $M$.
+\end{definition}
+\footnotesize
+
+Bemerkungen
+
+* Partitionen von $M := \{1,2,3,4\}$ sind zum Beispiel
+\begin{equation}
+P_1 := \{\{1\}, \{2,3,4\}\}, P_2 := \{\{1,2\}, \{3,4\}\}, P_3 := \{\{1\}, \{2\}, \{3,4\}\}. 
+\end{equation}
+ 
+
+# Mengen
+\small
+\begin{definition}[Zahlenmengen]
+Es bezeichnen
+\begin{itemize}
+\item $\mathbb{N}\,\,\, := \{1,2,3,...\}$ die \textit{natürlichen Zahlen},
+\item $\mathbb{N}_n     := \{1,2,3,...,n\}$ die \textit{natürlichen Zahlen der Ordnung $n$},
+\item $\mathbb{N}^0     := \mathbb{N} \cup \{0\}$ die \textit{natürlichen Zahlen} und Null,
+\item $\mathbb{Z}\,\,\, := \{...,-3,-2,-1,0,1,2,3,...\}$ die \textit{ganzen Zahlen},
+\item $\mathbb{Q}\,\,\, := \{\frac{p}{q}|p,q \in \mathbb{Z}, q \neq 0\}$ die \textit{rationalen Zahlen},
+\item $\mathbb{R}\,\,\,$ die \textit{reellen Zahlen}, und
+\item $\mathbb{C}\,\,\, := \{a +ib|a,b\in \mathbb{R}, i := \sqrt{-1} \}$ die \textit{komplexen Zahlen}.
+\end{itemize}
+\end{definition}
+
+
+Bemerkungen
+
+* $\mathbb{R}$ umfasst die rationalen Zahlen und die irrationalen Zahlen $\mathbb{R}\setminus \mathbb{Q}$ wie z.B.$e,\pi$ und $\sqrt{2}$.
+* Es gilt $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$.
+
+# Mengen
+\small
+\begin{definition}[Intervalle]
+\justifying
+Zusammenhängende Teilmengen der reellen Zahlen heißen \textit{Intervalle}. Für $a,b\in \mathbb{R}$ unterscheidet man
+\begin{itemize}
+\item das \textit{abgeschlossene Intervall}
+\begin{equation}
+[a,b] := \{x \in \mathbb{R}|a \le x \le b\},
+\end{equation}
+\item das \textit{offene Interval}
+\begin{equation}
+]a,b[ := \{x \in \mathbb{R}|a < x < b\},
+\end{equation}
+\item die \textit{halboffenen Intervalle}
+\begin{equation}
+]a,b] := \{x \in \mathbb{R}| a < x \le b\} \mbox{ und } [a,b[ := \{x \in \mathbb{R}| a \le x < b\}.
+\end{equation}
+\end{itemize}
+\end{definition}
+
+Bemerkungen
+
+* Positiv Unendlich ($\infty$) und negativ Unendlich ($-\infty$) sind keine Elemente von $\mathbb{R}$.
+* Es gilt also immer $]-\infty,b]$ oder $]-\infty,b[$   bzw. $]a,\infty[$  oder $[a,\infty[$, sowie $\mathbb{R} = ]-\infty, \infty[$.
+
+# Mengen
+\footnotesize
+\begin{definition}[Kartesische Produkte]
+\justifying
+$M$ und $N$ seien zwei Mengen. Dann ist das \textit{Kartesische Produkt der
+Mengen $M$ und $N$} die Menge aller geordneten Tupel $(m,n)$ mit $m \in M$ und
+$n \in N$, formal
+\begin{equation}
+M \times N := \{(m,n)|m\in M, n \in N \}.
+\end{equation}
+
+Das Kartesische Produkt einer Menge $M$ mit sich selbst wird bezeichnet mit
+\begin{equation}
+M^2 := M \times M.
+\end{equation}
+
+Seien weiterhin $M_1, ..., M_n$ Mengen. Dann ist das \textit{Kartesische
+Produkt der Mengen $M_1,...,M_n$} die Menge aller geordneten $n$-Tupel
+$(m_1,...,m_n)$ mit $m_i \in M_i$ für $i = 1,...,n$, formal
+\begin{equation}
+\prod_{i=1}^n M_i := M_1 \times \cdots \times M_n := \{(m_1,...,m_n)|m_i \in M_i \mbox{ für } i = 1,...,n\}.
+\end{equation}
+
+Das $n$-fache Kartesische Produkt einer Menge $M$ mit sich selbst wird bezeichnet mit
+\begin{equation}
+M^n := \prod_{i=1}^n M := \{(m_1,,...,m_n)|m_i \in M\}.
+\end{equation}
+\end{definition}
+
+
+# Mengen
+\small
+\begin{definition}[Die Menge $\mathbb{R}^n$]
+\justifying
+Das $n$-fache Kartesische Produkt der reellen Zahlen mit sich selbst wird bezeichnet mit
+\begin{equation}
+\mathbb{R}^n := \prod_{i=1}^n \mathbb{R} := \{x := (x_1,,...,x_n)|x_i \in \mathbb{R}\}
+\end{equation}
+und \textit{``$\mathbb{R}$ hoch $n$''} gesprochen. Wir schreiben die Elemente von $\mathbb{R}^n$ typischerweise als Spalten
+\begin{equation}
+x :=
+\begin{pmatrix}
+x_1
+\\
+\vdots
+\\
+x_n
+\end{pmatrix}
+\end{equation}
+und nennen sie \textit{$n$-dimensionale Vektoren}. Die Elemente von 
+$\mathbb{R}^1 = \mathbb{R}$ heißen nennt man \textit{Skalare}.
+\end{definition}
+
+
+\footnotesize
+Beispiel
+
+* Ein Beispiel für $x \in \mathbb{R}^4$ ist $x = \begin{pmatrix} 0.16 \\ 1.76 \\ 0.23 \\ 7.10 \end{pmatrix}$.
+
+# Selbstkontrollfragen 
+\small
+\setstretch{1.8}
+
+1. Diskutieren Sie die Begriffe Definition, Theorem, Beweis.
+2. Geben Sie die Definition einer Menge nach Cantor (1895) wieder.
+3. Nennen Sie drei Möglichkeiten zur Definition einer Menge.
+4. Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$. 
+5. Definieren Sie den Begriff der Kardinalität einer Menge.
+6. Definieren Sie den Begriff der Potenzmenge einer Menge.
+7. Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+8. Es seien $M := \{a,b\}, N := \{a,c,d\}$. Bestimmen Sie $M \cup N, M \cap N, M\setminus N, M \Delta N$.
+9. Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
+10. Erläutern Sie den Unterschied zwischen $\mathbb{N}$ und $\mathbb{Z}$.
+11. Erläutern Sie den Unterschied zwischen $\mathbb{R}$ und $\mathbb{Q}$.
+12. Definieren Sie die Begriffe des abgeschlossenen, offenen, und halboffenen Intervalls.
+13. Es seien $M$ und $N$ Mengen. Erläutern Sie die Notation $M \times N$.
+14. Definieren Sie die Menge $\mathbb{R}^n$.
+
