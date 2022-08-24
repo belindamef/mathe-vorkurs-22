@@ -6,18 +6,20 @@ output:
   beamer_presentation:
     keep_tex: true
     includes:
-      in_header: ../header.tex
+      in_header: ../Header.tex
+classoption: t    
 ---
 
 
 ```{r, include = F}
 source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
 ```
 
 #  {.plain}
 \center
 ```{r, echo = FALSE, out.width = "20%"}
-knitr::include_graphics("../Abbildungen/glmi_otto.png")
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
 ```
 
 \vspace{2mm}
@@ -29,26 +31,19 @@ Grundlagen der Mathematik und Informatik
 \Large
 Aufbaukurs: Fit für Psychologie WiSe 2022/23
 
-\vspace{6mm}
-\large
+\vspace{12mm}
+\normalsize
 Belinda Fleischmann
-
 
 \vspace{3mm}
 \scriptsize
-Inhalte basieren auf [Kursmaterialien zur Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
 
 
-#  {.plain}
-
-\vfill
-\center
-\huge
-\textcolor{black}{(1) Mengen}
-\vfill
 
 
-# Mengen
+
+# Grundlegende Begriffe und Symbole
 
 Formen mathematischer Aussagen
 
@@ -77,7 +72,9 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 ist es sinnvoller sie beim ersten Lesen zu übergehen, um sich nicht in Details zu 
 verlieren. 
 
-# Mengen
+
+# Grundlegende Begriffe und Symbole
+
 Als bekannt vorausgesetzte Symbole
 \vspace{5mm}
 
@@ -112,8 +109,23 @@ $n!$
 \end{tabular} 
 \end{table}
 
-# Mengen
+
+
+#  {.plain}
+
+\vfill
+\center
+\huge
+\textcolor{black}{(1) Mengen}
+\vfill
+
+
+
+
+
+# Definitionen - Menge
 \small
+
 \begin{definition}[Mengen und Mengendefinition]
 \justifying
 Nach Cantor (1895) ist eine \textit{Menge} definiert als
@@ -132,6 +144,7 @@ Definition von Mengen gibt es mindestens folgende Möglichkeiten:
 \end{itemize}
 \end{definition}
 
+\footnotesize
 Bemerkungen
 
 * $\{x \in \mathbb{N}|x < 4\}$ wird als "$x \in \mathbb{N}$, für die gilt, dass $x < 4$ ist" gelesen.
@@ -139,7 +152,10 @@ Bemerkungen
 * Mengen sind \textit{ungeordnet}, d.h. $\{1,2,3\} = \{1,3,2\} = \{2,3,1\}$ etc.
 
 
-# Mengen
+
+
+
+# Definitionen - Teilmenge, Mengengleichheit
 \small
 \begin{definition}[Teilmengen und Mengengleichheit]
 \begin{itemize}
@@ -167,11 +183,16 @@ A = B.
 \end{definition}
 
 \footnotesize
-Bemerkung
+Beispiel
 
-* Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. Dann gilt $A \subset B, B \subseteq C, C \subseteq B$ und $B = C$.
+* Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. Dann gilt:  
+$A \subset B, A \subset C, B \subseteq C, C \subseteq B$ und $B = C$.
 
-# Mengen
+
+
+
+
+# Definitionen - Kardinalität
 \small
 \begin{definition}[Kardinalität, leere Menge]
 \justifying
@@ -180,6 +201,7 @@ mit $|M|$ bezeichnet. Eine Menge mit Kardinalität 0 heißt \textit{leere Menge}
 und wird mit $\emptyset$ bezeichnet.
 \end{definition}
 
+\footnotesize
 Beispiele
 
 * Für $M := \{1,2,3\}$ gilt $|M| = 3$.
@@ -187,7 +209,11 @@ Beispiele
 * Für $M := \{x,y,z,\pi\}$ gilt $|M| = 4$.
 * Für $M := \emptyset$ gilt $|M| = 0$.
 
-# Mengen
+
+
+
+
+# Definitionen - Potenzmenge
 \small
 \begin{definition}[Potenzmenge]
 \justifying
@@ -196,12 +222,20 @@ und wird mit $\mathcal{P}(M)$ bezeichnet. Die leere Untermenge von $M$ und $M$
 selbst sind immer Elemente von $\mathcal{P}(M)$.
 \end{definition}
 
-Bemerkungen
+\footnotesize
+Bemerkung
 
-* Für $M := \{1,2,3\}$ gilt $\mathcal{P}(M) = \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\} \}$.
 * Ohne Beweis halten wir fest, dass gilt $|M| = n \Rightarrow |\mathcal{P}(M)| = 2^n$.
 
-# Mengen
+Beispiele
+
+* Für $M := \{1,2,3\}$ gilt $\mathcal{P}(M) = \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\} \}$.
+* Für $N := \{5,6\}$ gilt $\mathcal{P}(N) = \{\emptyset, \{5\},\{6\},\{5,6\} \}$.
+
+
+
+
+# Verknüpfungen von Mengen - Operationen
 \footnotesize
 \begin{definition}[Mengenoperationen]
 \setstretch{1}
@@ -230,14 +264,16 @@ wobei \textit{oder} hier also im exklusiven Sinne zu verstehen ist.
 \end{definition}
 
 \footnotesize
+\setstretch{1.5}
 Beispiel
 
-* Für $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$ gilt
-\begin{equation*}
-M \cup N = \{1,2,3,4,5\}, M \cap N = \{2,3\}, M \setminus N = \{1\}, N \setminus M = \{4,5\}, M \Delta N = \{1,4,5\}.
-\end{equation*}
+* Für $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$ gilt  
+$M \cup N = \{1,2,3,4,5\}, M \cap N = \{2,3\}, M \setminus N = \{1\}, N \setminus M = \{4,5\}, M \Delta N = \{1,4,5\}.$
 
-# Mengen
+
+
+
+# Verknüpfungen von Mengen - Partition
 \small
 \begin{definition}[Partition]
 $M$ sei eine Menge und $P := \{N_i\}$ sei eine Menge von Mengen $N_i$ mit $i = 1,...,n$,
@@ -247,9 +283,15 @@ M = \cup_{i=1}^n N_i \mbox{ und } N_i \cap N_j = \emptyset \mbox{ für } i = 1,.
 \end{equation}
 Dann heißt $P$ eine \textit{Partition} (oder \textit{Zerlegung}) von $M$.
 \end{definition}
-\footnotesize
 
-Bemerkungen
+\footnotesize
+Bemerkung
+
+* $M = \cup_{i=1}^n N_i$ drückt aus, dass die Menge $M$ der *Vereinigung* aller Teilmengen $N_i$ mit $i = 1,...,n$ ist.
+* $N_i \cap N_j = \emptyset \mbox{ für } i = 1,...,n, j = 1,..., n, i \neq j$ drückt aus, dass der *Druchschnitt* aller Teilmengen mit jeweils allen Teilmengen leer ($\emptyset$) ist. Man sagt auch, die Teilmengen sind *diskunkt.* 
+* Intuitiv entspricht die Partition einer Menge dem Aufteilen der Menge in disjunkte Teilmengen.
+
+Beispiele
 
 * Partitionen von $M := \{1,2,3,4\}$ sind zum Beispiel
 \begin{equation}
@@ -257,7 +299,7 @@ P_1 := \{\{1\}, \{2,3,4\}\}, P_2 := \{\{1,2\}, \{3,4\}\}, P_3 := \{\{1\}, \{2\},
 \end{equation}
  
 
-# Mengen
+# Spezielle Mengen - Zahlenmengen
 \small
 \begin{definition}[Zahlenmengen]
 Es bezeichnen
@@ -272,13 +314,18 @@ Es bezeichnen
 \end{itemize}
 \end{definition}
 
-
+\footnotesize
 Bemerkungen
 
 * $\mathbb{R}$ umfasst die rationalen Zahlen und die irrationalen Zahlen $\mathbb{R}\setminus \mathbb{Q}$ wie z.B.$e,\pi$ und $\sqrt{2}$.
 * Es gilt $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$.
 
-# Mengen
+
+
+
+
+
+# Spezielle Mengen - Intervalle
 \small
 \begin{definition}[Intervalle]
 \justifying
@@ -299,12 +346,17 @@ Zusammenhängende Teilmengen der reellen Zahlen heißen \textit{Intervalle}. Fü
 \end{itemize}
 \end{definition}
 
+\footnotesize
 Bemerkungen
 
 * Positiv Unendlich ($\infty$) und negativ Unendlich ($-\infty$) sind keine Elemente von $\mathbb{R}$.
 * Es gilt also immer $]-\infty,b]$ oder $]-\infty,b[$   bzw. $]a,\infty[$  oder $[a,\infty[$, sowie $\mathbb{R} = ]-\infty, \infty[$.
 
-# Mengen
+
+
+
+
+# Spezielle Mengen - Kartesisches Produkt
 \footnotesize
 \begin{definition}[Kartesische Produkte]
 \justifying
@@ -334,7 +386,10 @@ M^n := \prod_{i=1}^n M := \{(m_1,,...,m_n)|m_i \in M\}.
 \end{definition}
 
 
-# Mengen
+
+
+
+# Spezielle Mengen - reelle Tupel $n$-ter Ordnung
 \small
 \begin{definition}[Die Menge $\mathbb{R}^n$]
 \justifying
@@ -354,14 +409,19 @@ x_n
 \end{pmatrix}
 \end{equation}
 und nennen sie \textit{$n$-dimensionale Vektoren}. Die Elemente von 
-$\mathbb{R}^1 = \mathbb{R}$ heißen nennt man \textit{Skalare}.
+$\mathbb{R}^1 = \mathbb{R}$ nennt man \textit{Skalare}.
 \end{definition}
 
 
 \footnotesize
-Beispiel
+Beispiele
 
-* Ein Beispiel für $x \in \mathbb{R}^4$ ist $x = \begin{pmatrix} 0.16 \\ 1.76 \\ 0.23 \\ 7.10 \end{pmatrix}$.
+* Ein Bsp für $x \in \mathbb{R}^4$ ist  $x = \begin{pmatrix} 0.16 \\ 1.76 \\ 0.23 \\ 7.10 \end{pmatrix}$, Ein Bsp für $x \in \mathbb{R}^2$ ist  $x = \begin{pmatrix} 2.81 \\ 4.22 \end{pmatrix}$.
+
+
+
+
+
 
 # Selbstkontrollfragen 
 \small
