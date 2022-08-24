@@ -7,17 +7,19 @@ output:
     keep_tex: true
     includes:
       in_header: ../Header.tex
+classoption: t    
 ---
 
 
 ```{r, include = F}
 source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
 ```
 
 #  {.plain}
 \center
 ```{r, echo = FALSE, out.width = "20%"}
-knitr::include_graphics("../Abbildungen/glmi_otto.png")
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
 ```
 
 \vspace{2mm}
@@ -29,13 +31,13 @@ Grundlagen der Mathematik und Informatik
 \Large
 Aufbaukurs: Fit für Psychologie WiSe 2022/23
 
-\vspace{6mm}
-\large
+\vspace{12mm}
+\normalsize
 Belinda Fleischmann
 
 \vspace{3mm}
 \scriptsize
-Inhalte basieren auf [Kursmaterialien zur Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
 
 
 #  {.plain}
@@ -48,7 +50,7 @@ Inhalte basieren auf [Kursmaterialien zur Einführung in Mathematik und Informat
 
 
 
-# Fit für Psychologie
+# Fit für Psychologie - Motivation
 \setstretch{1.7}
 
 Elementares Basiswissen für die datenanalytischen Module des BSc Psychologie
@@ -75,7 +77,22 @@ Elementares Basiswissen für die datenanalytischen Module des MSc Psychologie
 
 
 
-# Fit für Psychologies
+# Lehrstuhl für Methodenlehre I
+\setstretch{1.7}
+
+[\textcolor{blue}{Webseite des Lehrstuhls (Lehre, Forschung, Team)}](https://www.ipsy.ovgu.de/methodenlehre_I-path-980,1404.html)
+
+\vspace{3mm}
+
+```{r, echo = FALSE, out.width = "70%"}
+knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
+```
+
+
+
+\color{red}{TODO}
+
+# Fit für Psychologie - Inhalte
 \setstretch{2}
 \large
 \vfill
@@ -95,51 +112,61 @@ Elementares Basiswissen für die datenanalytischen Module des MSc Psychologie
 (7) Grundbegriffe der Informatik
 \vfill
 
-# Fit für Psychologie {.t}
+
+# Fit für Psychologie
 
 [\textcolor{blue}{Webseite des Kurses (Folien, Videos)}](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html)
 
 \vspace{5mm}
 
 ```{r, echo = FALSE, out.width = "75%"}
-knitr::include_graphics("../Abbildungen/glmi_0_kursseite.png")
+knitr::include_graphics(file.path(abb_dir, "glmi_0_kursseite.png"))
 ```
+\color{red}{TODO: git einfügen?}
 
-# Fit für Psychologie {.t}
+
+
+
+# Fit für Psychologie - Literaturempfehlungen
 
 [\textcolor{blue}{Probabilistische Datenanalyse für die Wissenschaftliche Psychologie}](https://wasd.urz.uni-magdeburg.de/dostwald/)
 
 \vspace{7mm}
 
 ```{r, echo = FALSE, out.width = "80%"}
-knitr::include_graphics("../Abbildungen/glmi_0_pdwp.png")
+knitr::include_graphics(file.path(abb_dir, "/glmi_0_pdwp.png"))
 ```
 
-# Fit für Psychologie {.t}
+# Fit für Psychologie - Literaturempfehlungen
 
 [\textcolor{blue}{Bärwolff, G (2017) Höhere Mathematik}](https://www.springer.com/de/book/9783662550212)
 
 \vspace{5mm}
 
 ```{r, echo = FALSE, out.width = "35%"}
-knitr::include_graphics("../Abbildungen/glmi_0_baerwolff.pdf")
+knitr::include_graphics(file.path(abb_dir,"glmi_0_baerwolff.pdf"))
 ```
 
-# Fit für Psychologie {.t}
+# Fit für Psychologie - Literaturempfehlungen
 
 [\textcolor{blue}{Herold, H et al. (2017) Grundlagen der Informatik}](https://www.pearson.de/grundlagen-der-informatik-9783863268039)
 
 \vspace{5mm}
 
 ```{r, echo = FALSE, out.width = "35%"}
-knitr::include_graphics("../Abbildungen/glmi_0_herold.jpg")
+knitr::include_graphics(file.path(abb_dir, "glmi_0_herold.jpg"))
 ```
 
-# Fit für Psychologie
-\Huge
-\vfill
-\center
-Q & A
-\vfill
 
+# Orga - Termine
+
+\color{red}{TODO: kleinen Wochenplan erstellen?}
+
+
+
+
+
+#  {.plain}
+
+Q & A
 
