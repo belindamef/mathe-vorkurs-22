@@ -31,7 +31,7 @@ Grundlagen der Mathematik und Informatik
 \Large
 Aufbaukurs: Fit für Psychologie WiSe 2022/23
 
-\vspace{12mm}
+\vspace{18mm}
 \normalsize
 Belinda Fleischmann
 
@@ -117,7 +117,7 @@ $n!$
 \center
 \huge
 \textcolor{black}{(1) Mengen}
-\vfill
+
 
 
 

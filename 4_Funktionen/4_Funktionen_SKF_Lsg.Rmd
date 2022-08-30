@@ -1,0 +1,224 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(4) Funktionen
+
+\vspace{8mm}
+\Large
+Selbstkontrollfragen  + Lösungen
+\vfill
+
+
+
+
+
+# Selbstkontrollfragen
+\setstretch{1.5}
+\small
+1. Erläutern Sie die Komponenten der Funktionsschreibweise $f: D \to Z, x \mapsto f(x)$.
+2. Definieren Sie die Begriffe Bildmenge, Wertebereich, und Urbildmenge einer Funktion.
+3. Definieren Sie die Begriffe Surjektivität, Injektivität, und Bijektivität einer Funktion.
+4. Erläutern Sie, warum $f:\mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ weder injektiv noch surjektiv ist.
+5. Erläutern Sie, warum $f: [0,\infty[ \to [0,\infty[ , x \mapsto f(x) := x^2$ bijektiv ist.
+6. Erläutern Sie die Komponenten der Schreibweise $g \circ f: D \to S, x \mapsto (g\circ f)(x)$.
+7. Definieren Sie den Begriff der inversen Funktion.
+8. Geben Sie die inverse Funktion von $x^2$ auf $[0,\infty[$ an.
+9. Definieren Sie den Begriff der linearen Abbildung.
+10. Definieren Sie die Begriffe der univariat-und multivariat-reellwertigen Funktion.
+11. Definieren Sie Begriff der multivariaten vektorwertigen Funktion.
+12. Skizzieren Sie die konstante Funktion für $a := 1$ und die Identitätsfunktion.
+13. Für $a = 2$ und $b = 3$, skizzieren Sie die linear Funktion $f(x) = ax + b$.
+14. Skizzieren Sie die Funktionen $f(x) := (x-1)^2$ und $g(x) := (x + 3)^2$.
+15. Skizzieren Sie die Exponential- und Logarithmusfunktionen.
+16. Geben Sie Exponentialeigenschaften der Exponentialfunktion an.
+17. Geben Sie die Logarithmeneigenschaften der Logarithmusfunktion an.
+
+
+
+
+
+# \textcolor{darkblue}{SKF 1}. *Summen* 
+\large
+\color{darkblue} Erläutern Sie die Komponenten der Funktionsschreibweise $f: D \to Z, x \mapsto f(x)$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 2}. *Bild- und Urbildmenge*
+\large
+\color{darkblue} Definieren Sie die Begriffe Bildmenge, Wertebereich, und Urbildmenge einer Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 3}. *Funktionseigentschaften*
+\large
+\color{darkblue} Definieren Sie die Begriffe Surjektivität, Injektivität, und Bijektivität einer Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 4}. *Funktionseigenschaften*
+\large
+\color{darkblue} Erläutern Sie, warum $f:\mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ weder injektiv noch surjektiv ist.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 5}. *Funktionseigentschaften*
+\large
+\color{darkblue} Erläutern Sie, warum $f: [0,\infty[ \to [0,\infty[ , x \mapsto f(x) := x^2$ bijektiv ist.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 6}. *Funktionsdefinition*
+\large
+\color{darkblue} Erläutern Sie die Komponenten der Schreibweise $g \circ f: D \to S, x \mapsto (g\circ f)(x)$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Inverse*
+\large
+\color{darkblue} Definieren Sie den Begriff der inversen Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 8}. *Inverse*
+\large
+\color{darkblue} Geben Sie die inverse Funktion von $x^2$ auf $[0,\infty[$ an.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 9}. *Lineare Abbildung*
+\large
+\color{darkblue} Definieren Sie den Begriff der linearen Abbildung.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 10}. *Funktionenarten*
+\large
+\color{darkblue} Definieren Sie die Begriffe der univariat-und multivariat-reellwertigen Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 11}. *Funktionenarten*
+\large
+\color{darkblue} Definieren Sie Begriff der multivariaten vektorwertigen Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 12}. *Konstante und Identitätsfunktion*
+\large
+\color{darkblue} Skizzieren Sie die konstante Funktion für $a := 1$ und die Identitätsfunktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 13}. *Lineare Funktion*
+\large
+\color{darkblue} Für $a = 2$ und $b = 3$, skizzieren Sie die linear Funktion $f(x) = ax + b$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 14}. *Funktionsbeispiele*
+\large
+\color{darkblue} Skizzieren Sie die Funktionen $f(x) := (x-1)^2$ und $g(x) := (x + 3)^2$.
+
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 15}. *Exponential- und Logarithmusfunktion*
+\large
+\color{darkblue} Skizzieren Sie die Exponential- und Logarithmusfunktionen.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 16}. *Exponentialfunktion*
+\large
+\color{darkblue} Geben Sie Exponentialeigenschaften der Exponentialfunktion an.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 17}. *Logarithmus*
+\large
+\color{darkblue} Geben Sie die Logarithmeneigenschaften der Logarithmusfunktion an.
+
+\vspace{3mm}
+\color{black}
+\footnotesize

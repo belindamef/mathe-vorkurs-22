@@ -1,0 +1,186 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(7) Grundbegriffe der Informatik
+
+\vspace{8mm}
+\Large
+Selbstkontrollfragen  + Lösungen
+\vfill
+
+
+
+
+# Selbstkontrollfragen
+\setstretch{2}
+\small
+1. Geben Sie die typische Struktur einer computergestützten Datenanalyse wieder.
+2. Erläutern Sie den Begriff "Datenanalyseskript".
+3. Definieren Sie den Begriff "Informatik".
+4. Erläutern Sie die Akronyme CPU, RAM, SSD, und GPU.
+5. Nennen Sie wesentliche Aspekte der Von-Neumann Rechnerarchitektur.
+6. Definieren Sie den Begriff des Algorithmus.
+7. Erläutern Sie den Zusammenhang von Algorithmen und Programmen.
+8. Was bezeichnen die Syntax und Semantik einer Programmiersprache?
+9. Differenzieren Sie die Begriffe "Maschinensprache" und "höhere Programmiersprache".
+10. Skizzieren Sie Prinzipien der prozeduralen und objektorientierten imperativen Programmierung.
+11. Skizzieren Sie die Entwicklung der Programmiersprachen der ersten bis vierten Generation.
+12. Differenzieren Sie die Begriffe der kompilierten und der interpretierten Programmiersprachen.
+
+
+
+
+# \textcolor{darkblue}{SKF 1}. *Datenanalyse* 
+\large
+\color{darkblue} Geben Sie die typische Struktur einer computergestützten Datenanalyse wieder.
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 2}. *Datenanalyse*
+\large
+\color{darkblue} Erläutern Sie den Begriff "Datenanalyseskript".
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 3}. *Informatik*
+\large
+\color{darkblue} Definieren Sie den Begriff "Informatik".
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 4}. *Rechnerarchitektur*
+\large
+\color{darkblue} Erläutern Sie die Akronyme CPU, RAM, SSD, und GPU.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 5}. *Von-Neumann Rechnerarchitektur*
+\large
+\color{darkblue} Nennen Sie wesentliche Aspekte der Von-Neumann Rechnerarchitektur.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 6}. *Algorithmus*
+\large
+\color{darkblue} Definieren Sie den Begriff des Algorithmus.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Algorithmen und Programme*
+\large
+\color{darkblue} Erläutern Sie den Zusammenhang von Algorithmen und Programmen.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 8}. *Programmiersprache*
+\large
+\color{darkblue} Was bezeichnen die Syntax und Semantik einer Programmiersprache?
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 9}. *Programmiersprache*
+\large
+\color{darkblue} Differenzieren Sie die Begriffe "Maschinensprache" und "höhere Programmiersprache".
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 10}. *Imperative Programmierung*
+\large
+\color{darkblue} Skizzieren Sie Prinzipien der prozeduralen und objektorientierten imperativen Programmierung.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 11}. *Generationen der Programmiersprachen*
+\large
+\color{darkblue} Skizzieren Sie die Entwicklung der Programmiersprachen der ersten bis vierten Generation.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 12}. *Compiler und Interpreter*
+\large
+\color{darkblue} Differenzieren Sie die Begriffe der kompilierten und der interpretierten Programmiersprachen.
+
+\vspace{3mm}
+\color{black}
+\footnotesize

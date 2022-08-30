@@ -1,0 +1,765 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{18mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+
+
+#  {.plain}
+
+\vfill
+\center
+\huge
+\textcolor{black}{(4) Funktionen}
+
+
+
+
+# 
+\vfill
+\Large
+\setstretch{3}
+Definition und Eigenschaften
+
+Funktionentypen
+
+Elementare Funktionen
+
+Selbstkontrollfragen
+\vfill
+
+
+# 
+\vfill
+\Large
+\setstretch{3}
+**Definition und Eigenschaften**
+
+Funktionentypen
+
+Elementare Funktionen
+
+Selbstkontrollfragen
+\vfill
+
+
+
+
+
+# Definition
+\setstretch{1.2}
+\small
+\begin{definition}[Funktion]
+\justifying
+Eine \textit{Funktion} (oder \textit{Abbildung}) $f$ ist eine Zuordnungsvorschrift, 
+die jedem Element einer Menge $D$ genau ein Element einer Zielmenge $Z$ zuordnet. 
+$D$ wird dabei \textit{Definitionsmenge von $f$} und $Z$ wird \textit{Zielmenge von $f$}
+genannt. Wir schreiben
+\begin{equation}
+f : D \to Z, x \mapsto f(x),
+\end{equation}
+wobei $f : D \to Z$ gelesen wird als ``die Funktion $f$ bildet alle Elemente der
+Menge $D$ eindeutig auf Elemente in $Z$ ab'' und $x \mapsto f(x)$ gelesen wird 
+als ``$x$, welches ein Element von $D$ ist, wird durch die Funktion $f$ auf 
+$f(x)$ abgebildet, wobei $f(x)$ ein Element von $Z$ ist''. Der Pfeil $\to$ steht 
+für die Abbildung zwischen den Mengen $D$ und $Z$, der Pfeil $\mapsto$ steht für 
+die Abbildung zwischen einem Element von $D$ und einem Element von $Z$.
+\end{definition}
+\footnotesize
+Bemerkungen
+\begin{itemize}
+\justifying
+\item Es ist zentral, zwischen der \textit{Funktion} $f$ als Zuordnungsvorschrift und einem \textit{Wert} der Funktion $f(x)$ als Element von $Z$ zu unterscheiden.
+\item $x$ ist der Funktionsinput (auch \textit{Argument} der Funktion genannt), $f(x)$ der Funktionsoutput.
+\item Üblicherweise folgt $f(x)$ die Definition der \textit{funktionalen Form} von $f$, z.B.
+\begin{equation}
+f : \mathbb{R} \to \mathbb{R}_{\ge 0}, x \mapsto f(x) := x^2.
+\end{equation}
+\end{itemize}
+
+
+
+
+# Bild- und Urbildmenge
+\small
+\begin{definition}[Bildmenge, Urbildmenge]
+Es sei $f : D \to Z, x \mapsto f(x)$ eine Funktion und es seien $D' \subseteq D$ und $Z' \subseteq Z$.
+\begin{itemize}
+\item Die Menge
+\begin{equation}
+f(D') := \{z \in Z| \mbox{Es gibt ein } x \in D' \mbox{ mit } z = f(x)\}
+\end{equation}
+heißt die \textit{Bildmenge von $D'$} und $f(D) \subseteq Z$ heißt der \textit{Wertebereich} von $f$.
+\item Die Menge
+\begin{equation}
+f^{-1}(Z') := \{x \in D | f(x) \in Z'\}
+\end{equation}
+heißt die \textit{Urbildmenge von $Z'$}. $x \in D$ mit $z = f(x) \in Z$ heißt auch \textit{Urbild von $z$}.
+\end{itemize}
+\end{definition}
+
+\footnotesize
+Bemerkung
+\begin{itemize}
+\item Wertebereich $f(D)$ und Zielmenge $Z$ sind nicht notwendigerweise identisch.
+\end{itemize}
+
+
+
+
+
+# Eigenschaften
+\small
+\begin{definition}[Injektivität, Surjektivität, Bijektivität]
+\justifying
+Es sei $f : D \to Z, x \mapsto f(x)$ eine Funktion.
+\begin{itemize}
+\justifying
+\item Die Funktion $f$ heißt \textit{injektiv}, wenn es zu jedem Bild $z \in f(D)$ 
+genau ein Urbild $x \in D$ gibt. Äquivalent gilt, dass $f$ injektiv ist, wenn aus
+$x_1,x_2 \in D$ mit $x_1 \neq x_2$ folgt, dass $f(x_1) \neq f(x_2)$ ist.
+\item Die Funktion $f$ heißt \textit{surjektiv}, wenn $f(D) = Z$ gilt, wenn also 
+jedes Element der Zielmenge $Z$ ein Urbild in der Definitionsmenge $D$ hat.
+\item Die Funktion $f$ heißt \textit{bijektiv}, wenn $f$ injektiv und surjektiv ist.
+\end{itemize}
+\end{definition}
+
+\footnotesize
+Bemerkungen
+\begin{itemize}
+\justifying
+\item $f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, 
+weil z.B. für $x_1 = 2 \neq -2 = x_2$ gilt, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
+Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
+\item $f : [0,\infty[ \to [0,\infty[, x \mapsto f(x) := x^2$ ist injektiv und surjektiv, also bijektiv.
+\item Bijektive Abbildungen heißen auch \textit{eineindeutige Funktionen} (engl. \textit{one-to-one mappings}).
+\end{itemize}
+
+
+
+
+# Eigenschaften
+\vfill
+\center
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_inj_sur_bij.pdf"))
+```
+\vfill
+
+
+
+
+# 
+\vfill
+\Large
+\setstretch{3}
+Definition und Eigenschaften
+
+**Funktionentypen**
+
+Elementare Funktionen
+
+Selbstkontrollfragen
+\vfill
+
+
+
+
+
+# Funktiontypen - Verkettung
+\small
+\begin{definition}[Verkettete Funktionen]
+Es seien $f : D \to R$ und $g : R \to S$ zwei Funktionen, wobei die Zielmenge 
+von $f$ mit der Definitionsmenge von $g$ übereinstimmen. Dann ist durch
+\begin{equation}
+g \circ f : D \to S, x \mapsto (g \circ f)(x) := g(f(x))
+\end{equation}
+eine Funktion definiert, die die \textit{Verkettung von $f$ und $g$} genannt wird.
+\end{definition}
+Bemerkungen
+\begin{itemize}
+\item $g \circ f$ bezeichnet die Funktion.
+\item $(g \circ f)(x)$ bezeichnet ein Element in $S$.
+\item Erst wird $f$ auf $x$ angewendet, dann wird $g$ auf $f(x)$ angewendet.
+\item Für $f(x) := -x^2$ und $g(x) := \exp(x)$ ist $(g \circ f)(x) = \exp(-x^2)$.
+\end{itemize}
+
+
+
+
+# Funktionentypen - Inverse
+\small
+\begin{definition}[Inverse Funktion]
+Es sei $f : D \to R, x \mapsto f(x)$ eine bijektive Funktion. Dann heißt die Funktion $f^{-1}$ mit
+\begin{equation}
+f^{-1} \circ f : D \to D, x \mapsto (f^{-1} \circ f)(x) := f^{-1}(f(x)) = x
+\end{equation}
+\textit{inverse Funktion} (oder \textit{Umkehrfunktion}) von $f$.
+\end{definition}
+
+\footnotesize
+Bemerkungen
+\begin{itemize}
+\item Weil $f$ bijektiv ist, wird jedem $x \in D$ genau ein $z = f(x) \in Z$ zugeordnet.
+\item Jedem $z \in Z$ wird also auch genau ein $x \in D$ zugeordnet.
+\item Die inverse Funktion einer bijektiven Funktion ist also auch bijektiv.
+\item Beispiel: Die inverse Funktion von $f(x) := 2x =: y$ ist $f^{-1}(y) = y/2$.
+\end{itemize}
+
+
+
+
+# Funktionentypen - Linear
+\small
+\begin{definition}[Lineare Abbildung]
+\justifying
+Eine Abbildung $f : D \to R, x \mapsto f(x)$ heißt \textit{lineare Abbildung}, 
+wenn für $x,y \in D$ und einen Skalar $c$ gelten, dass
+\begin{equation}
+f(x + y) = f(x) + f(y) \mbox{ und } f(cx) = cf(x).
+\end{equation}
+Eine Abbildung, für die obige Eigenschaften nicht gelten, heißt \textit{nicht-lineare Abbildung}.
+\end{definition}
+
+\footnotesize
+Bemerkungen
+\begin{itemize}
+\item Für $a \in \mathbb{R}$ ist die Abbildung $f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := ax$ linear, weil
+\begin{equation}
+f(x + y) = a(x + y) = ax + ay = f(x) + f(y) \mbox{ und } f(cx) = acx = cax = cf(x).
+\end{equation}
+\item Für $a,b \in \mathbb{R}$ dagegen ist die Abbildung $f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := ax + b$ nicht-linear, weil z.B. für $a := b := 1$ gilt, dass
+\begin{equation}
+f(x+y) = 1(x+y)+1 = x + y + 1 \neq x + 1 + y + 1 = f(x) + f(y).
+\end{equation}
+\item Eine Abbildung der Form $f(x) := ax + b$ heißt \textit{affin-lineare Abbildung}
+\item Abbildungen der Form $f(x) := ax + b$ werden auch als \textit{lineare Funktionen} bezeichnet.
+\end{itemize}
+
+\color{red}{TODO: Funktionsbeispiel-Grafiken erstellen}
+
+
+
+
+
+# Funktionentypen -  Linear
+\small
+\begin{theorem}[Lineare Abbildung der Null]
+\normalfont
+$f: D \to R$ sei eine lineare Abbildung. Dann gilt 
+\begin{equation}
+f(0) = 0.
+\end{equation}
+\end{theorem}
+
+\underline{Beweis}
+\vspace{1mm}
+
+Mit der Additivität von $f$ gilt
+\begin{equation}
+f(0) = f(0 + 0) = f(0) + f(0).
+\end{equation}
+Addition von $-f(0)$ auf beiden Seiten obiger Gleichung ergibt dann
+\begin{equation}
+f(0) - f(0) =  f(0) + f(0) - f(0) \Leftrightarrow 0 =  f(0).  
+\end{equation}
+$\hfill\Box$
+
+
+
+
+# Funktionentypen - Funktionsarten
+\setstretch{1.1}
+\small
+\begin{definition}[Funktionenarten]
+In der statistischen Anwendung unterscheiden wir
+\begin{itemize}
+\item \textit{univariate reellwertige Funktionen} der Form
+\begin{equation}
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x),
+\end{equation}
+\item \textit{multivariate reellwertige Funktionen} der Form
+\begin{equation}
+f : \mathbb{R}^n \to \mathbb{R}, x \mapsto f(x) = f(x_1,...,x_n),
+\end{equation}
+\item \textit{multivariate vektorwertige Funktionen} der Form
+\begin{equation}
+f : \mathbb{R}^n \to \mathbb{R}^m, x \mapsto
+f(x) =
+\begin{pmatrix}
+f_1(x_1,...,x_n) 	\\
+\vdots				\\
+f_m(x_1,...,x_n)
+\end{pmatrix}.
+\end{equation}
+\end{itemize}
+\end{definition}
+\footnotesize
+Bemerkung
+\begin{itemize}
+\item In der Physik werden multivariate reellwertige Funktionen auch \textit{Skalarfelder} genannt.
+\item In der Physik werden multivariate vektorwertige Funktionen auch \textit{Vektorfelder} genannt.
+\item In manchen Anwendungen kommen auch \textit{matrixvariate matrixwertige Funktionen} zum Tragen.
+\end{itemize}
+
+
+
+# 
+\vfill
+\Large
+\setstretch{3}
+Definition und Eigenschaften
+
+Funktionentypen
+
+**Elementare Funktionen**
+
+Selbstkontrollfragen
+\vfill
+
+
+
+
+# Elementare Funktionen
+\setstretch{2}
+Elementare univariate reellwertige Funktion der probabilistischen Datenanalyse sind
+\begin{itemize}
+\item die Polynomfunktionen,
+\item die Exponentialfunktion,
+\item der Logarithmusfunktion,
+\item die Gammafunktion.
+\end{itemize}
+\vspace{3mm}
+Wir skizzieren diese Funktionen im Folgenden.
+
+
+
+
+# Elementare Funktionen - Polynom
+\small
+\begin{definition}[Polynomfunktionen]
+\justifying
+Eine Funktion der Form
+\begin{equation}
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := \sum_{i=0}^{k} a_i x^i = a_0 + a_1 x^1 + a_2 x^2 + \cdots + a_k x^k
+\end{equation}
+heißt \textit{Polynomfunktion} $k$-ten Grades mit Koeffizienten $a_0, a_1,...,a_k \in \mathbb{R}$. 
+Typische Polynomfunktionen sind in nachfolgender Tabelle aufgelistet
+\renewcommand{\arraystretch}{1.3}
+\begin{table}
+\centering
+\begin{tabular}{lll}
+Name 				& Funktionale Form 	& Koeffizienten 											\\\hline
+Konstante Funktion 	& $f(x) = a$		& $a_0 := a$, 			  $a_i := 0, i > 0$					\\
+Identitätsfunktion  & $f(x) = x$ 		& $a_0 := 0$, $a_1 := 1$, $a_i := 0, i > 0$					\\
+Lineare Funktion 	& $f(x) = ax + b$	& $a_0 := b$, $a_1 := a$, $a_i := 0, i > 1$					\\
+Quadratfunktion	 	& $f(x) = x^2$ 		& $a_0 := 0$, $a_1 := 0$, $a_2 := 1$, $a_i := 0, i > 2$		\\
+\end{tabular}
+\end{table}
+\end{definition}
+
+
+
+
+# Elementare Funktionen - Polynom
+\vspace{5mm}
+Graphen typischer Polynomfunktionen
+\vspace{5mm}
+
+```{r, echo = F, eval = F}
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                  # domain resolution
+a         = 2                                                                    # constant
+b         = 1                                                                    # constant
+xmax      = 5
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
+fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
+                matrix(x),                                                       # f(x) := x
+                matrix(a * x + b),                                               # f(x) := ax + b
+                matrix(x^2))                                                     # f(x) := x^2
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black", "gray50", "gray75", "gray90"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(-.5,
+0,
+c("f(x) = 2",
+"f(x) = x",
+"f(x) = 2x + 1",
+TeX("f(x) = x^2")),
+cex       = 1,
+col       = c("black", "gray50", "gray75", "gray90"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_polynom_funktionen.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_polynom_funktionen.pdf"))
+```
+
+
+
+
+# Elementare Funktionen - Exponentialfunktion
+\setstretch{1.2}
+\small
+\begin{theorem}[Exponentialfunktion und ihre Eigenschaften]
+\justifying
+\normalfont
+Die \textit{Exponentialfunktion} ist definiert als
+\begin{equation}
+\exp : \mathbb{R} \to \mathbb{R},
+x \mapsto \exp(x)
+:= e^x
+:= \sum_{n=0}^\infty \frac{x^n}{n!}
+= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+\end{equation}
+Die Exponentialfunktion hat folgende Eigenschaften:
+\vspace{1mm}
+
+\begin{table}
+\centering
+\begin{tabular}{ll}
+Wertebereich
+& $x \in ]-\infty,0[ \Rightarrow \exp(x) \in ]0,1[$
+\\
+& $x \in ]0,\infty[\quad\,\,  \Rightarrow \exp(x) \in ]1,\infty[$
+\\
+Monotonie
+& $x < y \Rightarrow \exp(x) < \exp(y)$
+\\
+Spezielle Werte
+& $\exp(0) = 1$ und $\exp(1) = e$
+\\
+Exponentialeigenschaften
+& $\exp(x + y) = \exp(x)\exp(y)$
+\\
+& $\exp(x - y) = \frac{\exp(x)}{\exp(y)}$
+\\
+& $\exp(x)\exp(-x) = 1$
+\end{tabular}
+\end{table}
+\end{theorem}
+\footnotesize
+Bemerkungen
+\begin{itemize}
+\item Für Beweise der Eigenschaften wird auf die einschlägige Literatur verwiesen.
+\item Die Exponentialeigenschaften sind beim Rechnen mit der Normalverteilung zentral.
+\item $e \approx 2.71$ heißt \textit{Eulersche Zahl}.
+\end{itemize}
+
+
+
+
+# Elementare Funktionen - Logarithmus
+\setstretch{1.2}
+\small
+\begin{theorem}[Logarithmusfunktion und ihre Eigenschaften]
+\justifying
+\normalfont
+Die \textit{Logarithmusfunktion} ist definiert als inverse Funktion der Exponentialfunktion,
+\begin{equation}
+\ln : ]0,\infty[ \to \mathbb{R}, x \mapsto \ln(x) \mbox{ mit } \ln(\exp(x)) = x \mbox{ für alle } x \in \mathbb{R}.
+\end{equation}
+Die Logarithmusfunktion hat folgende Eigenschaften:
+\vspace{1mm}
+
+\begin{table}
+\centering
+\begin{tabular}{ll}
+Wertebereich
+& $x \in \, ]0,1[\,\,\, \Rightarrow \ln(x) \in\,]-\infty,0[$
+\\
+& $x \in \, ]1,\infty[ \Rightarrow \ln(x) \in\, ]0,\infty[$
+\\
+Monotonie
+& $x < y \Rightarrow \ln(x) < \ln(y)$
+\\
+Spezielle Werte
+& $\ln(1) = 0$ und $\ln(e) = 1$.
+\\
+Logarithmeneigenschaften
+& $\ln(xy) = \ln(x) + \ln(y)$
+\\
+& $ \ln(x^c) = c\ln(x)$
+\\
+& $\ln\left(\frac{1}{x}\right) = - \ln (x)$
+\end{tabular}
+\end{table}
+\end{theorem}
+Bemerkungen
+\begin{itemize}
+\item Für Beweise der Eigenschaften wird auf die einschlägige Literatur verwiesen.
+\item Die Logarithmeneigenschaften sind beim Rechnen mit Log-Likelihood-Funktionen zentral.
+\item ``Die Logarithmusfunktion wandelt Produkte in Summen und Potenzen in Produkte um.''
+\end{itemize}
+
+
+
+
+
+# Elementare Funktionen - Exponential- und Logarithmusfunktion
+\vspace{5mm}
+Graphen der Exponential- und Logarithmusfunktion
+\vspace{5mm}
+
+```{r, echo = F, eval = F}
+graphics.off()
+
+# Definitionen
+res     = 1e3
+xmax    = 5
+x       = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res),                # exp domain
+                matrix(seq(1e-5   ,xmax, len = res), nrow = res))                # ln domain
+fx      = cbind(matrix(exp(x[,1])),                                              # exp(x)
+                matrix(log(x[,2])))                                              # ln(x)
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2)
+matplot(
+x,
+fx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(-xmax,xmax),
+ylim      = c(-xmax,xmax),
+ylab      = " ",
+xlab      = "x")
+grid()
+legend(
+-5,
+5,
+c("exp(x)", "ln(x)"),
+cex       = 1,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1.4,
+bty       = "n")
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_explog_funktionen.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_explog_funktionen.pdf"))
+```
+
+
+
+
+# Elementare Funktionen - Gammafunktion
+\setstretch{1.2}
+\small
+\begin{theorem}[Gammafunktion und ihre Eigenschaften]
+\justifying
+\normalfont
+Die \textit{Gammafunktion} ist definiert durch
+\begin{equation}
+\Gamma : \mathbb{R} \to \mathbb{R}, x \mapsto \Gamma(x) := \int_0^\infty \xi^{x-1}\exp(-\xi)\,d\xi
+\end{equation}
+Die Gammafunktion hat folgende Eigenschaften:
+\vspace{1mm}
+
+\begin{table}
+\centering
+\begin{tabular}{ll}
+Spezielle Werte
+& $\Gamma(1) = 1$
+\\
+& $\Gamma\left(\frac{1}{2} \right) = \sqrt{\pi}$
+\\
+& $\Gamma(n) = (n-1)!$ für $n \in \mathbb{N}$.
+\\
+Rekursionseigenschaft
+& Für $x>0$ gilt $\Gamma(x+1) = x\Gamma(x)$
+\end{tabular}
+\end{table}
+\end{theorem}
+Bemerkungen
+\begin{itemize}
+\item Für Beweise der Eigenschaften wird auf die einschlägige Literatur verwiesen.
+\item Die Gammafunktion ist im Kontext von $\chi^2$-, $t$- und $F$-Verteilung zentral.
+\end{itemize}
+
+
+
+
+# Elementare Funktionen - Gammafunktion
+\vspace{5mm}
+Graph der Gammafunktion auf $]0,5[$
+\vspace{5mm}
+
+```{r, echo = F, eval = F}
+
+graphics.off()
+
+# Definitionen
+res         = 1e3                                                                # domain resolution
+xmax        = 5                                                                  # |x_max|
+x           = seq(1e-3,xmax, len = res)                                          # Gamma domain
+fx          = gamma(x)                                                           # Gamma(x)
+
+# Visualisierung plot specifications
+par(
+family      = "sans",
+pty         = "s",
+bty         = "l",
+lwd         = 1,
+las         = 1,
+mgp         = c(2,1,0),
+cex         = 1.2
+)
+matplot(
+x,
+fx,
+type        = "l",
+lty         = 1,
+lwd         = 2,
+col         = "gray30",
+xlim        = c(0,xmax),
+ylim        = c(0,xmax),
+ylab        = " ",
+xlab        = "x")
+grid()
+legend(
+2,
+1,
+TeX("$\\Gamma(x)$"),
+cex         = 1.5,
+lty         = 1,
+col         = "gray30",
+lwd         = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_gamma_funktion.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_gamma_funktion.pdf"))
+```
+
+
+
+# 
+\vfill
+\Large
+\setstretch{3}
+Definition und Eigenschaften
+
+Funktionentypen
+
+Elementare Funktionen
+
+**Selbstkontrollfragen**
+\vfill
+
+# Selbstkontrollfragen
+\setstretch{1.5}
+\small
+1. Erläutern Sie die Komponenten der Funktionsschreibweise $f: D \to Z, x \mapsto f(x)$.
+2. Definieren Sie die Begriffe Bildmenge, Wertebereich, und Urbildmenge einer Funktion.
+3. Definieren Sie die Begriffe Surjektivität, Injektivität, und Bijektivität einer Funktion.
+4. Erläutern Sie, warum $f:\mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ weder injektiv noch surjektiv ist.
+5. Erläutern Sie, warum $f: [0,\infty[ \to [0,\infty[ , x \mapsto f(x) := x^2$ bijektiv ist.
+6. Erläutern Sie die Komponenten der Schreibweise $g \circ f: D \to S, x \mapsto (g\circ f)(x)$.
+7. Definieren Sie den Begriff der inversen Funktion.
+8. Geben Sie die inverse Funktion von $x^2$ auf $[0,\infty[$ an.
+9. Definieren Sie den Begriff der linearen Abbildung.
+10. Definieren Sie die Begriffe der univariat-und multivariat-reellwertigen Funktion.
+11. Definieren Sie Begriff der multivariaten vektorwertigen Funktion.
+12. Skizzieren Sie die konstante Funktion für $a := 1$ und die Identitätsfunktion.
+13. Für $a = 2$ und $b = 3$, skizzieren Sie die linear Funktion $f(x) = ax + b$.
+14. Skizzieren Sie die Funktionen $f(x) := (x-1)^2$ und $g(x) := (x + 3)^2$.
+15. Skizzieren Sie die Exponential- und Logarithmusfunktionen.
+16. Geben Sie Exponentialeigenschaften der Exponentialfunktion an.
+17. Geben Sie die Logarithmeneigenschaften der Logarithmusfunktion an.
+
+
+
+
+

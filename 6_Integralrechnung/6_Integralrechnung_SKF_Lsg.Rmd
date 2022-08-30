@@ -1,0 +1,147 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(6) Integralrechnung
+
+\vspace{8mm}
+\Large
+Selbstkontrollfragen  + Lösungen
+\vfill
+
+
+
+
+
+# Selbstkontrollfragen
+\small
+\setstretch{2.6}
+
+1. Definieren Sie den Begriff der Stammfunktion einer univariaten reellwertigen Funktion.
+2. Definieren Sie den Begriff des unbestimmten Integrals einer univariaten reellwertigen Funktion.
+3. Erläutern Sie den Begriff des Riemanschen Integrals.
+4. Geben Sie den ersten Hauptsatz der Differential- und Integralrechnung wieder.
+5. Geben Sie den zweiten Hauptsatz der Differential- und Integralrechnung wieder.
+6. Erläutern Sie den Begriff des uneigentlichen Integrals.
+7. Erläutern Sie den Begriff des mehrdimensionalen Integrals.
+8. Berechnen Sie das bestimmte Integral $\int_{0}^{1} 2x \,dx$.
+
+
+
+
+
+# \textcolor{darkblue}{SKF 1}. *Stammfunktion* 
+\large
+\color{darkblue} Definieren Sie den Begriff der Stammfunktion einer univariaten reellwertigen Funktion.
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 2}. *Unbestimmtes Integral*
+\large
+\color{darkblue} Definieren Sie den Begriff des unbestimmten Integrals einer univariaten reellwertigen Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 3}. *Riemannsches Integral*
+\large
+\color{darkblue} Erläutern Sie den Begriff des Riemanschen Integrals.
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 4}. *Erster Hauptsatz*
+\large
+\color{darkblue} Geben Sie den ersten Hauptsatz der Differential- und Integralrechnung wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 5}. *Zweiter Hauptsatz*
+\large
+\color{darkblue} Geben Sie den zweiten Hauptsatz der Differential- und Integralrechnung wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 6}. *Uneigentliches Integral*
+\large
+\color{darkblue} Erläutern Sie den Begriff des uneigentlichen Integrals.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Mehrdimensionales Integral*
+\large
+\color{darkblue} Erläutern Sie den Begriff des mehrdimensionalen Integrals.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 8}. *Bestimmtes Integral bestimmen*
+\large
+\color{darkblue} Berechnen Sie das bestimmte Integral $\int_{0}^{1} 2x \,dx$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize

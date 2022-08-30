@@ -1,0 +1,231 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(1) Mengen
+
+\vspace{8mm}
+\Large
+Selbstkontrollfragen  + Lösungen
+\vfill
+
+
+
+
+
+# Selbstkontrollfragen 
+\small
+\setstretch{1.8}
+
+1. Diskutieren Sie die Begriffe Definition, Theorem, Beweis.
+2. Geben Sie die Definition einer Menge nach Cantor (1895) wieder.
+3. Nennen Sie drei Möglichkeiten zur Definition einer Menge.
+4. Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$. 
+5. Definieren Sie den Begriff der Kardinalität einer Menge.
+6. Definieren Sie den Begriff der Potenzmenge einer Menge.
+7. Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+8. Es seien $M := \{a,b\}, N := \{a,c,d\}$. Bestimmen Sie $M \cup N, M \cap N, M\setminus N, M \Delta N$.
+9. Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
+10. Erläutern Sie den Unterschied zwischen $\mathbb{N}$ und $\mathbb{Z}$.
+11. Erläutern Sie den Unterschied zwischen $\mathbb{R}$ und $\mathbb{Q}$.
+12. Definieren Sie die Begriffe des abgeschlossenen, offenen, und halboffenen Intervalls.
+13. Es seien $M$ und $N$ Mengen. Erläutern Sie die Notation $M \times N$.
+14. Definieren Sie die Menge $\mathbb{R}^n$.
+
+
+
+
+
+
+
+
+
+
+# \textcolor{darkblue}{SKF 1}. *Grundlegende Begriffe und Symbole* 
+\large
+\color{darkblue} Diskutieren Sie die Begriffe Definition, Theorem, Beweis.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+\small
+* Eine **Definition** (oder auch \textit{Axiom}) ist ein 
+Grundsatz eines logischen Systems, der innerhalb dieses Systems weder begründet 
+noch deduktiv abgeleitet wird. Definitionen können nur nach ihrer Nützlichkeit 
+innerhalb eines logischen Systems bewertet werden. 
+
+* Ein **Theorem** (oder auch \textit{Satz}) ist eine Aussage, die 
+mittels eines Beweises als richtig erkannt, dass heißt, aus Definitionen und/oder
+bereits bekannten Sätzen hergeleitet werden kann. Theoreme sind die ``empirischen Ergebnisse'' 
+der Mathematik. 
+
+* Ein **Beweis** ist eine logische Argumentationskette, die auf bekannte
+Definitionen und Theoreme zurückgreift, um die Richtigkeit eines Theorems zu belegen. 
+Kurze Beweise tragen oft zum Verständnis eines Theorems bei, lange Beweise eher nicht.
+Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt 
+(``Warum ist das so?''). 
+
+
+
+
+
+# \textcolor{darkblue}{SKF 2}. *Mengendefinitionen*
+\large
+\color{darkblue} Geben Sie die Definition einer Menge nach Cantor (1895) wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 3}. *Mengendefinitionen*
+\large
+\color{darkblue} Nennen Sie drei Möglichkeiten zur Definition einer Menge.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 4}. *Teilmengen und Mengengleichheit*
+\large
+\color{darkblue} Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 5}. *Kardinalität*
+\large
+\color{darkblue} Definieren Sie den Begriff der Kardinalität einer Menge.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 6}. *Potenzmengen*
+\large
+\color{darkblue} Definieren Sie den Begriff der Potenzmenge einer Menge.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Potenzmengen*
+\large
+\color{darkblue} Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 8}. *Mengenoperationen*
+\large
+\color{darkblue} Es seien $M := \{a,b\}, N := \{a,c,d\}$. Bestimmen Sie $M \cup N, M \cap N, M\setminus N, M \Delta N$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 9}. *Natürliche Zahlen*
+\large
+\color{darkblue} Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 10}. *Natürliche und Ganze Zahlen*
+\large
+\color{darkblue} Erläutern Sie den Unterschied zwischen $\mathbb{N}$ und $\mathbb{Z}$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 11}. *Reelle und Rationale Zahlen*
+\large
+\color{darkblue} Erläutern Sie den Unterschied zwischen $\mathbb{R}$ und $\mathbb{Q}$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 12}. *Intervalle*
+\large
+\color{darkblue} Definieren Sie die Begriffe des abgeschlossenen, offenen, und halboffenen Intervalls.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 13}. *Kartesisches Produkt*
+\large
+\color{darkblue} Es seien $M$ und $N$ Mengen. Erläutern Sie die Notation $M \times N$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 14}. *$n$-Tupel*
+\large
+\color{darkblue} Definieren Sie die Menge $\mathbb{R}^n$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize

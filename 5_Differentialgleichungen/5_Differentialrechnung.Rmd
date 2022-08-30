@@ -1,0 +1,723 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(5) Differentialrechnung
+
+
+
+# 
+\Large
+\setstretch{3}
+\vfill
+Grundlagen der Differentialrechnung
+
+Analytische Optimierung
+
+Selbstkontrollfragen
+\vfill
+
+#
+\Large
+\setstretch{3}
+\vfill
+**Grundlagen der Differentialrechnung**
+
+Analytische Optimierung
+
+Selbstkontrollfragen
+\vfill
+
+
+
+# Grundlagen der Differentialrechnung
+
+\setstretch{1.1}
+\small
+\begin{definition}[Ableitung]
+Es sei $I \subseteq \mathbb{R}$ ein Intervall und
+\begin{equation}
+f : I \to \mathbb{R}, x \mapsto f(x)
+\end{equation}
+eine univariate reellwertige Funktion.
+$f$ heißt in $a \in I$ \textit{differenzierbar}, wenn der Grenzwert
+\begin{equation}
+f'(a) := \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
+\end{equation}
+existiert.
+$f'(a)$ heißt dann die \textit{Ableitung von $f$ an der Stelle $a$}.
+Ist $f$ differenzierbar für alle $x \in I$, so heißt $f$ \textit{differenzierbar} und die Funktion
+\begin{equation}
+f' : I \to \mathbb{R}, x \mapsto f'(x)
+\end{equation}
+heißt \textit{Ableitung von $f$}
+\end{definition}
+
+\footnotesize
+\setstretch{1.4}
+Bemerkungen
+
+* Für $h>0$ heißt $\frac{f(a+h)-f(a)}{h}$ \textit{Differenzquotient}.
+* Der Differenzquotient  misst die Änderung $f(a+h)-f(a)$ von $f$ pro Strecke $h$.
+* Für $h\to 0$ misst der Differenzquotient die Änderungs\underline{rate} von $f$ in $a$.
+* $f'(a)$ ist eine Zahl, $f'$ ist eine Funktion.
+* Wir werden keine Grenzwertbildung zur Berechnung von Ableitungen benötigen.
+
+
+
+# Grundlagen der Differentialrechnung
+\setstretch{1.4}
+\small
+\begin{definition}[Notation für Ableitungen univariater reellwertiger Funktionen]
+Es sei $f$ eine univariate reellwertige Funktion. Äquivalente Schreibweisen für
+die Ableitung von $f$ und die Ableitung von $f$ an einer Stelle $x$ sind
+\begin{enumerate}
+\item[(1)] die \textit{Lagrange-Notation} $f'$ und $f'(x)$,
+\item[(2)] die \textit{Newton-Notation} $\dot{f}$ und $\dot{f}(x)$,
+\item[(3)] die \textit{Leibniz-Notation} $\frac{df}{dx}$ und $\frac{df(x)}{dx}$ und
+\item[(4)] die \textit{Euler-Notation} $Df$ und $Df(x)$.
+\end{enumerate}
+
+\end{definition}
+
+\footnotesize
+Bemerkungen
+
+* Für univariate reellwertige Funktionen benutzen wir $f'$ und $f'(x)$ als Bezeichner.
+* In Berechnungen benutzen wir auch die "Operator-Schreibweise" $\frac{d}{dx}f(x)$.
+* Wir verstehen  $\frac{d}{dx}f(x)$ als den Auftrag, die Ableitung von $f$ zu berechnen.
+
+
+
+
+# Grundlagen der Differentialrechnung
+\small
+\begin{definition}[Höhere Ableitungen]
+Es sei $f$ eine univariate reellwertige Funktion und
+\begin{equation}
+f^{(1)} := f'
+\end{equation}
+sei die Ableitung von $f$. Die $k$-te Ableitung von $f$ ist rekursiv definiert durch
+\begin{equation}
+f^{(k)} := \left(f^{(k-1)}\right)' \mbox{ für } k \ge 0,
+\end{equation}
+unter der Annahme, dass $f^{(k-1)}$ differenzierbar ist. Insbesondere ist die
+\textit{zweite Ableitung von $f$} definiert durch die Ableitung von $f'$, also
+\begin{equation}
+f'' := (f')'.
+\end{equation}
+\end{definition}
+
+\setstretch{1.4}
+\footnotesize
+Bemerkungen
+
+* Wir schreiben auch $\frac{d^2}{dx^2}f(x)$ für den Auftrag, die zweite Ableitung von $f$ zu bestimmen.
+* Die nullte Ableitung $f^{(0)}$ von $f$ ist $f$ selbst.
+* Üblicherweise schreibt man für $k < 4$ $f',f'',f'''$ statt $f^{(1)}, f^{(2)}, f^{(3)}$.
+* Im Allgemeinen benötigen wir nur $f'$ und $f''$.
+
+
+
+
+# Grundlagen der Differentialrechnung
+\setstretch{1.1}
+\footnotesize
+\begin{theorem}[Rechenregeln für Ableitungen]
+\justifying
+\normalfont
+Für $i = 1,...,n$ seien $g_i$ reellwertige univariate differenzierbare Funktionen.
+Dann gelten folgende Rechenregeln für Ableitungen
+\begin{enumerate}
+\item[(1)] Summenregel
+\begin{equation}
+\mbox{Für } f(x) := \sum_{i=1}^n g_i(x) \mbox{ gilt } f'(x) = \sum_{i=1}^n g_i'(x).
+\end{equation}
+\item[(2)] Produktregel
+\begin{equation}
+\mbox{Für } f(x) := g_1(x)g_2(x) \mbox{ gilt } f'(x) = g_1'(x)g_2(x) + g_1(x)g_2'(x).
+\end{equation}
+\item[(3)] Quotientenregel
+\begin{equation}
+\mbox{Für } f(x) := \frac{g_1(x)}{g_2(x)} \mbox{ gilt } f'(x) = \frac{g_1'(x)g_2(x) - g_1(x)g_2'(x)}{g_2^2(x)}.
+\end{equation}
+\item[(4)] Kettenregel
+\begin{equation}
+\mbox{Für } f(x) := g_1(g_2(x)) \mbox{ gilt } f'(x) = g_1'(g_2(x))g'_2(x).
+\end{equation}
+\end{enumerate}
+\end{theorem}
+
+\footnotesize
+Bemerkung
+
+* Für Beweise der Rechenregeln wird auf die einschlägige Literatur verwiesen.
+
+
+
+
+
+# Grundlagen der Differentialrechnung
+\footnotesize
+\begin{theorem}[Ableitungen elementarer Funktionen]
+\justifying
+\normalfont
+Für einige elementare Funktionen der Datenanalyse ergeben sich folgende Ableitungen
+\vspace{2mm}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{table}
+\centering
+\begin{tabular}{lll}
+Name 							& Definition	    			& Ableitung								\\\hline
+Polynomfunktionen 				& $f(x) := \sum_{i=0}^n a_ix^i$ & $f(x)  = \sum_{i=1}^n ia_ix^{i-1}$ 	\\
+$\quad$ Konstante Funktion 		& $f(x) := a$					& $f'(x) = 0$ 							\\
+$\quad$ Identitätsfunktion  	& $f(x) := x$ 					& $f'(x) = 1$ 							\\
+$\quad$ Lineare Funktion 		& $f(x) := ax + b$				& $f'(x) = a$ 							\\
+$\quad$ Quadratfunktion 		& $f(x) := x^2$ 				& $f'(x) = 2x$ 							\\
+Exponentialfunktion				& $f(x) := \exp(x)$ 			& $f'(x) = \exp(x)$						\\
+Logarithmusfunktion				& $f(x) := \ln(x)$ 				& $f'(x) = \frac{1}{x}$					\\
+\end{tabular}
+\end{table}
+\end{theorem}
+
+\footnotesize
+Bemerkung
+
+* Für Beweise wird auf die einschlägige Literatur verwiesen.
+
+
+
+
+# Grundlagen der Differentialrechnung
+
+```{r, echo = F, eval = F}
+
+# 1 x 3 Plot Layout
+dev.new()
+library(latex2exp)
+par(
+mfcol     = c(1,3),
+family    = "sans",
+pty       = "s",
+bty       = "l",
+lwd       = 1,
+las       = 1,
+mgp       = c(2,1,0),
+font.main = 1,
+cex.main  = 1.2)
+
+# Definitionsmenge
+x_min     = -5                                                                   # minimum x-value
+x_max     = 5                                                                    # maximum x-value
+x_res     = 1e3                                                                  # x space resolution
+x         = seq(x_min,x_max,len = x_res)                                         # x space
+
+# Identitätsfunktion
+fxdx      = cbind(matrix(x), matrix(rep(1,length(x)), nrow = length(x)))          # f(x) := x, f'(x) = 1
+matplot(
+x,
+fxdx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(-x_max,x_max),
+ylim      = c(-x_max,x_max),
+ylab      = " ",
+xlab      = "x",
+main      = "Identitätsfunktion" )
+grid()
+legend(
+-2,
+-2,
+c("f(x)  = x", "f'(x) = 1"),
+cex       = 1,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1,
+bty       = "n")
+
+# Lineare Funktion
+a         = 1/2
+b         = -1
+fxdx      = cbind(matrix(a*x + b), matrix(a, nrow = length(x)))                  # f(x) := 2x - 3, f'(x) = 2
+matplot(
+x,
+fxdx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(-x_max,x_max),
+ylim      = c(-x_max,x_max),
+ylab      = " ",
+xlab      = "x",
+main      = "Lineare Funktion")
+grid()
+legend(
+-4,
+-2,
+c("f(x) = 0.5x - 1", "f'(x) = 0.5"),
+cex       = 1,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1,
+bty       = "n")
+
+# Quadratfunktion
+fxdx      = cbind(matrix(x^2),matrix(2*x))                                       # f(x) := x^2 # f'(x) = 2x
+matplot(
+x,
+fxdx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(-x_max,x_max),
+ylim      = c(-x_max,x_max),
+ylab      = " ",
+xlab      = "x",
+main      = "Quadratfunktion")
+grid()
+legend(
+-2,
+-2,
+c(TeX("f(x)  = x^2"), "f'(x) = 2x"),
+cex       = 1,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1,
+bty       = "n")
+
+# PDF Speicherung
+dev.copy2pdf(
+file        = file.path(abb_dir,"glmi_5_ableitungen_1.pdf"),
+width       = 7,
+height      = 3)
+
+```
+
+Ableitungen elementarer Funktionen
+\vspace{3mm}
+\center
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_5_ableitungen_1.pdf"))
+```
+
+
+
+
+# Grundlagen der Differentialrechnung
+
+```{r, echo = F, eval = F}
+
+# 1 x 2 Plotlayout
+dev.new()
+library(latex2exp)
+par(
+mfcol      = c(1,2),
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+font.main  = 1,
+cex        = 0.9,
+cex.main   = 1.1)
+
+# Exponentialfunktion
+x_min     = -4                                                                   # minimum x-value
+x_max     = 2                                                                    # maximum x-value
+x_res     = 1e3                                                                  # x space resolution
+x         = seq(x_min,x_max,len = x_res)                                         # x space
+fxdx      = cbind(matrix(exp(x)),matrix(exp(x)))                                 # f(x) := exp(x), f'(x) = exp(x)
+matplot(
+x,
+fxdx,
+type      = "l",
+lty       = c(1,2),
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(x_min,x_max),
+ylim      = c(-1,6),
+ylab      = " ",
+xlab      = "x",
+main      = "Exponentialfunktion")
+grid()
+legend(
+-4,
+6,
+c("f(x) = exp(x)", "f'(x) = exp(x)"),
+cex       = .9,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1.5,
+bty       = "n")
+
+# Logarithmusfunktion
+x_min     = 1e-3                                                                 # minimum x-value
+x_max     = 4                                                                    # maximum x-value
+x_res     = 1e3                                                                  # x space resolution
+x         = seq(x_min,x_max,len = x_res)                                         # x space
+fxdx      = cbind(matrix(log(x)), matrix(1/x))                                   # f(x) := ln(x), f'(x) = 1/x
+matplot(
+x,
+fxdx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("gray30", "gray70"),
+xlim      = c(0,x_max),
+ylim      = c(-4,5),
+ylab      = " ",
+xlab      = "x",
+main      = "Logarithmusfunktion")
+grid()
+legend(
+1,
+-1,
+c("f(x) = ln(x)", "f'(x) = 1/x"),
+cex       = .9,
+lty       = 1,
+col       = c("gray30", "gray70"),
+lwd       = 2,
+y.intersp = 1.5,
+bty       = "n")
+
+# PDF Speicherung
+dev.copy2pdf(
+file        = file.path(abb_dir, "glmi_5_ableitungen_2.pdf"),
+width       = 7,
+height      = 3)
+
+```
+
+Ableitungen elementarer Funktionen
+\vspace{3mm}
+\center
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir, "glmi_5_ableitungen_2.pdf"))
+```
+
+
+
+
+#
+\Large
+\setstretch{3}
+\vfill
+Grundlagen der Differentialrechnung
+
+**Analytische Optimierung**
+
+Selbstkontrollfragen
+\vfill
+
+
+
+
+
+# Analytische Optimierung
+\setstretch{1.1}
+\footnotesize
+\begin{definition}[Extremstellen und Extremwerte]
+\justifying
+Es sei $U \subseteq \mathbb{R}$ und $f : U \to \mathbb{R}$ eine univariate 
+reellwertige Funktion. Dann hat $f$ an der Stelle $x_0 \in U$
+\begin{itemize}
+\justifying
+\item ein \textit{lokales Minimum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\begin{equation}
+f(x_0) \le f(x) \mbox{ für alle } x\in I\cap U,
+\end{equation}
+\item ein \textit{globales Minimum}, wenn gilt, dass
+\begin{equation}
+f(x_0) \le f(x) \mbox{ für alle } x\in U,
+\end{equation}
+\item ein \textit{lokales Maximum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\begin{equation}
+f(x_0) \ge f(x) \mbox{ für alle }  x\in I\cap U,
+\end{equation}
+\item \textit{lokales Maximum}, wenn gilt, dass
+\begin{equation}
+f(x_0) \ge f(x) \mbox{ für alle } x\in U.
+\end{equation}
+\end{itemize}
+Der  Wert $x_0 \in U$ der Definitionsmenge von $f$ heißt entsprechend 
+\textit{lokale} oder \textit{globale Minimalstelle} oder \textit{Maximalstelle}, 
+der Funktionswert $f(x_0) \in \mathbb{R}$ heißt entsprechend \textit{lokales} 
+oder \textit{globales Minimum} oder \textit{Maximum}. Generell heißt der Wert
+$x_0 \in U$ \textit{Extremstelle} und der Funktionswert $f(x_0) \in \mathbb{R}$ \textit{Extremwert}.
+\end{definition}
+
+\footnotesize
+Bemerkungen
+
+* Extremstellen werden auch mit
+$\argmin_{x \in I \cap U} f(x)$ oder
+$\argmax_{x \in I \cap U} f(x)$
+bezeichnet.
+* Extremwerte werden auch mit
+$\min_{x \in I \cap U} f(x)$ oder
+$\max_{x \in I \cap U} f(x)$
+bezeichnet.
+
+
+# Analytische Optimierung
+\small
+\begin{definition}[Notwendige Bedingung für Extrema]
+$f$ sei eine univariate reellwertige Funktion. Dann gilt
+\begin{equation}
+x_0 \mbox{ ist Extremstelle von } f \Rightarrow f'(x_0) = 0.
+\end{equation}
+\end{definition}
+
+\footnotesize
+Bemerkungen
+
+* Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die erste Ableitung von $f$ in $x_0$ null.
+* Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$. Dann gilt
+    * \small Links von $x_0$ steigt $f$ an, rechts von $x_0$ fällt $f$ ab.
+    * In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+
+
+# Analytische Optimierung
+\small
+\begin{definition}[Hinreichende Bedingungen für lokale Extrema]
+$f$ sei eine zweimal differenzierbare univariate reellwertige Funktion.
+\begin{itemize}
+\item Wenn für $x_0 \in U \subseteq \mathbb{R}$
+\begin{equation}
+f'(x_0) = 0 \mbox{ und } f''(x_0) > 0
+\end{equation}
+gilt, dann hat $f$ an der Stelle $x_0$ ein Minimum.
+\item Wenn für $x_0 \in U \subseteq \mathbb{R}$
+\begin{equation}
+f'(x_0) = 0 \mbox{ und } f''(x_0) < 0
+\end{equation}
+gilt, dann hat $f$ an der Stelle $x_0$ ein Maximum.
+\end{itemize}
+\end{definition}
+
+\footnotesize
+Bemerkung
+
+* Eine Intuition vermittelt nachfolgende Abbildung.
+
+# Analytische Optimierung
+\vspace{2mm}
+
+```{r, eval = F, echo = F}
+# plot specifications
+dev.new()                                                                        # new figure
+theta   = par(                                                                   # figure parameters
+            mfcol      = c(1,1),                                                 # subplot grid
+            family     = "sans",                                                 # font family
+            pty        = "s",                                                    # square plots
+            bty        = "l",                                                    # plot box, o, l, 7, c, or ]
+            lwd        = 1,                                                      # line width
+            las        = 1,                                                      # 0: axis parallel, 1: horizontal, 2: axis perpendicular, 3: vertical
+            mgp        = c(2,1,0),                                               # margin line in mex unit
+            font.main  = 1,                                                      # title font type
+            cex.main   = 1.2                                                     # title  magnification factor
+)
+
+# Exponentialfunktion
+x_min   = -3                                                                     # minimum x-value
+x_max   = 4                                                                      # maximum x-value
+x_res   = 1e3                                                                    # x space resolution
+x       = seq(x_min,x_max,len = x_res)                                           # x space
+fxdx    = cbind(matrix((x-1)^2),                                                 # f(x) : = (x-1)^2
+                matrix(2*x - 2),                                                 # f'(x)  = 2x - 2
+                matrix(rep(2,x_res), nrow = x_res))                              # f''(x) = 2
+
+p   = matplot(                                                                   # multiple line plot
+            x,                                                                   # x values
+            fxdx,                                                                # f(x) values
+            type        = "l",                                                   # line type for all graphs
+            lty         = 1,                                                     # solid and dashed lines
+            lwd         = 2,                                                     # linewidth for all graphs
+            col         = c("gray20", "gray50", "gray80"),                       # line colors
+            xlim        = c(x_min,x_max),                                        # x-axis limits
+            ylim        = c(-2,6),                                               # y-axis limits
+            ylab         = " ",                                                  # no y-axis label
+            xlab         = "x",                                                  # x-axis label
+)
+g   = grid()                                                                     # grid lines
+l   = legend(-3.3,                                                               # upper left corner x ordinate
+             1,                                                                  # upper left corner y ordinate
+             c(TeX("f(x)   = $(x-1)^2$"), 
+                "f'(x) = 2x - 2" ,
+                "f''(x) = 2") ,                                                  # labels
+             cex = .8,                                                           # size of text multiplier
+             lty = 1,                                                            # linetype
+             col = c("gray20", "gray50", "gray80"),                              # colors
+             lwd = 2,                                                            # line width
+             y.intersp = 1.5,                                                    # legend line spacing
+             bty = "n")
+
+# PDF Speicherung
+dev.copy2pdf(
+file        = file.path(abb_dir, "glmi_5_optimierung.pdf"),
+width       = 4,
+height      = 4)
+
+```
+\center
+```{r, echo = FALSE, out.width = "50%"}
+knitr::include_graphics(file.path(abb_dir, "glmi_5_optimierung.pdf"))
+```
+\vspace{-3mm}
+\footnotesize
+Hier ist offenbar $x_0 = 1$ eine lokale Minimalstelle von $f(x) = (x-1)^2$. Man erkennt:
+
+* Links von $x_0$ fällt $f$ ab, rechts von $x_0$ steigt $f$ an.
+* In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+* Links und rechts von $x_0$ und in $x_0$ ist die Änderung $f''$ von $f'$ positiv.
+* Links von $x_0$ schwächt sich die Negativitaet von $f'$ zu $0$ ab.
+* Rechts von $x_0$ verstärkt sich die Positivitaet von $f'$.
+
+
+
+
+# Analytische Optimierung
+\small
+\begin{definition}[Standardverfahren der analytischen Optimierung]
+\justifying
+$f$ sei eine univariate reellwertige Funktion. Lokale Extremstellen von $f$ können
+mit folgendem \textit{Standardverfahren der analytischen Optimierung} identifiziert
+werden:
+\begin{itemize}
+\itemsep3mm
+\item[(1)] Berechnen der ersten und zweiten Ableitung von $f$.
+\item[(2)] Bestimmen von Nullstellen $x^*$ von $f'$ durch Auflösen von $f'(x^*) = 0$ nach $x^*$.
+
+$\Rightarrow$ Nullstellen von $f'$ sind Kandidaten für Extremstellen von $f$.
+
+\item [(3)]  Evaluation von $f''(x^*)$.
+
+$\Rightarrow$ Wenn $f''(x^*) > 0$, dann ist $x^*$ lokale Minimumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) < 0$, dann ist $x^*$ lokale Maximumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) = 0$, dann ist $x^*$ keine Extremstelle von $f$.
+\end{itemize}
+\end{definition}
+
+
+# Analytische Optimierung
+
+\color{darkcyan}
+Beispiel
+
+\vspace{2mm}
+\footnotesize
+
+Wir betrachten die Funktion
+\begin{equation}
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := (x - 1)^2.
+\end{equation}
+
+Die erste Ableitung von $f$ ergibt sich mit der Kettenregel zu
+\begin{equation}
+f'(x) = \frac{d}{dx}\left((x-1)^2 \right) = 2(x-1)\cdot \frac{d}{dx}(x-1) = 2x - 2.
+\end{equation}
+
+Die zweite Ableitung von $f$ ergibt sich zu
+\begin{equation}
+f''(x) = \frac{d}{dx}f'(x) = \frac{d}{dx}(2x - 2) = 2 > 0 \mbox{ für alle } x \in \mathbb{R}.
+\end{equation}
+
+Auflösen von $f'(x^*) = 0$ nach $x^*$ ergibt
+\begin{equation}
+f'(x^*) = 0
+\Leftrightarrow
+2x^* - 2 = 0
+\Leftrightarrow
+2x^* = 2
+\Leftrightarrow
+x^* = 1.
+\end{equation}
+
+$x^* = 1$ ist folglich eine Minimalstelle von $f$ mit zugehörigen Minimalwert $f(1) = 0$.
+
+
+#
+\Large
+\setstretch{3}
+\vfill
+Grundlagen der Differentialrechnung
+
+Analytische Optimierung
+
+**Selbstkontrollfragen**
+\vfill
+
+# Selbstkontrollfragen
+\setstretch{1.7}
+\small
+1. Definieren Sie den Begriff der Ableitung $f'(a)$ einer Funktion $f$ an einer Stelle $a$.
+2. Definieren den Begriff der Ableitung $f'$ einer Funktion $f$.
+3. Erläutern Sie die Symbole $f'(x), \dot{f}(x)$, $\frac{df(x)}{dx}$, und $\frac{d}{dx}f(x)$.
+4. Definieren Sie den Begriff der zweiten Ableitung $f''$ einer Funktion $f$.
+5. Geben Sie die Summenregel für Ableitungen wieder.
+6. Geben Sie die Produktregel für Ableitungen wieder.
+7. Geben Sie die Quotientenregel für Ableitungen wieder.
+8. Geben Sie die Kettenregel für Ableitungen wieder.
+9. Bestimmen Sie die Ableitung der Funktion $f(x) := 3x^2 + \exp\left(-x^2\right) - x \ln(x)$.
+10. Bestimmen Sie die Ableitung der Funktion $f(x) :=\frac{1}{2}\sum_{i=1}^n (x_i - \mu)^2$ für $\mu \in \mathbb{R}$.
+11. Definieren Sie die Begriffe des globalen und lokalen Maximums/Minimums einer Funktion.
+12. Geben Sie die notwendige Bedingung für ein Extremum einer Funktion wieder.
+13. Geben Sie die hinreichende Bedingung für ein lokales Extremum einer Funktion wieder.
+14. Geben Sie das Standardverfahren der analytischen Optimierung wieder.
+15. Bestimmen Sie einen Extremwert von $f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ für $\mu \in \mathbb{R}$.

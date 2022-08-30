@@ -30,7 +30,7 @@
 \vskip2pt
 \makebox[123mm]{\hspace{7.5mm}
 \hfill Grundlagen der Mathematik und Informatik $\vert$ 
-\copyright $ $ 2022 Belinda Fleischmann CC BY-NC-SA 4.0 $\vert$ 
+Belinda Fleischmann $\vert$ 
 Folie \insertframenumber}
 \vskip4pt
 }
@@ -40,9 +40,15 @@ Folie \insertframenumber}
 % colors
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{grey}{RGB}{235,235,235}
+\definecolor{darkgrey}{RGB}{105,105,105}
 \definecolor{lightgrey}{RGB}{245,245,245}
 \definecolor{LightBlue}{RGB}{220,220,255}
 \definecolor{darkblue}{RGB}{51, 51, 153}
+\definecolor{darkcyan}{RGB}{5,92,92}
+\definecolor{middlecyan}{RGB}{0,153,153}
+\definecolor{darkgreen}{RGB}{0,102,51}
+\definecolor{plum}{RGB}{128,0,128}
+
 
 % definitions and theorems
 \setbeamercolor{block title}{fg = black, bg = grey}
@@ -92,6 +98,13 @@ Folie \insertframenumber}
 % ------------------------------------------------------------------------------
 \usepackage{bm}                                         % bold math symbols
 \newcommand{\niton}{\not\owns}
+
+
+% additional mathematical operators
+% ------------------------------------------------------------------------------
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
 
 % text highlighting
 % ------------------------------------------------------------------------------

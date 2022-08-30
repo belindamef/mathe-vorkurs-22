@@ -1,0 +1,206 @@
+---
+fontsize: 8pt
+bibliography: ../Referenzen.bib
+citation_package: natbib
+output:
+  beamer_presentation:
+    keep_tex: true
+    includes:
+      in_header: ../Header.tex
+classoption: t    
+---
+
+
+```{r, include = F}
+source("../R_common.R")
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+```
+
+#  {.plain}
+\center
+```{r, echo = FALSE, out.width = "20%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_otto.png"))
+```
+
+\vspace{2mm}
+
+\huge
+Grundlagen der Mathematik und Informatik
+\vspace{6mm}
+
+\Large
+Aufbaukurs: Fit für Psychologie WiSe 2022/23
+
+\vspace{12mm}
+\normalsize
+Belinda Fleischmann
+
+\vspace{3mm}
+\scriptsize
+Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html) von [Dirk Ostwald](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Team/Dirk+Ostwald.html), lizenziert unter [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+
+
+#  {.plain}
+
+\vfill
+\center
+\vspace{24mm}
+\huge
+\color{black}(5) Differentialgleichungen
+
+\vspace{8mm}
+\Large
+Selbstkontrollfragen  + Lösungen
+\vfill
+
+
+
+
+
+# Selbstkontrollfragen
+\setstretch{1.7}
+\small
+1. Definieren Sie den Begriff der Ableitung $f'(a)$ einer Funktion $f$ an einer Stelle $a$.
+2. Definieren den Begriff der Ableitung $f'$ einer Funktion $f$.
+3. Erläutern Sie die Symbole $f'(x), \dot{f}(x)$, $\frac{df(x)}{dx}$, und $\frac{d}{dx}f(x)$.
+4. Definieren Sie den Begriff der zweiten Ableitung $f''$ einer Funktion $f$.
+5. Geben Sie die Summenregel für Ableitungen wieder.
+6. Geben Sie die Produktregel für Ableitungen wieder.
+7. Geben Sie die Quotientenregel für Ableitungen wieder.
+8. Geben Sie die Kettenregel für Ableitungen wieder.
+9. Bestimmen Sie die Ableitung der Funktion $f(x) := 3x^2 + \exp\left(-x^2\right) - x \ln(x)$.
+10. Bestimmen Sie die Ableitung der Funktion $f(x) :=\frac{1}{2}\sum_{i=1}^n (x_i - \mu)^2$ für $\mu \in \mathbb{R}$.
+11. Definieren Sie die Begriffe des globalen und lokalen Maximums/Minimums einer Funktion.
+12. Geben Sie die notwendige Bedingung für ein Extremum einer Funktion wieder.
+13. Geben Sie die hinreichende Bedingung für ein lokales Extremum einer Funktion wieder.
+14. Geben Sie das Standardverfahren der analytischen Optimierung wieder.
+15. Bestimmen Sie einen Extremwert von $f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ für $\mu \in \mathbb{R}$.
+
+
+
+
+
+# \textcolor{darkblue}{SKF 1}. *Ableitung* 
+\large
+\color{darkblue} Definieren Sie den Begriff der Ableitung $f'(a)$ einer Funktion $f$ an einer Stelle $a$.
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 2}. *Ableitung*
+\large
+\color{darkblue} Definieren den Begriff der Ableitung $f'$ einer Funktion $f$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 3}. *Symbole*
+\large
+\color{darkblue} Erläutern Sie die Symbole $f'(x), \dot{f}(x)$, $\frac{df(x)}{dx}$, und $\frac{d}{dx}f(x)$.
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+# \textcolor{darkblue}{SKF 4}. *Zweite Ableitung*
+\large
+\color{darkblue} Definieren Sie den Begriff der zweiten Ableitung $f''$ einer Funktion $f$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 5}. *Ableitung - Summenregel*
+\large
+\color{darkblue} Geben Sie die Summenregel für Ableitungen wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 6}. *Ableitung - Produktregel*
+\large
+\color{darkblue} Geben Sie die Produktregel für Ableitungen wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Ableitung - Quotientenregel*
+\large
+\color{darkblue} Geben Sie die Quotientenregel für Ableitungen wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 8}. *Ableitung - Kettenregel*
+\large
+\color{darkblue} Geben Sie die Kettenregel für Ableitungen wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+
+# \textcolor{darkblue}{SKF 9}. *Ableitung bestimmen*
+\large
+\color{darkblue} Bestimmen Sie die Ableitung der Funktion $f(x) := 3x^2 + \exp\left(-x^2\right) - x \ln(x)$.
+
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 10}. *Ableitung bestimmen*
+\large
+\color{darkblue} Bestimmen Sie die Ableitung der Funktion $f(x) :=\frac{1}{2}\sum_{i=1}^n (x_i - \mu)^2$ für $\mu \in \mathbb{R}$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 11}. *globale und lokale Minima/Maxima*
+\large
+\color{darkblue} Definieren Sie die Begriffe des globalen und lokalen Maximums/Minimums einer Funktion.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 12}. *notwendige Bedingung Extremum*
+\large
+\color{darkblue} Geben Sie die notwendige Bedingung für ein Extremum einer Funktion wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 13}. *hinreichende Bedingung lokales Extremum*
+\large
+\color{darkblue} Geben Sie die hinreichende Bedingung für ein lokales Extremum einer Funktion wieder.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 14}. *Analytische Optimierung - Verfahren*
+\large
+\color{darkblue} Geben Sie das Standardverfahren der analytischen Optimierung wieder.
+
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+# \textcolor{darkblue}{SKF 15}. *Extremwert bestimmen*
+\large
+\color{darkblue} Bestimmen Sie einen Extremwert von $f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ für $\mu \in \mathbb{R}$.
+
+\vspace{3mm}
+\color{black}
+\footnotesize
