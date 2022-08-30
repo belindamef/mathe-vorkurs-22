@@ -43,7 +43,6 @@ Inhalte basieren auf [Einführung in Mathematik und Informatik](https://www.ipsy
 
 
 #  {.plain}
-
 \vfill
 \center
 \huge

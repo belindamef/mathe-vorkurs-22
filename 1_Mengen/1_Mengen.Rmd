@@ -112,13 +112,10 @@ $n!$
 
 
 #  {.plain}
-
 \vfill
 \center
 \huge
 \textcolor{black}{(1) Mengen}
-
-
 
 
 
