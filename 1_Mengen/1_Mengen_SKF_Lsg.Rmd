@@ -67,7 +67,7 @@ Selbstkontrollfragen  + Lösungen
 4. Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$. 
 5. Definieren Sie den Begriff der Kardinalität einer Menge.
 6. Definieren Sie den Begriff der Potenzmenge einer Menge.
-7. Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+7. Es sei $M := \{a,b\}$. Bestimmen Sie $|M|$ und $\mathcal{P}(M)$.
 8. Es seien $M := \{a,b\}, N := \{a,c,d\}$. Bestimmen Sie $M \cup N, M \cap N, M\setminus N, M \Delta N$.
 9. Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
 10. Erläutern Sie den Unterschied zwischen $\mathbb{N}$ und $\mathbb{Z}$.
@@ -121,6 +121,18 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \vspace{3mm}
 \color{black}
 \footnotesize
+\justifying
+
+Nach Cantor (1895) ist eine \textit{Menge} definiert als
+``eine Zusammenfassung $M$ von bestimmten wohlunterschiedenen Objekten $m$
+unsere Anschauung oder unseres Denken (welche die Elemente der Menge genannt werden)
+zu einem Ganzen''. Wir schreiben
+\begin{align*}
+m \in M \mbox{ bzw. } m \notin M
+\end{align*}
+um auszudrücken, dass $m$ ein Element bzw. kein Element von $M$ ist.
+
+
 
 
 # \textcolor{darkblue}{SKF 3}. *Mengendefinitionen*
@@ -131,13 +143,30 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
-# \textcolor{darkblue}{SKF 4}. *Teilmengen und Mengengleichheit*
+\begin{itemize}
+\item[(1)] Auflisten der Elemente in geschweiften Klammern, z.B. $M := \{1,2,3\}$.
+\item[(2)] Angabe der Eigenschaften der Elemente, z.B. $M := \{x \in \mathbb{N}|x < 4\}$.
+\item[(3)] Gleichsetzen mit einer anderen eindeutig definierten Menge, z.B. $M := \mathbb{N}_3$.
+\end{itemize}
+
+
+
+# \textcolor{darkblue}{SKF 4}. *Teilmengen*
 \large
 \color{darkblue} Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$.
 
 \vspace{3mm}
 \color{black}
+
 \footnotesize
+\setstretch{1.4}
+
+* $m \in M$ bedeutet $m$ ist ein Element der Menge $M$
+* $m \notin N$ bedeutet $m$ ist *kein* Element der Menge $N$
+* $M \subseteq N$ bedeutet die Menge $M$ ist eine Teilmenge der Menge $N$. Dabei ist $M$ eine *Untermenge* von $N$ und $N$ eine *Obermenge* von $N$
+* $M \subset N$ bedeutet die Menge $M$ ist eine echte Teilmenge der Menge $N$. Das heißt für jedes Element $m \in M$ gilt auch $m \in N$, aber es gibt mindestens ein Element $n \in N$ für das gilt $n \notin M$. Anders ausgedrückt, es gibt mindestens ein Element $n$ der Menge $N$, das *nicht* auch ein Element der Menge $M$ ist. 
+
+
 
 
 
@@ -149,6 +178,16 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
+\begin{definition}[Kardinalität, leere Menge]
+\justifying
+Die Anzahl der Elemente einer Menge $M$ heißt \textit{Kardinalität} und wird 
+mit $|M|$ bezeichnet. Eine Menge mit Kardinalität 0 heißt \textit{leere Menge} 
+und wird mit $\emptyset$ bezeichnet.
+\end{definition}
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 6}. *Potenzmengen*
@@ -157,17 +196,37 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 
 \vspace{3mm}
 \color{black}
+
 \footnotesize
 
 
+\begin{definition}[Potenzmenge]
+\justifying
+Die Menge aller Teilmengen einer Menge $M$ heißt \textit{Potenzmenge von $M$} 
+und wird mit $\mathcal{P}(M)$ bezeichnet. Die leere Untermenge von $M$ und $M$ 
+selbst sind immer Elemente von $\mathcal{P}(M)$.
+\end{definition}
 
-# \textcolor{darkblue}{SKF 7}. *Potenzmengen*
+
+
+
+
+
+# \textcolor{darkblue}{SKF 7}. *Kardinalität und Potenzmengen*
 \large
-\color{darkblue} Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+\color{darkblue} Es sei $M := \{a,b\}$. Bestimmen Sie $|M|$ und $\mathcal{P}(M)$.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+$|M|=2$
+
+$\mathcal{P}(M)=\{\emptyset, \{a\}, \{b\}, \{a,b\} \}$
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 8}. *Mengenoperationen*
@@ -178,13 +237,37 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
+$M \cup N = \{a,b,c,d\}$
+
+$M \cap N = \{a\}$
+
+$M\setminus N = \{b\}$
+
+$M \Delta N = \{b,c,d\}$.
+
+
+
+
+
 # \textcolor{darkblue}{SKF 9}. *Natürliche Zahlen*
 \large
 \color{darkblue} Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
 
 \vspace{3mm}
 \color{black}
+
 \footnotesize
+
+* $\mathbb{N}$ bezeichnet die Menge der natürlichen Zahlen.
+
+* $\mathbb{N}_n$ bezeichnet die Menge der natürlichen Zahlen der Ordnung n  
+\textcolor{darkcyan}{Bsp. für $n=3$: $\mathbb{N}_3 = \{1,2,3\}$}.
+
+* $\mathbb{N}^0$ bezeichnet die Menge der natürlichen Zahlen inklusive der Null.
+
+
+
+
 
 # \textcolor{darkblue}{SKF 10}. *Natürliche und Ganze Zahlen*
 \large
@@ -194,6 +277,11 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
+Der Unterschied zwischen der Menge der natürlichen Zahlen $\mathbb{N}$ und der Menge der ganzen Zahlen $\mathbb{Z}$ liegt darin, dass $\mathbb{Z}$ auch negative Zahlen und die Null beinhaltet und $\mathbb{N}$ nicht. 
+
+
+
+
 
 # \textcolor{darkblue}{SKF 11}. *Reelle und Rationale Zahlen*
 \large
@@ -202,6 +290,9 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+Der Unterschied zwischen der Menge der reellen Zahlen $\mathbb{R}$ und der Menge der rationalen Zahlen $\mathbb{Q}$ liegt darin, dass $\mathbb{R}$ auch die Menge der irrationalen Zahlen (z.B. $e,\pi$ und $\sqrt{2}$) umfasst und $\mathbb{Q}$ nur rationale Zahlen.
+
 
 
 
@@ -213,6 +304,28 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
+\begin{definition}[Intervalle]
+\justifying
+Zusammenhängende Teilmengen der reellen Zahlen heißen \textit{Intervalle}. Für $a,b\in \mathbb{R}$ unterscheidet man
+\begin{itemize}
+\item das \textit{abgeschlossene Intervall}
+\begin{equation}
+[a,b] := \{x \in \mathbb{R}|a \le x \le b\},
+\end{equation}
+\item das \textit{offene Interval}
+\begin{equation}
+]a,b[ := \{x \in \mathbb{R}|a < x < b\},
+\end{equation}
+\item die \textit{halboffenen Intervalle}
+\begin{equation}
+]a,b] := \{x \in \mathbb{R}| a < x \le b\} \mbox{ und } [a,b[ := \{x \in \mathbb{R}| a \le x < b\}.
+\end{equation}
+\end{itemize}
+\end{definition}
+
+
+
+
 
 # \textcolor{darkblue}{SKF 13}. *Kartesisches Produkt*
 \large
@@ -222,10 +335,39 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \color{black}
 \footnotesize
 
+$M \times N$ representiert das \textit{Kartesische Produkt der
+Mengen $M$ und $N$}. Das kartesische Produkt bezeichnet die Menge aller geordneten Tupel $(m,n)$ mit $m \in M$ und $n \in N$. 
+
+
+
+
+
 # \textcolor{darkblue}{SKF 14}. *$n$-Tupel*
 \large
 \color{darkblue} Definieren Sie die Menge $\mathbb{R}^n$.
 
 \vspace{3mm}
 \color{black}
-\footnotesize
+\footnotesize 
+
+\begin{definition}[Die Menge $\mathbb{R}^n$]
+\justifying
+Das $n$-fache Kartesische Produkt der reellen Zahlen mit sich selbst wird bezeichnet mit
+\begin{equation}
+\mathbb{R}^n := \prod_{i=1}^n \mathbb{R} := \{x := (x_1,,...,x_n)|x_i \in \mathbb{R}\}
+\end{equation}
+und \textit{``$\mathbb{R}$ hoch $n$''} gesprochen. Wir schreiben die Elemente von $\mathbb{R}^n$ typischerweise als Spalten
+\begin{equation}
+x :=
+\begin{pmatrix}
+x_1
+\\
+\vdots
+\\
+x_n
+\end{pmatrix}
+\end{equation}
+und nennen sie \textit{$n$-dimensionale Vektoren}. Die Elemente von 
+$\mathbb{R}^1 = \mathbb{R}$ nennt man \textit{Skalare}.
+\end{definition}
+

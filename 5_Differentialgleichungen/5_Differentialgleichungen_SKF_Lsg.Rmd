@@ -87,6 +87,18 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Es sei $I \subseteq \mathbb{R}$ ein Intervall und
+$f : I \to \mathbb{R}, x \mapsto f(x)$ eine univariate reellwertige Funktion.
+
+$f'(a)$ bezeichnet den Grenzwert
+\begin{equation}
+f'(a) := \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
+\end{equation}
+
+\textcolor{darkcyan}{Wenn $f'(a)$ existiert, $f$ heißt in $a \in I$ \textit{differenzierbar}.}
+
+
+
 
 
 # \textcolor{darkblue}{SKF 2}. *Ableitung*
@@ -97,13 +109,38 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Es sei $I \subseteq \mathbb{R}$ ein Intervall und
+$f : I \to \mathbb{R}, x \mapsto f(x)$ eine univariate reellwertige Funktion.
 
-# \textcolor{darkblue}{SKF 3}. *Symbole*
+Wenn $f$ differenzierbar für alle $x \in I$ ist, bezeichnet $f'$
+die \textit{Ableitung von $f$} und ist definiert als
+\begin{equation}
+f' : I \to \mathbb{R}, x \mapsto f'(x)
+\end{equation}
+
+
+
+
+
+
+# \textcolor{darkblue}{SKF 3}. *Notationen*
 \large
 \color{darkblue} Erläutern Sie die Symbole $f'(x), \dot{f}(x)$, $\frac{df(x)}{dx}$, und $\frac{d}{dx}f(x)$.
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+$f'(x), \dot{f}(x)$, $\frac{df(x)}{dx}$, und $\frac{d}{dx}f(x)$ sind äquivalente Schreibweisen bzw. Notationen für Ableitungen univariater reelwertigen Funktion $f$.
+
+\begin{enumerate}
+\item[(1)] die \textit{Lagrange-Notation} $f'$ und $f'(x)$,
+\item[(2)] die \textit{Newton-Notation} $\dot{f}$ und $\dot{f}(x)$,
+\item[(3)] die \textit{Leibniz-Notation} $\frac{df}{dx}$ und $\frac{df(x)}{dx}$ und
+\item[(4)] die \textit{Euler-Notation} $Df$ und $Df(x)$.
+\end{enumerate}
+
+
+
 
 # \textcolor{darkblue}{SKF 4}. *Zweite Ableitung*
 \large
@@ -112,6 +149,21 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+Es sei $f$ eine univariate reellwertige Funktion und
+\begin{equation}
+f^{(1)} := f'
+\end{equation}
+sei die Ableitung von $f$. Die $2$-te Ableitung von $f$ ist definiert durch
+\begin{equation}
+f^{(2)} := \left(f^{(1)}\right)' \mbox{ für } k \ge 0,
+\end{equation}
+unter der Annahme, dass $f^{(1)}$ differenzierbar ist. 
+Die \textit{zweite Ableitung von $f$} ist definiert durch die Ableitung von $f'$, also
+\begin{equation}
+f'' := (f')'.
+\end{equation}
+
 
 
 
@@ -123,6 +175,9 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+$\mbox{Für } f(x) := \sum_{i=1}^n g_i(x) \mbox{ gilt } f'(x) = \sum_{i=1}^n g_i'(x)$
+
+
 
 
 # \textcolor{darkblue}{SKF 6}. *Ableitung - Produktregel*
@@ -132,6 +187,9 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+$\mbox{Für } f(x) := g_1(x)g_2(x) \mbox{ gilt } f'(x) = g_1'(x)g_2(x) + g_1(x)g_2'(x).$
+
 
 
 
@@ -143,6 +201,11 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+$\mbox{Für } f(x) := \frac{g_1(x)}{g_2(x)} \mbox{ gilt } f'(x) = \frac{g_1'(x)g_2(x) - g_1(x)g_2'(x)}{g_2^2(x)}.$
+
+
+
+
 
 # \textcolor{darkblue}{SKF 8}. *Ableitung - Kettenregel*
 \large
@@ -151,6 +214,12 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+$\mbox{Für } f(x) := g_1(g_2(x)) \mbox{ gilt } f'(x) = g_1'(g_2(x))g'_2(x).$
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 9}. *Ableitung bestimmen*
@@ -161,6 +230,17 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{align*}
+f'(x) &= 2\cdot3x^1 + \exp\left(-x^2\right)\cdot (-2x^1) - (1\cdot\ln(x)+ x \cdot \frac{1}{x} ) \\
+& = 6x - 2x \exp\left(-x^2\right) - ln(x) - \frac{x}{x} \\
+& = 6x - 2x \exp\left(-x^2\right) - ln(x)
+\end{align*}
+
+
+
+
+
 # \textcolor{darkblue}{SKF 10}. *Ableitung bestimmen*
 \large
 \color{darkblue} Bestimmen Sie die Ableitung der Funktion $f(x) :=\frac{1}{2}\sum_{i=1}^n (x_i - \mu)^2$ für $\mu \in \mathbb{R}$.
@@ -168,6 +248,16 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{align*}
+f'(x) &=\frac{1}{2}\sum_{i=1}^n 2(x_i - \mu)\cdot 1 \\
+& =\frac{1}{2}\sum_{i=1}^n 2(x_i - \mu)
+\end{align*}
+
+
+
+
+
 # \textcolor{darkblue}{SKF 11}. *globale und lokale Minima/Maxima*
 \large
 \color{darkblue} Definieren Sie die Begriffe des globalen und lokalen Maximums/Minimums einer Funktion.
@@ -175,6 +265,40 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Extremstellen und Extremwerte]
+\justifying
+Es sei $U \subseteq \mathbb{R}$ und $f : U \to \mathbb{R}$ eine univariate 
+reellwertige Funktion. Dann hat $f$ an der Stelle $x_0 \in U$
+\begin{itemize}
+\justifying
+\item ein \textit{lokales Minimum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\begin{equation}
+f(x_0) \le f(x) \mbox{ für alle } x\in I\cap U,
+\end{equation}
+\item ein \textit{globales Minimum}, wenn gilt, dass
+\begin{equation}
+f(x_0) \le f(x) \mbox{ für alle } x\in U,
+\end{equation}
+\item ein \textit{lokales Maximum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\begin{equation}
+f(x_0) \ge f(x) \mbox{ für alle }  x\in I\cap U,
+\end{equation}
+\item \textit{lokales Maximum}, wenn gilt, dass
+\begin{equation}
+f(x_0) \ge f(x) \mbox{ für alle } x\in U.
+\end{equation}
+\end{itemize}
+Der  Wert $x_0 \in U$ der Definitionsmenge von $f$ heißt entsprechend 
+\textit{lokale} oder \textit{globale Minimalstelle} oder \textit{Maximalstelle}, 
+der Funktionswert $f(x_0) \in \mathbb{R}$ heißt entsprechend \textit{lokales} 
+oder \textit{globales Minimum} oder \textit{Maximum}. Generell heißt der Wert
+$x_0 \in U$ \textit{Extremstelle} und der Funktionswert $f(x_0) \in \mathbb{R}$ \textit{Extremwert}.
+\end{definition}
+
+
+
+
 # \textcolor{darkblue}{SKF 12}. *notwendige Bedingung Extremum*
 \large
 \color{darkblue} Geben Sie die notwendige Bedingung für ein Extremum einer Funktion wieder.
@@ -182,6 +306,29 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Notwendige Bedingung für Extrema]
+$f$ sei eine univariate reellwertige Funktion. Dann gilt
+\begin{equation}
+x_0 \mbox{ ist Extremstelle von } f \Rightarrow f'(x_0) = 0.
+\end{equation}
+\end{definition}
+
+\color{red}
+TODO: Grafik zu Veranschaulichung der Bemerkung, siehe VO-Folien 16
+
+\footnotesize
+Bemerkungen
+
+* Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die erste Ableitung von $f$ in $x_0$ null.
+* Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$. Dann gilt
+    * \small Links von $x_0$ steigt $f$ an, rechts von $x_0$ fällt $f$ ab.
+    * In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+
+
+
+
+
 # \textcolor{darkblue}{SKF 13}. *hinreichende Bedingung lokales Extremum*
 \large
 \color{darkblue} Geben Sie die hinreichende Bedingung für ein lokales Extremum einer Funktion wieder.
@@ -189,6 +336,27 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Hinreichende Bedingungen für lokale Extrema]
+$f$ sei eine zweimal differenzierbare univariate reellwertige Funktion.
+\begin{itemize}
+\item Wenn für $x_0 \in U \subseteq \mathbb{R}$
+\begin{equation}
+f'(x_0) = 0 \mbox{ und } f''(x_0) > 0
+\end{equation}
+gilt, dann hat $f$ an der Stelle $x_0$ ein Minimum.
+\item Wenn für $x_0 \in U \subseteq \mathbb{R}$
+\begin{equation}
+f'(x_0) = 0 \mbox{ und } f''(x_0) < 0
+\end{equation}
+gilt, dann hat $f$ an der Stelle $x_0$ ein Maximum.
+\end{itemize}
+\end{definition}
+
+
+
+
+
 # \textcolor{darkblue}{SKF 14}. *Analytische Optimierung - Verfahren*
 \large
 \color{darkblue} Geben Sie das Standardverfahren der analytischen Optimierung wieder.
@@ -197,6 +365,32 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Standardverfahren der analytischen Optimierung]
+\justifying
+$f$ sei eine univariate reellwertige Funktion. Lokale Extremstellen von $f$ können
+mit folgendem \textit{Standardverfahren der analytischen Optimierung} identifiziert
+werden:
+\begin{itemize}
+\itemsep3mm
+\item[(1)] Berechnen der ersten und zweiten Ableitung von $f$.
+\item[(2)] Bestimmen von Nullstellen $x^*$ von $f'$ durch Auflösen von $f'(x^*) = 0$ nach $x^*$.
+
+$\Rightarrow$ Nullstellen von $f'$ sind Kandidaten für Extremstellen von $f$.
+
+\item [(3)]  Evaluation von $f''(x^*)$.
+
+$\Rightarrow$ Wenn $f''(x^*) > 0$, dann ist $x^*$ lokale Minimumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) < 0$, dann ist $x^*$ lokale Maximumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) = 0$, dann ist $x^*$ keine Extremstelle von $f$.
+\end{itemize}
+\end{definition}
+
+
+
+
 # \textcolor{darkblue}{SKF 15}. *Extremwert bestimmen*
 \large
 \color{darkblue} Bestimmen Sie einen Extremwert von $f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ für $\mu \in \mathbb{R}$.
@@ -204,3 +398,52 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+Wir betrachten die Funktion
+\begin{equation}
+f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right) \mbox{ mit } \mu \in \mathbb{R}
+\end{equation}
+
+
+Die erste Ableitung von $f$ ergibt sich mit der Kettenregel zu
+\begin{align}
+f'(x) &= \frac{d}{dx}\left(\exp\left(-\frac{1}{2}(x - \mu)^2\right)\right) \\
+&= \exp\left(-\frac{1}{2}(x - \mu)^2\right)\cdot \left(-\frac{2}{2}(x-\mu)\cdot 1\right) \\
+&= - (x-\mu) \exp\left(-\frac{1}{2}(x - \mu)^2\right)
+\end{align}
+
+\color{red}
+Die zweite Ableitung von $f$ ergibt sich mit der Produktregel zu
+\begin{align}
+f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right) 
++ \left(- (x-\mu) \right) \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)\cdot \left(-\frac{2}{2}(x-\mu)\cdot 1\right) \\
+&= -\exp\left(-\frac{1}{2}(x - \mu)^2\right) 
++ (x-\mu) \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)\cdot (x-\mu)\\
+&= -\exp\left(-\frac{1}{2}(x - \mu)^2\right) 
++ 2(x-\mu) \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
+\end{align}
+
+
+
+# \textcolor{darkblue}{SKF 15}. *Extremwert bestimmen*
+\large
+\color{darkblue} (forgeführt).
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+\color{red}
+Auflösen von $f'(x^*) = 0$ nach $x^*$ ergibt
+\begin{equation}
+f'(x^*) = 0
+\Leftrightarrow
+2x^* - 2 = 0
+\Leftrightarrow
+2x^* = 2
+\Leftrightarrow
+x^* = 1.
+\end{equation}
+
+$x^* = 1$ ist folglich eine Minimalstelle von $f$ mit zugehörigen Minimalwert $f(1) = 0$.
+
+

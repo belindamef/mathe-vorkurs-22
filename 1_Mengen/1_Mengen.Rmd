@@ -430,7 +430,7 @@ Beispiele
 4. Für Mengen $M,N$ erläutern Sie die Ausdrücke $m \in M, m \notin N, M \subseteq N, M \subset N$. 
 5. Definieren Sie den Begriff der Kardinalität einer Menge.
 6. Definieren Sie den Begriff der Potenzmenge einer Menge.
-7. Es sei $M := \{a,b\}$. Bestimmen Sie $\mathcal{P}(M)$.
+7. Es sei $M := \{a,b\}$. Bestimmen Sie $|M|$ und $\mathcal{P}(M)$.
 8. Es seien $M := \{a,b\}, N := \{a,c,d\}$. Bestimmen Sie $M \cup N, M \cap N, M\setminus N, M \Delta N$.
 9. Erläutern Sie die Symbole $\mathbb{N}$, $\mathbb{N}_n$, und $\mathbb{N}^0$.
 10. Erläutern Sie den Unterschied zwischen $\mathbb{N}$ und $\mathbb{Z}$.

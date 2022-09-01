@@ -177,9 +177,7 @@ Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbil
 # Eigenschaften
 \vfill
 \center
-```{r, echo = FALSE, out.width = "100%"}
-knitr::include_graphics(file.path(abb_dir,"glmi_4_inj_sur_bij.pdf"))
-```
+
 \vfill
 
 
@@ -330,6 +328,7 @@ f_m(x_1,...,x_n)
 \end{equation}
 \end{itemize}
 \end{definition}
+
 \footnotesize
 Bemerkung
 \begin{itemize}

@@ -54,9 +54,6 @@ Selbstkontrollfragen  + Lösungen
 \vfill
 
 
-
-
-
 # Selbstkontrollfragen
 \small
 \setstretch{2.5}
@@ -65,22 +62,31 @@ Selbstkontrollfragen  + Lösungen
 3. Schreiben Sie die Summe $0 + 2 + 4 + 6 + 8 + 10$ mithilfe des Summenzeichens.
 4. Definieren Sie das Produktzeichen.
 5. Für $a \in \mathbb{R}$, definieren Sie die $n$te (negative) Potenz von $a$.
-6. Berechnen Sie $2^2\cdot 2^3$ und $2^5$. Geben Sie die zugehörige Potenzregel an.
+6. Berechnen Sie $2^2\cdot 2^3$ und $(2^5)^{-2}$. Geben Sie die zugehörige Potenzregel an.
 7. Berechnen Sie $6^2$ und $2^2\cdot 3^2$. Geben Sie die zugehörige Potenzregel an.
 8. Warum kann die $n$-te Wurzel von $a$ als $a^{\frac{1}{n}}$ geschrieben werden?
 9. Berechnen Sie $(\sqrt{2})^{\frac{2}{3}}, 9^{\frac{1}{2}}$, und $4^{-\frac{1}{2}}$.
 
 
 
-
-
 # \textcolor{darkblue}{SKF 1}. *Summen* 
 \large
-\color{darkblue} Berechnen Sie die Summen $\sum_{i=1}^3 2$, $\sum_{i=1}^3 i^2$, und $\sum_{i=1}^3 \frac{2}{3}i$.
+\color{darkblue} Berechnen Sie die Summen $\sum_{i=1}^3 2$, $\sum_{i=1}^3 i^2$, 
+und $\sum_{i=1}^3 \frac{2}{3}i$.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+\setstretch{2.5}
+
+\begin{itemize}
+\item $\sum_{i=1}^3 2 = 2+2+2 = 6$  
+
+\tiny \setstretch{2} \textcolor{darkcyan}{alternativ kann man für eine Summe über konstante Summanden $c$ auch folgende Formel verwenden: $\sum_{i}^n c = (n-i+1) \cdot c$. In diesem Beispiel ergibt das $\sum_{i=1}^3 2= (3-1+1) \cdot 2=3 \cdot 2 = 6$}
+\item \footnotesize \setstretch{2.5} $\sum_{i=1}^3 i^2 = 1^2 + 2^2 + 3^2 = 11$
+\item $\sum_{i=1}^3 \frac{2}{3}i = \frac{2}{3}\sum_{i=1}^3 i = \frac{2}{3}(1+2+3) = \frac{2}{3} \cdot 6 = 4$
+\end{itemize}
+
 
 
 
@@ -91,6 +97,18 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+\setstretch{1.2}
+
+$\sum_{i=1}^6 2i - 1$
+oder
+$\sum_{i\in I}i$ mit $I=\{1,3,5,7,9,11\}$
+
+\vspace{6mm}
+\textcolor{darkcyan}{Anmerkung: Es gibt viele Möglichkeiten diese Summe zu schreiben.}
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 3}. *Summen*
@@ -101,13 +119,40 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+$\sum_{i=1}^6 2i - 2$
+oder
+$\sum_{i\in I}i$ mit $I=\{0,2,4,6,8,10\}$
+
+\vspace{6mm}
+\textcolor{darkcyan}{Anmerkung: Es gibt wie bei SKF 2 viele Möglichkeiten diese Summe zu schreiben.}
+
+
+
+
+
 # \textcolor{darkblue}{SKF 4}. *Produkte*
 \large
-\color{darkblue} Definieren Sie das Produktzeichen. \subset N$.
+\color{darkblue} Definieren Sie das Produktzeichen.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Produktzeichen]
+Produkte werden oft mithilfe des \textit{Produktzeichens}
+\begin{equation}
+\prod_{i=1}^{n} x_i = x_1 \cdot x_{2} \cdot \cdots \cdot x_{n}
+\end{equation}
+dargestellt. Dabei stehen
+\begin{itemize}
+\item $\prod$ für das griechische \textit{P}i, mnemonisch für \textit{P}rodukt,
+\item das Subskript $i = 1$ für den Laufindex der Produkterme und den Startindex,
+\item das Superskript $n$ für den Endindex,
+\item $x_1, x_2, ..., x_n$ für die Produktterme.
+\end{itemize}
+\end{definition}
+
+
 
 
 
@@ -119,15 +164,41 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Für $a \in \mathbb{R}$ und $n \in \mathbb{N}^0$ ist die \textit{$n$-te Potenz von $a$} definiert durch
+\begin{align*}
+a^0 := 1 \mbox{ und } a^{n+1} := a^n \cdot a.
+\end{align*}
+
+Für $a\in \mathbb{R} \setminus 0$ und  $n \in \mathbb{N}^0$ die \textit{negative $n$-te Potenz von $a$} definiert durch
+\begin{align*}
+a^{-n} := (a^n)^{-1} := \frac{1}{a^n}.
+\end{align*}
+
+\textcolor{darkcyan}
+Anmerkung: $a$ wird \textit{Basis} und $n$ wird \textit{Exponent} genannt.
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 6}. *Potenzen*
 \large
-\color{darkblue} Berechnen Sie $2^2\cdot 2^3$ und $2^5$. Geben Sie die zugehörige Potenzregel an.
+\color{darkblue} Berechnen Sie $2^2\cdot 2^3$ und $(2^5)^{-2}$. Geben Sie die zugehörige Potenzregel an.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\setstretch{1.5}
+
+\begin{itemize}
+\item $2^2\cdot 2^3 = 2^{2+3} = 2^5 = 32$\\
+\textcolor{darkcyan}{$a^n a^m = a^{n+m}$}
+\item $(2^5)^{-2} = 2^{5\cdot(-2)} = 2^{-10} = (2^{10})^{-1} = \frac{1}{2^{10}}$\\
+\textcolor{darkcyan}{$(a^n)^m = a^{nm} $ und $a^{-n} := (a^n)^{-1} := \frac{1}{a^n}$}
+\end{itemize}
+
 
 
 
@@ -139,14 +210,35 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{itemize}
+\item $6^2 = 36$
+\item $2^2\cdot 3^2 = (2\cdot3)^2 = 36$ \\
+\textcolor{darkcyan}{$(ab)^n 	= a^nb^n$}
+\end{itemize}
+
+
+
 
 # \textcolor{darkblue}{SKF 8}. *Potenzen*
 \large
-\color{darkblue} Warum kann die $n$-te Wurzel von $a$ als $a^{\frac{1}{n}}$ geschrieben werden? M\setminus N, M \Delta N$.
+\color{darkblue} Warum kann die $n$-te Wurzel von $a$ als $a^{\frac{1}{n}}$ geschrieben werden?
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+Es gilt
+\begin{align*}
+\left(a^{\frac{1}{n}}\right)^n
+= a^{\frac{1}{n}}\cdot a^{\frac{1}{n}}\cdot \cdots \cdot a^{\frac{1}{n}}
+= a^{\sum_{i=1}^n \frac{1}{n}}
+= a^1
+= a.
+\end{align*}
+Also gilt mit der Definition der $n$-ten Wurzel, dass $r = a^\frac{1}{n}$.
+
+
+
 
 # \textcolor{darkblue}{SKF 9}. *Potenzen*
 \large
@@ -155,4 +247,12 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+\setstretch{1.5}
+
+\begin{itemize}
+\item $(\sqrt{2})^{\frac{2}{3}} = (2^{\frac{1}{2}})^\frac{2}{3} = 2^{\frac{2}{6}} = 2^{\frac{1}{3}} = \sqrt[3]{2}$ 
+\item $9^{\frac{1}{2}} = \sqrt{9} = 3$
+\item $4^{-\frac{1}{2}} = (4^{\frac{1}{2}})^{-1} =\frac{1}{4^{\frac{1}{2}}} =\frac{1}{\sqrt{4} = \frac{1}{2}} $
+\end{itemize}
+
 

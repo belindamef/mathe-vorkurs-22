@@ -214,7 +214,7 @@ Für einige elementare Funktionen der Datenanalyse ergeben sich folgende Ableitu
 \centering
 \begin{tabular}{lll}
 Name 							& Definition	    			& Ableitung								\\\hline
-Polynomfunktionen 				& $f(x) := \sum_{i=0}^n a_ix^i$ & $f(x)  = \sum_{i=1}^n ia_ix^{i-1}$ 	\\
+Polynomfunktionen 				& $f(x) := \sum_{i=0}^n a_ix^i$ & $f'(x)  = \sum_{i=1}^n ia_ix^{i-1}$ 	\\
 $\quad$ Konstante Funktion 		& $f(x) := a$					& $f'(x) = 0$ 							\\
 $\quad$ Identitätsfunktion  	& $f(x) := x$ 					& $f'(x) = 1$ 							\\
 $\quad$ Lineare Funktion 		& $f(x) := ax + b$				& $f'(x) = a$ 							\\

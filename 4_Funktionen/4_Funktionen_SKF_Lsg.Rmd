@@ -82,13 +82,18 @@ Selbstkontrollfragen  + Lösungen
 
 
 
-# \textcolor{darkblue}{SKF 1}. *Summen* 
+# \textcolor{darkblue}{SKF 1}. *Funktionsschreibweise* 
 \large
 \color{darkblue} Erläutern Sie die Komponenten der Funktionsschreibweise $f: D \to Z, x \mapsto f(x)$.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+* $f : D \to Z$ wir gelesen wird als ``die Funktion $f$ bildet alle Elemente der
+Menge $D$ eindeutig auf Elemente in $Z$ ab''
+* $x \mapsto f(x)$ wird gelesen wird als ``$x$, welches ein Element von $D$ ist, wird durch die Funktion $f$ auf  $f(x)$ abgebildet, wobei $f(x)$ ein Element von $Z$ ist''
+
 
 
 
@@ -100,6 +105,25 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Es sei $f : D \to Z, x \mapsto f(x)$ eine Funktion und es seien $D' \subseteq D$ und $Z' \subseteq Z$.
+
+\begin{itemize}
+\item Die \textit{Bildmenge von $D'$} ist definiert als
+\begin{align*}
+f(D') := \{z \in Z| \mbox{Es gibt ein } x \in D' \mbox{ mit } z = f(x)\}
+\end{align*}. \\ 
+\textit{\textcolor{darkcyan}{Die Bildmenge umfasst all die Elemente der Zielmenge, die ihren Urpsrung in $D'$ haben.}}
+\item Der \textit{Wertebereich} von $f$ ist gegeben durch $f(D) \subseteq Z$.
+
+\item \textit{Urbildmenge von $Z'$} ist definiert als
+\begin{align*}
+f^{-1}(Z') := \{x \in D | f(x) \in Z'\}
+\end{align*}\\
+\textit{\textcolor{darkcyan}{Die Urbildmenge umfasst die Werte der Definitionsmenge, die auch einen Wert in $Z'$ abbilden.}}
+\end{itemize}
+
+
+
 
 # \textcolor{darkblue}{SKF 3}. *Funktionseigentschaften*
 \large
@@ -109,6 +133,26 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{definition}[Injektivität, Surjektivität, Bijektivität]
+\justifying
+Es sei $f : D \to Z, x \mapsto f(x)$ eine Funktion.
+\begin{itemize}
+\justifying
+\item Die Funktion $f$ heißt \textit{injektiv}, wenn es zu jedem Bild $z \in f(D)$ 
+genau ein Urbild $x \in D$ gibt. Äquivalent gilt, dass $f$ injektiv ist, wenn aus
+$x_1,x_2 \in D$ mit $x_1 \neq x_2$ folgt, dass $f(x_1) \neq f(x_2)$ ist.
+\item Die Funktion $f$ heißt \textit{surjektiv}, wenn $f(D) = Z$ gilt, wenn also 
+jedes Element der Zielmenge $Z$ ein Urbild in der Definitionsmenge $D$ hat.
+\item Die Funktion $f$ heißt \textit{bijektiv}, wenn $f$ injektiv und surjektiv ist.
+\end{itemize}
+\end{definition}
+
+```{r, echo = FALSE, out.width = "70%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_inj_sur_bij.pdf"))
+```
+
+
+
 # \textcolor{darkblue}{SKF 4}. *Funktionseigenschaften*
 \large
 \color{darkblue} Erläutern Sie, warum $f:\mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ weder injektiv noch surjektiv ist.
@@ -117,25 +161,165 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+$f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, 
+weil z.B. für $x_1 = 2 \neq -2 = x_2$ gilt, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
+Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                  # domain resolution
+a         = 2                                                                    # constant
+b         = 1                                                                    # constant
+xmax      = 5
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
+fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
+                matrix(x),                                                       # f(x) := x
+                matrix(a * x + b),                                               # f(x) := ax + b
+                matrix(x^2))                                                     # f(x) := x^2
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black", "gray50", "gray75", "orange"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(-.5,
+0,
+c("f(x) = 2",
+"f(x) = x",
+"f(x) = 2x + 1",
+TeX("f(x) = x^2")),
+cex       = 1,
+col       = c("black", "gray50", "gray75", "orange"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_4.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_4.pdf"))
+```
 
 
 # \textcolor{darkblue}{SKF 5}. *Funktionseigentschaften*
 \large
 \color{darkblue} Erläutern Sie, warum $f: [0,\infty[ \to [0,\infty[ , x \mapsto f(x) := x^2$ bijektiv ist.
 
+$f : [0,\infty[ \to [0,\infty[, x \mapsto f(x) := x^2$ ist injektiv und surjektiv und somit bijektiv.
+
 \vspace{3mm}
 \color{black}
 \footnotesize
 
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                  # domain resolution
+a         = 2                                                                    # constant
+b         = 1                                                                    # constant
+xmax      = 5
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
+fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
+                matrix(x),                                                       # f(x) := x
+                matrix(a * x + b),                                               # f(x) := ax + b
+                matrix(x^2))                                                     # f(x) := x^2
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black", "gray50", "gray75", "orange"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(-.5,
+0,
+c("f(x) = 2",
+"f(x) = x",
+"f(x) = 2x + 1",
+TeX("f(x) = x^2")),
+cex       = 1,
+col       = c("black", "gray50", "gray75", "orange"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_5.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_5.pdf"))
+```
 
 
-# \textcolor{darkblue}{SKF 6}. *Funktionsdefinition*
+
+
+# \textcolor{darkblue}{SKF 6}. *Verkettete Funktion*
 \large
 \color{darkblue} Erläutern Sie die Komponenten der Schreibweise $g \circ f: D \to S, x \mapsto (g\circ f)(x)$.
 
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{itemize}
+\item $g \circ f$ bezeichnet die Funktion.
+\item $g \circ f: D \to S$ wir gelesen wird als ``die Funktion $g \circ f$ bildet alle Elemente der
+Menge $D$ eindeutig auf Elemente in $S$ ab''
+\item $x \mapsto (g\circ f)(x)$ wird gelesen wird als ``$x$, welches ein Element von $D$ ist, wird durch die Funktion $g \circ f$ auf $(g \circ f)(x)$ abgebildet, wobei $(g \circ f)(x)$ ein Element von $S$ ist''
+\item $(g \circ f)(x)$ bezeichnet ein Element in $S$.
+\end{itemize}
+
+
 
 
 
@@ -147,6 +331,16 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{definition}[Inverse Funktion]
+Es sei $f : D \to R, x \mapsto f(x)$ eine bijektive Funktion. Dann heißt die Funktion $f^{-1}$ mit
+\begin{equation}
+f^{-1} \circ f : D \to D, x \mapsto (f^{-1} \circ f)(x) := f^{-1}(f(x)) = x
+\end{equation}
+\textit{inverse Funktion} (oder \textit{Umkehrfunktion}) von $f$.
+\end{definition}
+
+
+
 
 # \textcolor{darkblue}{SKF 8}. *Inverse*
 \large
@@ -156,6 +350,15 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Die inverse Funktion von $f(x) := x^2 =: y$ ist $f^{-1}(y) = \sqrt{y}$
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_5.pdf"))
+```
+
+
+
+
 
 # \textcolor{darkblue}{SKF 9}. *Lineare Abbildung*
 \large
@@ -164,6 +367,20 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{definition}[Lineare Abbildung]
+\justifying
+Eine Abbildung $f : D \to R, x \mapsto f(x)$ heißt \textit{lineare Abbildung}, 
+wenn für $x,y \in D$ und einen Skalar $c$ gelten, dass
+\begin{equation}
+f(x + y) = f(x) + f(y) \mbox{ und } f(cx) = cf(x).
+\end{equation}
+Eine Abbildung, für die obige Eigenschaften nicht gelten, heißt \textit{nicht-lineare Abbildung}.
+\end{definition}
+
+
+
+
 # \textcolor{darkblue}{SKF 10}. *Funktionenarten*
 \large
 \color{darkblue} Definieren Sie die Begriffe der univariat-und multivariat-reellwertigen Funktion.
@@ -171,6 +388,19 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{itemize}
+\item \textit{univariate reellwertige Funktionen} sind definiert als
+\begin{align*}
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x),
+\end{align*}
+\item \textit{multivariate reellwertige Funktionen} sind definiert als
+\begin{align*}
+f : \mathbb{R}^n \to \mathbb{R}, x \mapsto f(x) = f(x_1,...,x_n),
+\end{align*}
+\end{itemize}
+
+
 # \textcolor{darkblue}{SKF 11}. *Funktionenarten*
 \large
 \color{darkblue} Definieren Sie Begriff der multivariaten vektorwertigen Funktion.
@@ -178,6 +408,25 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{itemize}
+\item \textit{multivariate vektorwertige Funktionen} sind definiert als
+\begin{align*}
+f : \mathbb{R}^n \to \mathbb{R}^m, x \mapsto
+f(x) =
+\begin{pmatrix}
+f_1(x_1,...,x_n) 	\\
+\vdots				\\
+f_m(x_1,...,x_n)
+\end{pmatrix}.
+\end{align*}
+\end{itemize}
+
+
+
+
+
+
 # \textcolor{darkblue}{SKF 12}. *Konstante und Identitätsfunktion*
 \large
 \color{darkblue} Skizzieren Sie die konstante Funktion für $a := 1$ und die Identitätsfunktion.
@@ -185,6 +434,69 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                  # domain resolution
+a         = 2                                                                    # constant
+b         = 1                                                                    # constant
+xmax      = 5
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
+fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
+                matrix(x))                                                       # f(x) := x
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen", "orange"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(-.5,
+0,
+c("f(x) = 2",
+"f(x) = x"),
+cex       = 1,
+col       = c("darkgreen", "orange"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_12.pdf"),                           # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_12.pdf"))
+```
+
+
+
+
 # \textcolor{darkblue}{SKF 13}. *Lineare Funktion*
 \large
 \color{darkblue} Für $a = 2$ und $b = 3$, skizzieren Sie die linear Funktion $f(x) = ax + b$.
@@ -192,9 +504,130 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 3                                                                   # constant
+xmax      = 6
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(a * x + b))                                            # f(x) := ax + b
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkblue"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(-.5,
+0,
+c("f(x) = 2x + 3"),
+cex       = 1.2,
+col       = c("darkblue"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_13.pdf"),                           # filename
+    width  = 16,                                                                # PDF width
+    height = 8                                                                  # PDF height
+)
+```
+
+\center
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_13.pdf"))
+```
+
+
+
+
 # \textcolor{darkblue}{SKF 14}. *Funktionsbeispiele*
 \large
 \color{darkblue} Skizzieren Sie die Funktionen $f(x) := (x-1)^2$ und $g(x) := (x + 3)^2$.
+
+
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+xmax      = 14
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix((x-1)^2) ,                                             # f(x) := (x-1)^2
+                  matrix((x+3)^2))                                              # g(x) := (x+3)^2
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 0.8
+)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen", "orange"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-5,20),
+ylab       = " ",
+xlab       = "x",
+)
+grid()
+legend(2,
+-1.5,
+c("f(x) = (x-1)^2",
+  "g(x) = (x+3)^2"),
+cex       = 1,
+col       = c("darkgreen", "orange"),
+lty       = 1,
+lwd       = 2,
+bty       = "n")
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_14.pdf"),                           # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_14.pdf"))
+```
+
+
 
 
 \vspace{3mm}
@@ -207,6 +640,67 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+
+```{r, echo = F, eval = F}
+graphics.off()
+
+# Definitionen
+res     = 1e3
+xmax    = 5
+x       = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res),                # exp domain
+                matrix(seq(1e-5   ,xmax, len = res), nrow = res))                # ln domain
+fx      = cbind(matrix(exp(x[,1])),                                              # exp(x)
+                matrix(log(x[,2])))                                              # ln(x)
+
+# Visualisierung
+dev.new()
+par(
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+cex        = 1.2)
+matplot(
+x,
+fx,
+type      = "l",
+lty       = 1,
+lwd       = 2,
+col       = c("darkcyan", "orange"),
+xlim      = c(-xmax,xmax),
+ylim      = c(-xmax,xmax),
+ylab      = " ",
+xlab      = "x")
+grid()
+legend(
+-5,
+5,
+c("exp(x)", "ln(x)"),
+cex       = 1,
+lty       = 1,
+col       = c("darkcyan", "orange"),
+lwd       = 2,
+y.intersp = 1.4,
+bty       = "n")
+dev.copy2pdf(                                                                    # export to PDF
+    file   = file.path(abb_dir, "glmi_4_explog_funktionen_skf_15.pdf"),                   # filename
+    width  = 12,                                                                  # PDF width
+    height = 6                                                                   # PDF height
+)
+
+```
+
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_explog_funktionen_skf_15.pdf"))
+```
+
+
+
+
+
 # \textcolor{darkblue}{SKF 16}. *Exponentialfunktion*
 \large
 \color{darkblue} Geben Sie Exponentialeigenschaften der Exponentialfunktion an.
@@ -214,6 +708,14 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+\setstretch{2}
+
+\begin{itemize}
+\item $\exp(x + y) = \exp(x)\exp(y)$
+\item $\exp(x - y) = \frac{\exp(x)}{\exp(y)}$
+\item $\exp(x)\exp(-x) = 1$
+\end{itemize}
+
 
 # \textcolor{darkblue}{SKF 17}. *Logarithmus*
 \large
@@ -222,3 +724,29 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{table}
+\begin{tabular}{ll}
+Wertebereich
+& $x \in \, ]0,1[\,\,\, \Rightarrow \ln(x) \in\,]-\infty,0[$
+\\
+& $x \in \, ]1,\infty[ \Rightarrow \ln(x) \in\, ]0,\infty[$
+\\
+Monotonie
+& $x < y \Rightarrow \ln(x) < \ln(y)$
+\\
+Spezielle Werte
+& $\ln(1) = 0$ und $\ln(e) = 1$.
+\\
+Logarithmeneigenschaften
+& $\ln(xy) = \ln(x) + \ln(y)$
+\\
+& $ \ln(x^c) = c\ln(x)$
+\\
+& $\ln\left(\frac{1}{x}\right) = - \ln (x)$
+\end{tabular}
+\end{table}
+
+
+
+

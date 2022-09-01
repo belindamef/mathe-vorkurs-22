@@ -77,6 +77,8 @@ Selbstkontrollfragen
 \vfill
 
 
+
+
 # Summen - Summenzeichen
 \footnotesize
 \begin{definition}[Summenzeichen]
@@ -296,7 +298,7 @@ Potenzen
 3. Schreiben Sie die Summe $0 + 2 + 4 + 6 + 8 + 10$ mithilfe des Summenzeichens.
 4. Definieren Sie das Produktzeichen.
 5. Für $a \in \mathbb{R}$, definieren Sie die $n$te (negative) Potenz von $a$.
-6. Berechnen Sie $2^2\cdot 2^3$ und $2^5$. Geben Sie die zugehörige Potenzregel an.
+6. Berechnen Sie $2^2\cdot 2^3$ und $(2^5)^{-2}$. Geben Sie die zugehörige Potenzregel an.
 7. Berechnen Sie $6^2$ und $2^2\cdot 3^2$. Geben Sie die zugehörige Potenzregel an.
 8. Warum kann die $n$-te Wurzel von $a$ als $a^{\frac{1}{n}}$ geschrieben werden?
 9. Berechnen Sie $(\sqrt{2})^{\frac{2}{3}}, 9^{\frac{1}{2}}$, und $4^{-\frac{1}{2}}$.
