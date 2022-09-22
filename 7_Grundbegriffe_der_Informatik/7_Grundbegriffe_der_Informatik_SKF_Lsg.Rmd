@@ -82,6 +82,14 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+Struktur computergestützter Datenanalyse
+
+1. Einlesen und Bereinigen eines digitalen Datensatzes
+2. Berechnung und Visualisierung deskriptiver Statistiken
+3. Probabilistische Modellierung und Inferenz
+4. Dokumentation und Präsentation der Ergebnisse
+
+
 
 
 # \textcolor{darkblue}{SKF 2}. *Datenanalyse*
@@ -93,6 +101,14 @@ Selbstkontrollfragen  + Lösungen
 \footnotesize
 
 
+* Ein Datenanalyseskript beinhaltet die Dokumentation aller Schritte einer Datenanalyse von Rohdaten bis zur Datenvisualisierung.
+* Es ermöglicht die Reproduktion wissenschaftlicher Ergebnisse durch Dritte.
+* Essentieller Teil wissenschaftlicher Publikationen und täglicher wissenschaftlicher Arbeit.
+
+
+
+
+
 # \textcolor{darkblue}{SKF 3}. *Informatik*
 \large
 \color{darkblue} Definieren Sie den Begriff "Informatik".
@@ -101,6 +117,20 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\justifying
+Bei der Informatik handelt es sich um 
+
+* die Wissenschaft von der systematischen 
+Darstellung, Speicherung, Verarbeitung und Übertragung von Informationen, 
+* wobei besonders die automatische Verarbeitung mit Computern betrachtet wird. 
+* Sie ist zugleich Grundlagen- und Formalwissenschaft als auch Ingenieurdisziplin.
+
+\flushright{\textit{Wikipedia}}
+\vfill
+
+
+
+
 # \textcolor{darkblue}{SKF 4}. *Rechnerarchitektur*
 \large
 \color{darkblue} Erläutern Sie die Akronyme CPU, RAM, SSD, und GPU.
@@ -108,6 +138,29 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+CPU (Central Processing Unit/Mikroprozessor)
+
+* Rechenwerk, Steuerwerk, und Leitwerk des Systems
+* Cache (flüchtiger schneller Speicher)
+* Intel(R) Core(TM) i5-7300HQ CPU @ 2.50GHz
+
+RAM (Random Access Memory)
+
+* Temporärer, flüchtiger Arbeitsspeicher des Systems
+* Begrenzt, z.B. 16 GB
+
+Massenspeicher
+
+* Stationärer Speicher des Systems
+* SSD (Solid State Drive), Cloudspeicher
+
+GPU (Graphical Processing Unit)
+
+* Leistungsstarke, speziell für Visualisierung optimierte Prozessoren
+* Unterstützung der CPU in manchen Anwendungen, z.b. Neuronale Netze
+
+
 
 
 
@@ -118,6 +171,28 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{itemize}
+\item Rechner := Steuerwerk, Rechenwerk, Speicher, Eingabewerk, Ausgabewerk.
+\item Eingabe von Programmen und Daten in den Speicher.
+\item Daten, Programme, Zwischen- und Endergebnisse liegen im gleichen Speicher.
+\item Speicher ist in gleichgroße nummerierte (addressierte) Zellen unterteilt.
+\item Über die Adresse einer Speicherzelle kann deren Inhalt abgerufen/verändert werden.
+\item Aufeinanderfolgende Befehle eines Programms liegen in benachbarten Speicherzellen.
+\item Steuerwerk ruft den nächsten Befehl durch Erhöhen der Befehlsaddresse um 1 auf.
+\item Sprungbefehle erlauben eine Abweichung von der gespeicherten Reihenfolge
+\item Grundlegende Befehle sind
+\begin{itemize}
+\begin{small}
+\item[$\circ$] Arithmetische Befehle (z.B. Addition, Multiplikation)
+\item[$\circ$] Logische Vergleiche (z.B. logisches UND, logisches ODER)
+\item[$\circ$] Transportbefehle (z.B. Eingabewerk $\rightarrow$ Speicher, Speicher $\rightarrow$ Rechenwert)
+\end{small}
+\end{itemize}
+\item Alle Daten (z.B. Befehle, Adressen) werden binär codiert
+\item Binäre Enkodierung/Dekodierung geschieht durch geeignete Schaltwerke.
+\end{itemize}
+
 
 
 
@@ -131,6 +206,7 @@ Selbstkontrollfragen  + Lösungen
 
 
 
+
 # \textcolor{darkblue}{SKF 7}. *Algorithmen und Programme*
 \large
 \color{darkblue} Erläutern Sie den Zusammenhang von Algorithmen und Programmen.
@@ -138,6 +214,11 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+* Ein **Algorithmus** ist eine Folge von Anweisungen zur Lösung eines Problems (z.B. Dateneinlesen, deskriptive Statistiken berechnen).
+* Ein **Programm** ist ein Algorithmus, der von einem Computer ausgeführt werden kann (z.B. Eine in einer Programmiersprache verfasste Textdatei)
+
+
 
 
 
@@ -149,6 +230,12 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+* Der **Syntax** einer Programmiersprache bezeichnet Vokabular und Programmaufbau.
+* Die **Semantik** einer Programmiersprache bezeichnet die bedeutung der erlaubten Anweisungen.
+
+
+
+
 
 # \textcolor{darkblue}{SKF 9}. *Programmiersprache*
 \large
@@ -157,6 +244,12 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+* **Maschinensprache** besteht aus Operationsbefehlen, die als Binärzahlen (z.B. 1001 0010) kodiert werden, während **Programmiersprachen** aus Wörtern und Sätzen bestehen, die an die menschliche Sprache angelehnt sind.
+* Programme werden von Menschen in Programmiersprachen (z.B. Python, R) geschrieben. Ein Computer führt nur Maschinenprogramme aus.
+* Programme werden mit *Interpretern* oder *Compilern* in Maschinensprache übersetzt. 
+
+
 
 
 # \textcolor{darkblue}{SKF 10}. *Imperative Programmierung*
@@ -167,6 +260,19 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+**Prozedurale imperative Programmierung**
+
+* Daten und sie manipulierende Befehle werden separat behandelt.
+* Prozeduren (Funktionen) bilden das zentrale Strukturkonzept.
+
+**Objektorientierte imperative Programmierung**
+
+* Daten und manipulierende Befehle werden als *Objekte* zusammengefasst.
+* Objekte bilden das zentrale Strukturkonzept.
+
+
+
+
 
 # \textcolor{darkblue}{SKF 11}. *Generationen der Programmiersprachen*
 \large
@@ -176,6 +282,31 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+1. Generation (1GL)
+
+* Maschinensprachen
+* 10110000 01100001 (in hexadezimaler Darstellung: B0 61)
+
+2. Generation (2GL)
+
+
+* Assemblersprachen ab 1950, erste Form der symbolischen Programmierung
+* Bspw. ``MOV Al, 61H'' \# Intel-Prozessor-spezifische Sprache
+
+3. Generation (3GL)
+
+
+* Höhere Programmiersprachen ab 1970 wie FORTRAN, C, C++, Java
+* Programmierfreundlich, prozessor-unabhängig
+
+4. Generation (4GL)
+
+* Höhere Programmiersprachen ab 1980 wie Python, Matlab, R
+* Codeoverhead Minimisierung, Automation, Flexibilität, Multiparadigmatisch
+
+
+
+
 
 # \textcolor{darkblue}{SKF 12}. *Compiler und Interpreter*
 \large
@@ -184,3 +315,8 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+* Bei **kompilierten Programmiersprachen** wird der gesamte Quellcode *vor Ausführung* von einem Übersetzungsprogramm (*Compiler*) in Maschinensprache übersetzt. Bei **interpretierten Programmiersprachen** wird der Quellcode *während der Ausführung* von einem Ausführungsprogramm (*Interpreter*) in maschinelle Sprache übersetzt. 
+* Bei kompilierter Sprache wird der Maschinencode direkt vom Prozessor ausgeführt. Der Code muss nicht übersetzt werden und läuft schnell, während interpretrierte Sprache aufgrund der Übersetzung in Maschinensprache langsamer läuft. 
+* Dafür muss interpretierte Sprache bei Änderung des Quellcodes nicht neu interpretiert werden, während kompilierte Sprache bei jeder Änderung des Quellcodes neu kompiliert werden muss. 
+

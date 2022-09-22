@@ -81,6 +81,18 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{definition}[Stammfunktion, Unbestimmtes Integral]
+\justifying
+Für ein Intervall $I \subset \mathbb{R}$ sei $f : I \to \mathbb{R}$ eine
+univariate reellwertige Funktion. Dann heißt eine differenzierbare Funktion 
+$F : I \to \mathbb{R}$ mit der Eigenschaft
+\begin{equation}
+F' = f
+\end{equation}
+\textit{Stammfunktion von $f$}.
+\end{definition}
+
+
 
 
 # \textcolor{darkblue}{SKF 2}. *Unbestimmtes Integral*
@@ -91,13 +103,79 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{definition}[Stammfunktion, Unbestimmtes Integral]
+\justifying
+Für ein Intervall $I \subset \mathbb{R}$ sei $f : I \to \mathbb{R}$ eine
+univariate reellwertige Funktion. Dann heißt eine differenzierbare Funktion 
+$F : I \to \mathbb{R}$ mit der Eigenschaft
+\begin{equation}
+F' = f
+\end{equation}
+\textit{Stammfunktion von $f$}.
+Ist $F$ eine Stammfunktion von $f$, dann heißt
+\begin{equation}
+\int f(x) \,dx := F(x) + c \mbox{ mit } c \in \mathbb{R}
+\end{equation}
+\textit{unbestimmtes Integral} der Funktion $f$.
+\end{definition}
+
+\footnotesize
+\color{darkcyan}
+Bemerkungen
+
+* \color{darkcyan}Die Ableitung der Stammfunktion $F$ von $f$ ist $f$.
+* Das unbestimmte Integral ist die Gesamtheit aller Stammfunktionen von $f$.
+* Die Konstante $c \in \mathbb{R}$ heißt \textit{Integrationskonstante}, es gilt $\frac{d}{dx}c = 0$.
+* Der Ausdruck $\int f(x) \,dx$ ist als $F(x) + c$ definiert
+* In $\int f(x) \,dx$ haben $\int$ und $\,dx$ keine eigentliche Bedeutung, $f(x)$ heißt \textit{Integrand}.
+
+
+
+
+
+
 
 # \textcolor{darkblue}{SKF 3}. *Riemannsches Integral*
 \large
 \color{darkblue} Erläutern Sie den Begriff des Riemanschen Integrals.
 \vspace{3mm}
-\color{black}
+
+
 \footnotesize
+
+\begin{theorem}[Riemannsches Integral]
+\justifying
+\normalfont
+$f : [a,b] \to \mathbb{R}$ sei eine beschränkte reellwertige Funktion auf $[a,b]$. 
+Weiterhin sei für $Z_k, k = 1,2,3,...$ eine Folge von Zerlegungen von $[a,b]$ mit 
+zugehörigen Feinheiten $Z_{k, \mbox{\tiny max}}$. Wenn für jede Folge von 
+Zerlegungen $Z_1, Z_2,...$  mit $|Z_{k, \mbox{\tiny max}}| \to 0$ für $k \to \infty$ 
+und für beliebig gewählte Punkte $\xi_{ki}, i = 1,...,n$ im Teilintervall 
+$[x_{k,i-1}, x_{k,i}]$ der Zerlegung $Z_k$ gilt, dass die Folge der zugehörigen 
+Riemannschen Summen $R(Z_1), R(Z_2), ...$ gegen den gleichen Grenzwert strebt, 
+dann heißt $f$ auf $[a,b]$ \textit{integrierbar}. Der entsprechende Grenzwert 
+der Folge von Riemannschen Summen wird \textit{bestimmtes Riemannsches Integral} 
+genannt und mit
+\begin{equation}
+\int_a^b f(x)\,dx := \lim_{k \to \infty} R(Z_k) \mbox{ für } |Z_{k, \mbox{\tiny max}}| \to 0
+\end{equation}
+bezeichnet.
+\end{theorem}
+
+\footnotesize
+Bemerkungen
+
+* Für $f > 0$ ist $\int_a^b f(x)\,dx$ der Flächeninhalt zwischen den $f(x)$ und der $x$-Achse
+* Generell ist $\int_a^b f(x)\,dx$ der vorzeichenbehaftete Flächeninhalt den $f(x)$ und der $x$-Achse.
+* Positive und negative Flächeninhalt gleichen einander aus.
+* $\int_a^b f(x)\,dx$ ist als Mittelwert von $f$ auf $[a,b]$ zu verstehen.
+
+
+
+
+
+
+
 
 # \textcolor{darkblue}{SKF 4}. *Erster Hauptsatz*
 \large
@@ -106,6 +184,20 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\begin{theorem}[Erster Hauptsatz der Differential- und Integralrechnung]
+\justifying
+\normalfont
+Ist $f : I \to \mathbb{R}$ eine auf dem Intervall $I \subset \mathbb{R}$ 
+stetige Funktion, dann ist die Funktion
+\begin{equation}
+F : I \to \mathbb{R}, x \mapsto F(x) := \int_a^x f(t)\,dt \mbox{ mit } x, a \in I
+\end{equation}
+eine Stammfunktion von $f$.
+\end{theorem}
+
+
+
 
 
 
@@ -117,6 +209,19 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\begin{theorem}[Zweiter Hauptsatz der Differential- und Integralrechnung]
+\justifying
+\normalfont
+Ist $F$ eine Stammfunktion einer stetigen Funktion $f : I \to \mathbb{R}$ auf 
+einem Intervall $I$, so gilt für $a,b \in I$ mit $a \le b$
+\begin{equation}
+\int_a^b f(x)\,dx = F(b) - F(a) =: F(x)\vert_a^b
+\end{equation}
+\end{theorem}
+
+
+
+
 
 
 # \textcolor{darkblue}{SKF 6}. *Uneigentliches Integral*
@@ -124,8 +229,35 @@ Selbstkontrollfragen  + Lösungen
 \color{darkblue} Erläutern Sie den Begriff des uneigentlichen Integrals.
 
 \vspace{3mm}
-\color{black}
 \footnotesize
+
+\begin{definition}[Uneigentliche Integrale]
+\justifying
+$f : \mathbb{R} \to \mathbb{R}$ sei eine univariate reellwertige Funktion. Mit den Definitionen
+\begin{equation}
+\int_{-\infty}^b f(x)\,dx := \lim_{a \to -\infty} \int_a^b f(x)\,dx
+\mbox{ und }
+\int_a^\infty f(x)\,dx := \lim_{b \to \infty} \int_a^b f(x)\,dx
+\end{equation}
+und der Additivität von Integralen
+\begin{equation}
+\int_{-\infty}^\infty f(x)\,dx = \int_{-\infty}^b f(x)\,dx + \int_b^{\infty}f(x)\,dx
+\end{equation}
+wird der Begriff des bestimmten Integrals auf die unbeschränkten Integrationsintervalle $]-\infty,b]$,
+$[a,\infty[$ und $]-\infty,\infty[$ erweitert. Integrale mit unbeschränkten 
+Integrationsintervallen heißen \textit{uneigentliche Integrale}. Wenn die 
+entsprechenden Grenzwerte existieren, sagt man, dass die uneigentlichen Integrale 
+\textit{konvergieren}.
+\end{definition}
+
+\footnotesize
+\color{darkcyan}
+Bemerkung
+
+* \color{darkcyan}Für die WDF $f$ einer Zufallsvariable ist die Forderung $\int_{-\infty}^\infty f(x)\,dx = 1$ zentral.
+
+
+
 
 
 
@@ -137,6 +269,36 @@ Selbstkontrollfragen  + Lösungen
 \color{black}
 \footnotesize
 
+\color{red}
+
+
+\begin{definition}[Mehrdimensionale Integrale]
+$f : \mathbb{R}^n \to \mathbb{R}$ sei eine multivariate reellwertige Funktion. 
+Dann heißen Integrale der Form
+\begin{equation}
+\int\limits_{[a_1,b_1]\times \cdots \times [a_n,b_n]} f(x)\,dx
+= \int_{a_1}^{b_1} \cdots \int_{a_n}^ {b_n} f(x_1,...,x_n)\,dx_1...\,dx_n
+\end{equation}
+\textit{mehrdimensionale bestimmte Integrale auf Hyperrechtecken}. Weiterhin 
+heißen Integrale der Form
+\begin{equation}
+\int_{\mathbb{R}^n} f(x)\,dx
+= \int_{-\infty}^{\infty}  \cdots \int_{-\infty}^{\infty}
+f(x_1,...,x_n)\,dx_1...\,dx_n
+\end{equation}
+\textit{mehrdimensionale uneigentliche Integrale.}
+\end{definition}
+
+\footnotesize
+\color{darkcyan}
+Bemerkungen
+
+* \color{darkcyan}Für die WDF eines Zufallsvektors ist die Forderung $\int_{\mathbb{R}^n} f(x)\,dx = 1$ zentral.
+
+
+
+
+
 
 # \textcolor{darkblue}{SKF 8}. *Bestimmtes Integral bestimmen*
 \large
@@ -145,3 +307,26 @@ Selbstkontrollfragen  + Lösungen
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+Eine Stammfunktion der Funktion 
+\begin{align*}
+f: \mathbb{R} \to \mathbb{R}, x \mapsto f(x):= 2x
+\end{align*}
+ist gegeben durch
+\begin{align*}
+F: \mathbb{R} \to \mathbb{R}, x \mapsto F(x):= x^2
+\end{align*}
+weil 
+\begin{align*}
+F'(x) = \frac{d}{dx}(x^2) = 2 \cdot x^{2-1} = 2x
+\end{align*}
+
+Einsetzen in den Zweiten Hauptsatz der Differential- und Integralrechnung ergibt dann
+\begin{align*}
+\int_{0}^{1} 2x \,dx = 1^2 - 0^2 = 1
+\end{align*}
+
+\color{darkcyan}
+Vergleiche Theorem Zweiter Hauptsatz:
+$\int_{a}^{b}f(x)dx = F(b)-F(a)$
+
