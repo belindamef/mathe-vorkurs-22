@@ -314,17 +314,33 @@ x_0 \mbox{ ist Extremstelle von } f \Rightarrow f'(x_0) = 0.
 \end{equation}
 \end{definition}
 
-\color{red}
-TODO: Grafik zu Veranschaulichung der Bemerkung, siehe VO-Folien 16
+```{r, echo=F,  out.width = "40%", fig.align = 'right'}
+knitr::include_graphics(file.path(abb_dir, "glmi_5_optimierung.pdf"))
+```
 
+\vspace{-43mm}
 \footnotesize
+\setstretch{1.1}
+\color{darkcyan}
 Bemerkungen
 
-* Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die erste Ableitung von $f$ in $x_0$ null.
-* Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$. Dann gilt
-    * \small Links von $x_0$ steigt $f$ an, rechts von $x_0$ fällt $f$ ab.
-    * In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+\begin{itemize}
+\color{darkcyan}
+\item Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die  
 
+erste Ableitung von $f$ in $x_0$ null.
+\item Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$.  
+Dann gilt
+\begin{itemize}
+\color{darkcyan}
+\item \footnotesize Links von $x_0$ steigt $f$ an,  
+    
+rechts von $x_0$ fällt $f$ ab.
+\item In $x_0$ steigt $f$ weder an, 
+
+noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+\end{itemize}
+\end{itemize}
 
 
 

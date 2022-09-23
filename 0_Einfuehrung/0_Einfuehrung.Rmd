@@ -90,7 +90,6 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 
 
 
-\color{red}{TODO}
 
 # Fit für Psychologie - Inhalte
 \setstretch{2}
@@ -113,6 +112,30 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 \vfill
 
 
+# Orga - grober Zeitplan
+
+\vspace{12mm}
+
+\small
+
+| Tag           | Uhrzeit           | Inhalt                          |
+| ------------- |------------------ | -----                           |
+| Dienstag      | 11:15-12:45       | (0)Einführung, (1)Mengen        |
+|               | ---               |   *Pause*                       |
+|               | 13:45-16:00       | (2)Summen, Produkte und Potenzen|
+|               |                   |                                 |
+| Mittwoch      | 09:00-12:00       | (4)Funktionen                   |
+|               | ---               |   *Pause*                       |
+|               | 13:00-15:00       | (5)Differentialgleichungen      |
+|               |                   |                                 |
+| Donnerstag    | 09:00-12:00       | (6)Integralrechnung             |
+|               | ---               |   *Pause*                       |
+|               | 13:00-15:00       | (7)Grundbegriffe der Informatik |
+|               |                   |                                 |
+| Freitag       | 09:00-12:00       | Selbstkontrollfragen            |
+
+
+
 # Fit für Psychologie
 
 [\textcolor{blue}{Webseite des Kurses (Folien, Videos)}](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2022/Grundlagen+der+Mathematik+und+Informatik.html)
@@ -122,7 +145,7 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 ```{r, echo = FALSE, out.width = "75%"}
 knitr::include_graphics(file.path(abb_dir, "glmi_0_kursseite.png"))
 ```
-\color{red}{TODO: git einfügen?}
+\color{red}{TODO: git einfügen mit Anleitung zum Beitragen, Uni-Website aktualisieren}
 
 
 
@@ -156,13 +179,6 @@ knitr::include_graphics(file.path(abb_dir,"glmi_0_baerwolff.pdf"))
 ```{r, echo = FALSE, out.width = "35%"}
 knitr::include_graphics(file.path(abb_dir, "glmi_0_herold.jpg"))
 ```
-
-
-# Orga - Termine
-
-\color{red}{TODO: kleinen Wochenplan erstellen?}
-
-
 
 
 

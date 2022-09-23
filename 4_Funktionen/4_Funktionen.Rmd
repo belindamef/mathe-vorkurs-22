@@ -270,8 +270,6 @@ f(x+y) = 1(x+y)+1 = x + y + 1 \neq x + 1 + y + 1 = f(x) + f(y).
 \item Abbildungen der Form $f(x) := ax + b$ werden auch als \textit{lineare Funktionen} bezeichnet.
 \end{itemize}
 
-\color{red}{TODO: Funktionsbeispiel-Grafiken erstellen}
-
 
 
 
