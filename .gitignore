@@ -6,7 +6,7 @@
 *.Rproj
 
 # Knit temp output files
-*_cache
+**_cache
 *.log
 *.tex
 *.aux

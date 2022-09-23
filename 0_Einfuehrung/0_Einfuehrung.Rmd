@@ -59,7 +59,7 @@ Elementares Basiswissen für die datenanalytischen Module des BSc Psychologie
 * Modul A2 Forschungsmethoden
 * Modul B1 Deskriptive Statistik
 * Modul B2 Inferenzstatistik
-* Modul C2 Computergestützte Datenanalyse
+* Modul C1 Einführung in empirisch-wissenschaftliches Arbeiten
 
 \normalsize
 Studien- und Prüfungsordnung BSc Psychologie § 4(2) Zulassung zum Studium
@@ -151,7 +151,7 @@ knitr::include_graphics(file.path(abb_dir, "glmi_0_kursseite.png"))
 
 # Fit für Psychologie
 
-[\textcolor{blue}{git-repository des Kurses (Folien, Videos)}](https://github.com/belindamef/mathe-vorkurs-22)
+[\textcolor{blue}{git-repository des Kurses (Folien, RMarkdown Codes)}](https://github.com/belindamef/mathe-vorkurs-22)
 
 \vspace{5mm}
 
