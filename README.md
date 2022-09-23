@@ -1,20 +1,21 @@
-# Vorkurs "Fit für Psychologie" (WiSe 2022/2023)
+# Vorkurs "Fit für Psychologie" (WiSe 2022/2023) <!-- omit in toc -->
 
 
 
 ## Inhaltsverzeichnis <!-- omit in toc -->
-- [Vorkurs "Fit für Psychologie" (WiSe 2022/2023)](#allgemeines-lineares-modell-sose-2022)
-  - [Allgemeine Informationen](#allgemeine-informationen)
-  - [Anleitung, wie man beitragen kann](#anleitung-wie-man-beitragen-kann)
-    - [Schritt 1: Repository kopieren (***Fork***)](#schritt-1-repository-kopieren-fork)
-      - [**Wichtige Eigenschaften eines Forks:**](#wichtige-eigenschaften-eines-forks)
-    - [Schritt 2: Fork mit Original-Repo synchronisieren (***Fetch upstream***)](#schritt-2-fork-mit-original-repo-synchronisieren-fetch-upstream)
-    - [Schritt 3: Eigenen 'Zweig' erstellen (***Branch***)](#schritt-3-eigenen-zweig-erstellen-branch)
-    - [Schritt 4: Änderungen vornehmen und speichern (***Commit changes***)](#schritt-4-änderungen-vornehmen-und-speichern-commit-changes)
-    - [Schritt 5: Änderungsvorschläge einreichen (***pull request***)](#schritt-5-änderungsvorschläge-einreichen-pull-request)
+- [Allgemeine Informationen](#allgemeine-informationen)
+- [Anleitung, wie man beitragen kann](#anleitung-wie-man-beitragen-kann)
+  - [Schritt 1: Repository kopieren (***Fork***)](#schritt-1-repository-kopieren-fork)
+    - [**Wichtige Eigenschaften eines Forks:**](#wichtige-eigenschaften-eines-forks)
+  - [Schritt 2: Fork mit Original-Repo synchronisieren (***Fetch upstream***)](#schritt-2-fork-mit-original-repo-synchronisieren-fetch-upstream)
+  - [Schritt 3: Eigenen 'Zweig' erstellen (***Branch***)](#schritt-3-eigenen-zweig-erstellen-branch)
+  - [Schritt 4: Änderungen vornehmen und speichern (***Commit changes***)](#schritt-4-änderungen-vornehmen-und-speichern-commit-changes)
+  - [Schritt 5: Änderungsvorschläge einreichen (***pull request***)](#schritt-5-änderungsvorschläge-einreichen-pull-request)
 
 ## Allgemeine Informationen
 Dieses Repository enthält alle Skripte für den Vorkurs "Fit für Psychologie" zum Studienstart im Wintersemester 2022/2023 bei Belinda Fleischmann an der OVGU Magdeburg.
+
+Auf unserer Lehrstuhlseite ist dieser Kurs als ["Grundlagen der Mathematik und Informatik"]() aufgeführt. 
 
 ## Anleitung, wie man beitragen kann
 Im Folgenden finden Sie eine Schritt-für-Schritt Anleitung dafür, wie Sie zu diesem Repository beitragen können (z.B. Typos korrigieren). Das hier beschriebene Vorgehen erfolgt auschließlich online über das github Webinterface. Das heißt, Sie benötigen hierfür keine gesonderte Desktop-App. 
@@ -49,9 +50,17 @@ Wenn das Forking erfolgreich abgeschlossen wurde, werden wir automatisch auf die
 * Löschen des Fork führt nicht zum Löschen der Original-Repository. 
 
 ### Schritt 2: Fork mit Original-Repo synchronisieren (***Fetch upstream***)
-Um den eigenen Fork mit dem Original-Repo zu synchronisieren, gehen wir auf die Hauptseite unsere Fork. Dort wird uns stets angezeigt, ob die branch ...
+Um den eigenen Fork mit dem Original-Repo zu synchronisieren, gehen wir auf die Hauptseite unsere Fork. Dort wird uns stets angezeigt, ob die branch, die ausgewählt ist *up-to-date* oder ggf. *\<Anzahl\> commits behind* ist. 
 
-TODO: screenshot von fetch upstream
+Es empfiehlt sich, den eigenen Fork *zuerst* mit dem Original-Repo zu snychronieren, bevor wir Änderungen vornehmen, um Bearbeitungskonflikte zu vermeiden. 
+
+Dazu klicken wir einfach auf ```Sync fork``` und ```Update branch``` (siehe unten).
+
+<img src="doc/Abbildungen/Abb_4_2_fork_5_sync_fork.png" width="80%"/>
+
+Nach erfolgreicher Synchronisierung erhalten wir die Benachrichtigung *Successfully fetched and fast-forwarded from upstream \<Name des original/upstream Repo\>*.
+
+<img src="doc/Abbildungen/Abb_4_3_fork_6_fork_synced.png" width="80%"/>`
 
 ### Schritt 3: Eigenen 'Zweig' erstellen (***Branch***)
 Ein git Repository kann einen oder mehrere sogenannte "Branches" haben. Es gibt immer eine "Haupt-branch", die idR. "main" oder "master" heißt. Änderungen (auch im eigenen Fork) sollten stets auf einer extra dafür kreierten branch erfolgen. 
