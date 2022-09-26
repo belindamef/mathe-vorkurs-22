@@ -151,6 +151,37 @@ Bemerkungen
 
 
 
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Definieren Sie folgende Mengen:
+
+\begin{enumerate}
+\color{darkblue}
+\item $M$, die dieZahlen 1, 2, 3, 4, 5, 6 und 7 beinhaltet.
+\item $G$. die alle Zahlen der Menge M beinhaltet, die größer als 3 sind.  
+\end{enumerate}
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Definieren Sie folgende Mengen:
+
+\begin{enumerate}
+\color{darkblue}
+\item $M$ mit den Zahlen 1, 2, 3, 4, 5, 6 und 7.  
+
+\textcolor{black}{$M := \{1,2,3,4,5,6,7\}$}
+\item $G$ mit allen Zahlen der Menge M, die größer als 3 sind.  
+
+\textcolor{black}{$G := \{g \in M | g > 3\}$ oder $G := \{4,5,6,7\}$}
+\end{enumerate}
+
+
+
 
 # Definitionen - Teilmenge, Mengengleichheit
 \small
@@ -179,11 +210,56 @@ A = B.
 \end{itemize}
 \end{definition}
 
-\footnotesize
-Beispiel
 
-* Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. Dann gilt:  
-$A \subset B, A \subset C, B \subseteq C, C \subseteq B$ und $B = C$.
+
+
+
+# \color{darkblue} Übungsbeispiel
+\small
+
+\color{darkblue}
+Schreiben Sie, falls möglich Mengen als Teilmengen anderer Mengen auf und notieren Sie Mengengleichheiten, fals bestehend.
+
+\begin{enumerate}
+\color{darkblue}
+\item Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. 
+
+
+\item Es seien $A := \{5,6,7,8\}$, $B := \{x\in A|x>6\}$, $C := \{7\}$.
+
+\end{enumerate}
+
+
+
+
+
+# \color{darkblue} Übungsbeispiel
+\small
+
+\color{darkblue}
+Schreiben Sie, falls möglich Mengen als Teilmengen anderer Mengen auf und notieren Sie Mengengleichheiten, falls bestehend.
+
+\begin{enumerate}
+\color{darkblue}
+\item Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. 
+
+\textcolor{black}{$A \subset B, A \subset C, B \subseteq C, C \subseteq B$ und $B = C$.}
+\item Es seien $A := \{5,6,7,8\}$, $B := \{x\in A|x>6\}$, $C := \{5\}$.  
+
+\textcolor{black}{$\Leftrightarrow A := \{5,6,7,8\}$, $B := \{7,8\}$, $C := \{5\}$}
+
+\textcolor{black}{$B \subset A, C \subset A, C \subset B$.}
+\end{enumerate}
+
+\vfill
+
+\color{darkcyan}
+Bemerkung:
+
+* \color{darkcyan} $\Leftrightarrow$ ist ein Symbol für Äquivalenz. 
+
+ 
+
 
 
 
@@ -198,14 +274,48 @@ mit $|M|$ bezeichnet. Eine Menge mit Kardinalität 0 heißt \textit{leere Menge}
 und wird mit $\emptyset$ bezeichnet.
 \end{definition}
 
-\footnotesize
-Beispiele
 
-* Für $M := \{1,2,3\}$ gilt $|M| = 3$.
-* Für $M := \{a,b\}$ gilt $|M| = 2$.
-* Für $M := \{x,y,z,\pi\}$ gilt $|M| = 4$.
-* Für $M := \emptyset$ gilt $|M| = 0$.
 
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Geben Sie jeweils die Kardinalität $|M|$ der Menge $M$ an.
+
+\begin{enumerate}
+\color{darkblue}
+\item Für $M := \{1,2,3\}$ 
+\item $M := \{a,b\}$
+\item Für $M := \{a,b\}$.
+\item Für $M := \emptyset$
+\end{enumerate}
+
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Geben Sie jeweils die Kardinalität $|M|$ der Menge $M$ an.
+
+\begin{enumerate}
+\color{darkblue}
+\item Für $M := \{1,2,3\}$ \\
+\textcolor{black}{$|M| = 3$.}
+
+\item $M := \{a,b\}$ \\
+\textcolor{black}{$|M| = 2$}
+
+\item Für $M := \{x,y,z,\pi\}$. \\
+\textcolor{black}{$|M| = 4$}
+
+\item Für $M := \emptyset$\\
+\textcolor{black}{$|M| = 0$}
+
+\end{enumerate}
 
 
 
@@ -228,6 +338,41 @@ Beispiele
 
 * Für $M := \{1,2,3\}$ gilt $\mathcal{P}(M) = \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\} \}$.
 * Für $N := \{5,6\}$ gilt $\mathcal{P}(N) = \{\emptyset, \{5\},\{6\},\{5,6\} \}$.
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Geben Sie jeweils die Potenzmenge $\mathcal{P}$ an.
+
+\begin{enumerate}
+\color{darkblue}
+\item $M := \{1,2,3\}$
+\item $N := \{5,6\}$ 
+\end{enumerate}
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Geben Sie jeweils die Potenzmenge $\mathcal{P}$ an.
+
+\begin{enumerate}
+\color{darkblue}
+\item $M := \{1,2,3\}$ \\
+\textcolor{black}{$\mathcal{P}(M) = \{\emptyset, \{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\} \}$}
+
+\item $N := \{5,6\}$ \\
+\textcolor{black}{$\mathcal{P}(N) = \{\emptyset, \{5\},\{6\},\{5,6\} \}$}
+
+\end{enumerate}
+
+
 
 
 
@@ -260,12 +405,40 @@ wobei \textit{oder} hier also im exklusiven Sinne zu verstehen ist.
 \end{itemize}
 \end{definition}
 
-\footnotesize
-\setstretch{1.5}
-Beispiel
+# \color{darkblue} Übungsbeispiele
+\small
 
-* Für $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$ gilt  
-$M \cup N = \{1,2,3,4,5\}, M \cap N = \{2,3\}, M \setminus N = \{1\}, N \setminus M = \{4,5\}, M \Delta N = \{1,4,5\}.$
+\color{darkblue}
+Es seien $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$. Geben Sie die sich aus den Mengenoperationen ergebenden Elemente an.
+
+\begin{enumerate}
+\color{darkblue}
+\item $M \cup N $
+\item $M \cap N $
+\item $M \setminus N$
+\item $N \setminus M$
+\item $M \Delta N $
+\end{enumerate}
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Es seien $M := \{1,2,3\}$ und $N := \{2,3,4,5\}$. Geben Sie die sich aus den Mengenoperationen ergebenden Elemente an.
+
+\begin{enumerate}
+\color{darkblue}
+\item $M \cup N $ \textcolor{black}{$= \{1,2,3,4,5\}$}
+\item $M \cap N $ \textcolor{black}{$= \{2,3\}$}
+\item $M \setminus N$ \textcolor{black}{$ = \{1\}$}
+\item $N \setminus M$ \textcolor{black}{$ = \{4,5\}$}
+\item $M \Delta N $ \textcolor{black}{$ = \{1,4,5\}$}
+\end{enumerate}
+
+
 
 
 
@@ -288,13 +461,31 @@ Bemerkung
 * $N_i \cap N_j = \emptyset \mbox{ für } i = 1,...,n, j = 1,..., n, i \neq j$ drückt aus, dass der *Druchschnitt* aller Teilmengen mit jeweils allen Teilmengen leer ($\emptyset$) ist. Man sagt auch, die Teilmengen sind *diskunkt.* 
 * Intuitiv entspricht die Partition einer Menge dem Aufteilen der Menge in disjunkte Teilmengen.
 
-Beispiele
 
-* Partitionen von $M := \{1,2,3,4\}$ sind zum Beispiel
-\begin{equation}
-P_1 := \{\{1\}, \{2,3,4\}\}, P_2 := \{\{1,2\}, \{3,4\}\}, P_3 := \{\{1\}, \{2\}, \{3,4\}\}. 
-\end{equation}
+
+
+
+# \color{darkblue} Übungsbeispiel
+\small
+
+\color{darkblue}
+Geben Sie alle Partitionen von $M := \{1,2,3,4\}$ an.
+
+# \color{darkblue} Übungsbeispiel
+\small
+
+\color{darkblue}
+Geben Sie mögliche Partitionen von $M := \{1,2,3,4\}$ an.
+
+
+\color{black} Mögliche Partitionen von $M := \{1,2,3,4\}$ sind 
+\begin{itemize}
+\item $P_1 := \{\{1\}, \{2,3,4\}\}$
+\item $P_2 := \{\{1,2\}, \{3,4\}\}$
+\item $P_3 := \{\{1\}, \{2\}, \{3,4\}\}.$¸
+\end{itemize}
  
+
 
 # Spezielle Mengen - Zahlenmengen
 \small
@@ -334,7 +525,7 @@ Zusammenhängende Teilmengen der reellen Zahlen heißen \textit{Intervalle}. Fü
 \end{equation}
 \item das \textit{offene Interval}
 \begin{equation}
-]a,b[ := \{x \in \mathbb{R}|a < x < b\},
+]a,b[ \: := \{x \in \mathbb{R}|a < x < b\},
 \end{equation}
 \item die \textit{halboffenen Intervalle}
 \begin{equation}
@@ -348,6 +539,50 @@ Bemerkungen
 
 * Positiv Unendlich ($\infty$) und negativ Unendlich ($-\infty$) sind keine Elemente von $\mathbb{R}$.
 * Es gilt also immer $]-\infty,b]$ oder $]-\infty,b[$   bzw. $]a,\infty[$  oder $[a,\infty[$, sowie $\mathbb{R} = ]-\infty, \infty[$.
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Definieren Sie folgende Intervalle
+
+\begin{enumerate}
+\color{darkblue}
+\item "Die reellen Zahlen von $2$ bis einschlielich $10$."
+\item "Die reellen Zahlen, die größer als $-2$ und kleiner als $5$ sind."
+\item "Die reellen Zahlen, die größer als oder gleich $-2$ und kleiner als $5$ sind."
+\item "Die reellen Zahlen, die kleiner als oder gleich $5$ sind."
+\end{enumerate}
+
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Definieren Sie folgende Intervalle
+
+\begin{enumerate}
+\color{darkblue}
+\item "Die reellen Zahlen von $2$ bis einschlielich $10$." \\
+\textcolor{black}{$[2,10] := \{x \in \mathbb{R}|2 \le x \le 10\}$}
+
+\item "Die reellen Zahlen, die größer als $-2$ und kleiner als $5$ sind." \\
+\textcolor{black}{$]-2,5[ \: := \{x \in \mathbb{R}|-2 < x < 5\}$}
+
+\item "Die reellen Zahlen, die größer als oder gleich $-2$ und kleiner als $5$ sind." \\
+\textcolor{black}{$[-2,5[ \: := \{x \in \mathbb{R}|-2 \le x < 5\}$}
+
+\item "Die reellen Zahlen, die kleiner als oder gleich $5$ sind." \\
+\textcolor{black}{$]-\infty,5] := \{x \in \mathbb{R}|x \le 5\}$}
+
+\end{enumerate}
+
 
 
 
@@ -411,9 +646,10 @@ $\mathbb{R}^1 = \mathbb{R}$ nennt man \textit{Skalare}.
 
 
 \footnotesize
+\color{darkcyan}
 Beispiele
 
-* Ein Bsp für $x \in \mathbb{R}^4$ ist  $x = \begin{pmatrix} 0.16 \\ 1.76 \\ 0.23 \\ 7.10 \end{pmatrix}$, Ein Bsp für $x \in \mathbb{R}^2$ ist  $x = \begin{pmatrix} 2.81 \\ 4.22 \end{pmatrix}$.
+* \color{darkcyan}Ein Bsp für $x \in \mathbb{R}^4$ ist  $x = \begin{pmatrix} 0.16 \\ 1.76 \\ 0.23 \\ 7.10 \end{pmatrix}$, Ein Bsp für $x \in \mathbb{R}^2$ ist  $x = \begin{pmatrix} 2.81 \\ 4.22 \end{pmatrix}$.
 
 
 
