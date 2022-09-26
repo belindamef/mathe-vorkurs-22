@@ -116,6 +116,27 @@ f : \mathbb{R} \to \mathbb{R}_{\ge 0}, x \mapsto f(x) := x^2.
 
 
 
+
+# Veranschaulichung - Definitions- und Zielmenge
+\setstretch{1.2}
+\small
+\color{darkcyan}
+
+Beispiel: 
+\begin{align*}
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := 2.
+\end{align*}´
+
+```{r, echo = FALSE, out.width = "60%"}
+knitr::include_graphics(file.path(abb_dir, "glmi_4_def_ziel_bsp.pdf"))
+```
+
+
+\color{black}
+Bermerkung: 
+
+* Die aufgeführen Werte in Definitions- und Zielbereich (1,2,3 und 2,4,6) sind natürlich nicht vollständig. Für $\mathbb{R} \to \mathbb{R}$ umfasst das alle Werte in der Menge der reelen Zahlen.
+
 # Bild- und Urbildmenge
 \small
 \begin{definition}[Bildmenge, Urbildmenge]
@@ -177,7 +198,9 @@ Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbil
 # Eigenschaften
 \vfill
 \center
-
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir, "glmi_4_inj_sur_bij.pdf"))
+```
 \vfill
 
 
