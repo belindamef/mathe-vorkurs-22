@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.16)  23 SEP 2022 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.16)  23 SEP 2022 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1024,9 +1024,9 @@ ng>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 318.
+(Font)              <7> on input line 307.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 318--318
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 307--307
 [][][][][] 
  []
 
@@ -1037,17 +1037,17 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 318--318
 File: ../Abbildungen/Lehrstuhlseite.png Graphic file (type png)
 <use ../Abbildungen/Lehrstuhlseite.png>
 Package pdftex.def Info: ../Abbildungen/Lehrstuhlseite.png  used on input line 
-329.
+318.
 (pdftex.def)             Requested size: 215.10196pt x 179.34978pt.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 329--329
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 318--318
 [][][][][] 
  []
 
 [4
 
  <../Abbildungen/Lehrstuhlseite.png>]
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 359--359
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 348--348
 [][][][][] 
  []
 
@@ -1055,9 +1055,9 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 359--359
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 387.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 376.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 387--387
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 376--376
 [][][][][] 
  []
 
@@ -1068,10 +1068,10 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 387--387
 File: ../Abbildungen/glmi_0_kursseite.png Graphic file (type png)
 <use ../Abbildungen/glmi_0_kursseite.png>
 Package pdftex.def Info: ../Abbildungen/glmi_0_kursseite.png  used on input lin
-e 396.
+e 385.
 (pdftex.def)             Requested size: 230.46739pt x 171.11995pt.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 396--396
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 385--385
 [][][][][] 
  []
 
@@ -1082,10 +1082,10 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 396--396
 File: ../Abbildungen/glmi_0_git_repo.png Graphic file (type png)
 <use ../Abbildungen/glmi_0_git_repo.png>
 Package pdftex.def Info: ../Abbildungen/glmi_0_git_repo.png  used on input line
- 405.
+ 394.
 (pdftex.def)             Requested size: 230.46739pt x 154.36546pt.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 405--405
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 394--394
 [][][][][] 
  []
 
@@ -1095,11 +1095,11 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 405--405
 <../Abbildungen/glmi_0_pdwp.png, id=85, 925.20656pt x 549.55313pt>
 File: ../Abbildungen/glmi_0_pdwp.png Graphic file (type png)
 <use ../Abbildungen/glmi_0_pdwp.png>
-Package pdftex.def Info: ../Abbildungen/glmi_0_pdwp.png  used on input line 414
+Package pdftex.def Info: ../Abbildungen/glmi_0_pdwp.png  used on input line 403
 .
 (pdftex.def)             Requested size: 245.83282pt x 146.01662pt.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 414--414
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 403--403
 [][][][][] 
  []
 
@@ -1109,34 +1109,26 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 414--414
 
 pdfTeX warning: pdflatex (file ../Abbildungen/glmi_0_baerwolff.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<../Abbildungen/glmi_0_baerwolff.pdf, id=93, 478.00583pt x 682.86618pt>
+<../Abbildungen/glmi_0_baerwolff.pdf, id=94, 478.00583pt x 682.86618pt>
 File: ../Abbildungen/glmi_0_baerwolff.pdf Graphic file (type pdf)
 <use ../Abbildungen/glmi_0_baerwolff.pdf>
 Package pdftex.def Info: ../Abbildungen/glmi_0_baerwolff.pdf  used on input lin
-e 423.
-(pdftex.def)             Requested size: 107.55333pt x 153.64867pt.
+e 414.
+(pdftex.def)             Requested size: 92.1879pt x 131.6944pt.
+<../Abbildungen/glmi_0_herold.jpg, id=95, 426.59375pt x 602.25pt>
+File: ../Abbildungen/glmi_0_herold.jpg Graphic file (type jpg)
+<use ../Abbildungen/glmi_0_herold.jpg>
+Package pdftex.def Info: ../Abbildungen/glmi_0_herold.jpg  used on input line 4
+14.
+(pdftex.def)             Requested size: 92.1879pt x 130.14287pt.
 
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 423--423
+Overfull \hbox (34.14319pt too wide) in paragraph at lines 414--414
 [][][][][] 
  []
 
 [10
 
- <../Abbildungen/glmi_0_baerwolff.pdf>]
-<../Abbildungen/glmi_0_herold.jpg, id=148, 426.59375pt x 602.25pt>
-File: ../Abbildungen/glmi_0_herold.jpg Graphic file (type jpg)
-<use ../Abbildungen/glmi_0_herold.jpg>
-Package pdftex.def Info: ../Abbildungen/glmi_0_herold.jpg  used on input line 4
-32.
-(pdftex.def)             Requested size: 107.55333pt x 151.83948pt.
-
-Overfull \hbox (34.14319pt too wide) in paragraph at lines 432--432
-[][][][][] 
- []
-
-[11
-
- <../Abbildungen/glmi_0_herold.jpg>] [12
+ <../Abbildungen/glmi_0_baerwolff.pdf> <../Abbildungen/glmi_0_herold.jpg>] [11
 
 ]
 \tf@nav=\write5
@@ -1150,10 +1142,10 @@ Overfull \hbox (34.14319pt too wide) in paragraph at lines 432--432
 
 (./0_Einfuehrung.aux) ) 
 Here is how much of TeX's memory you used:
- 27148 strings out of 478287
- 522812 string characters out of 5849289
+ 27143 strings out of 478287
+ 522675 string characters out of 5849289
  813991 words of memory out of 5000000
- 44678 multiletter control sequences out of 15000+600000
+ 44676 multiletter control sequences out of 15000+600000
  510145 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,122p,1010b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1163,10 +1155,10 @@ lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 so8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy7.pfb>
-Output written on 0_Einfuehrung.pdf (12 pages, 1425697 bytes).
+Output written on 0_Einfuehrung.pdf (11 pages, 1424200 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  24654 words of extra memory for PDF output out of 24883 (max. 10000000)
 

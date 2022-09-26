@@ -61,12 +61,6 @@ Elementares Basiswissen für die datenanalytischen Module des BSc Psychologie
 * Modul B2 Inferenzstatistik
 * Modul C1 Einführung in empirisch-wissenschaftliches Arbeiten
 
-\normalsize
-Studien- und Prüfungsordnung BSc Psychologie § 4(2) Zulassung zum Studium
-
-\small
-"Studierende, deren Englisch-, EDV- bzw. Mathematikkenntnisse gering sind,
-sollten sich vor Aufnahme des Studiums entsprechend weiterbilden."
 
 \normalsize
 Elementares Basiswissen für die datenanalytischen Module des MSc Psychologie
@@ -91,7 +85,7 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 
 
 
-# Fit für Psychologie - Inhalte
+# Inhalte
 \setstretch{2}
 \large
 \vfill
@@ -112,7 +106,7 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 \vfill
 
 
-# Orga - grober Zeitplan
+# Fit für Psychologie - Zeitplan
 
 \vspace{12mm}
 
@@ -136,7 +130,7 @@ knitr::include_graphics(file.path(abb_dir,"Lehrstuhlseite.png"))
 
 
 
-# Fit für Psychologie
+# Kursmaterialien und Skripte
 
 [\textcolor{blue}{Webseite des Kurses (Folien, Videos)}](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2023/Grundlagen+der+Mathematik+und+Informatik.html)
 
@@ -149,7 +143,7 @@ knitr::include_graphics(file.path(abb_dir, "glmi_0_kursseite.png"))
 
 
 
-# Fit für Psychologie
+# Kursmaterialien und Skripte
 
 [\textcolor{blue}{git-repository des Kurses (Folien, RMarkdown Codes)}](https://github.com/belindamef/mathe-vorkurs-22)
 
@@ -162,7 +156,7 @@ knitr::include_graphics(file.path(abb_dir, "glmi_0_git_repo.png"))
 
 
 
-# Fit für Psychologie - Literaturempfehlungen
+# Literaturempfehlungen
 
 [\textcolor{blue}{Probabilistische Datenanalyse für die Wissenschaftliche Psychologie}](https://wasd.urz.uni-magdeburg.de/dostwald/)
 
@@ -172,29 +166,25 @@ knitr::include_graphics(file.path(abb_dir, "glmi_0_git_repo.png"))
 knitr::include_graphics(file.path(abb_dir, "/glmi_0_pdwp.png"))
 ```
 
-# Fit für Psychologie - Literaturempfehlungen
+# Literaturempfehlungen
 
 [\textcolor{blue}{Bärwolff, G (2017) Höhere Mathematik}](https://www.springer.com/de/book/9783662550212)
-
-\vspace{5mm}
-
-```{r, echo = FALSE, out.width = "35%"}
-knitr::include_graphics(file.path(abb_dir,"glmi_0_baerwolff.pdf"))
-```
-
-# Fit für Psychologie - Literaturempfehlungen
 
 [\textcolor{blue}{Herold, H et al. (2017) Grundlagen der Informatik}](https://www.pearson.de/grundlagen-der-informatik-9783863268039)
 
 \vspace{5mm}
 
-```{r, echo = FALSE, out.width = "35%"}
+
+
+```{r, echo = FALSE, out.width = "30%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_0_baerwolff.pdf"))
+
 knitr::include_graphics(file.path(abb_dir, "glmi_0_herold.jpg"))
 ```
 
-
-
 #  {.plain}
-
+\vfill
+\center
+\huge
 Q & A
-
+\vfill

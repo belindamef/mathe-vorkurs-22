@@ -182,6 +182,43 @@ Bemerkungen
 
 
 
+
+# Produkte - Rechenregeln
+\vfill
+\footnotesize
+\setstretch{.5}
+\begin{theorem}[Rechenregeln für Produkte]
+\normalfont
+\justifying
+\vspace{1mm}
+
+Assoziativität bei Produkten gleicher Länge
+\begin{equation}
+\left( \prod_{i=1}^n x_i \right) \cdot \left( \prod_{i=1}^n y_i  \right)= \prod_{i=1}^n (x_i \cdot y_i)
+\end{equation}
+
+Distributivität bei Multiplikation mit einer Konstante 
+\begin{equation}
+\prod_{i=1}^n ax_i = a \left(\prod_{i=1}^n x_i \right)
+\end{equation}
+
+Aufspalten von Produkten mit $1 < m < n$
+\begin{equation}
+\prod_{i = 1}^n x_i = \left( \prod_{i=1}^m x_i \right) \cdot \left( \prod_{i=m+1}^n x_i\right) 
+\end{equation}
+
+Umindizierung
+\begin{equation}
+\prod_{i=0}^n x_i = \prod_{j = m}^{n+m} x_{j - m}
+\end{equation}
+
+Vertauschen der Produktfolge bei Doppelprodukten
+\begin{equation}
+\prod_{i=1}^n \prod_{j=1}^m x_{ij}  =  \prod_{j=1}^m \prod_{i=1}^n  x_{ij} 
+\end{equation}
+\end{theorem}
+
+
 # 
 \vfill
 \Large
