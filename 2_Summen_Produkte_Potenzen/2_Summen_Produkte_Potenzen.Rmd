@@ -142,6 +142,73 @@ Umindizierung
 
 
 
+
+# \color{darkblue} Übungsbeispiele
+\small
+\color{darkblue}
+Berechnen sie folgende Summen unter Anwendung der Rechenregeln für Summen.
+\begin{enumerate}
+\color{darkblue}
+\item $\sum_{i=1}^6 2$ 
+
+\item $\sum_{i=1}^3 i + \sum_{i=1}^3 2i$
+
+\item $\sum_{i=1}^3  3i $ 
+
+\end{enumerate}
+
+\color{darkblue}
+Spalten Sie die folgende Summe in $2$ Summen auf mit $1 < m < n$ und $m=2$.
+\begin{enumerate}[4]
+\color{darkblue}
+\item $\sum_{i = 1}^5 (i+2) $ 
+\end{enumerate}
+
+\color{darkblue}
+Indizieren Sie die folgende Summe neu mit einem Startindex $j=5$
+\begin{enumerate}[5]
+\color{darkblue}
+\item $\sum_{i = 0}^5 2i $ 
+\end{enumerate}
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Berechnen sie folgende Summen unter Anwendung der Rechenregeln für Summen.
+
+\begin{enumerate}
+\color{darkblue}
+\item $\sum_{i=1}^6 2$ \textcolor{black}{$= 6 \cdot 2 = 12$}
+
+\item $\sum_{i=1}^3 i + \sum_{i=1}^3 2i$ \textcolor{black}{$=\sum_{i=1}^3 \left( i +2i \right) = \sum_{i=1}^3 \left( 3i \right) = 3 \cdot1 + 3 \cdot 2 + 3 \cdot 3 = 18$}
+
+\item $\sum_{i=1}^3  3i $ \textcolor{black}{$=3\sum_{i=1}^3  i = 3\cdot (1+2+3) = 18$}
+
+\end{enumerate}
+
+\color{darkblue}
+Spalten Sie die folgende Summe in $2$ Summen auf mit $1 < m < n$ und $m=2$.
+\begin{enumerate}[4]
+\color{darkblue}
+\item $\sum_{i = 1}^5 (i+2) $ \textcolor{black}{$= \sum_{i=1}^2 (i+2) + \sum_{i=3}^5 (i+2)$}
+\end{enumerate}
+
+\color{darkblue}
+Indizieren Sie die folgende Summe neu mit einem Startindex $j=5$
+\begin{enumerate}[5]
+\color{darkblue}
+\item $\sum_{i = 0}^5 2i $ \textcolor{black}{$= \sum_{j=5}^7 2(i-5)$}
+\end{enumerate}
+
+
+
+
+
+
 # 
 \vfill
 \Large
@@ -178,7 +245,7 @@ Bemerkungen
 
 * Nur mit Subskript und Superskripten macht das Produktzeichen Sinn.
 * Die Bezeichnung des Laufindexes ist irrelevant, es gilt $\prod_{i=1}^n x_i = \prod_{j=1}^n x_j$.
-* Manchmal wird der Laufindex auch als Element einer Indexmenge $I$ angegeben. Ist z.B. die Indexmenge $J := \mathbb{N}_2^0=\{0,1,2\}$ definiert, so ist $\sum_{j \in J}x_j := x_0 + x_1 + x_2$.
+* Manchmal wird der Laufindex auch als Element einer Indexmenge $I$ angegeben. Ist z.B. die Indexmenge $J := \mathbb{N}_2^0=\{0,1,2\}$ definiert, so ist $\prod_{j \in J}x_j := x_0 \cdot x_1 \cdot x_2$.
 
 
 
@@ -187,10 +254,14 @@ Bemerkungen
 \vfill
 \footnotesize
 \setstretch{.5}
-\begin{theorem}[Rechenregeln für Produkte]
-\normalfont
+\begin{theorem}[Rechenregeln für Produkte, Teil 1/2]
 \justifying
 \vspace{1mm}
+
+Produkte gleicher Produktterme
+\begin{equation}
+\prod_{i=1}^n x = x^n
+\end{equation}
 
 Assoziativität bei Produkten gleicher Länge
 \begin{equation}
@@ -207,6 +278,19 @@ Aufspalten von Produkten mit $1 < m < n$
 \prod_{i = 1}^n x_i = \left( \prod_{i=1}^m x_i \right) \cdot \left( \prod_{i=m+1}^n x_i\right) 
 \end{equation}
 
+\end{theorem}
+
+
+
+
+
+# Produkte - Rechenregeln (Fortgeführt)
+\footnotesize
+\setstretch{.5}
+\begin{theorem}[Rechenregeln für Produkte , Teil 2/2]
+\justifying
+\vspace{1mm}
+
 Umindizierung
 \begin{equation}
 \prod_{i=0}^n x_i = \prod_{j = m}^{n+m} x_{j - m}
@@ -217,6 +301,80 @@ Vertauschen der Produktfolge bei Doppelprodukten
 \prod_{i=1}^n \prod_{j=1}^m x_{ij}  =  \prod_{j=1}^m \prod_{i=1}^n  x_{ij} 
 \end{equation}
 \end{theorem}
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Berechnen sie folgende Produkte unter Anwendung der Rechenregeln für Produkte
+
+\begin{enumerate}
+\color{darkblue}
+\item $\prod_{i=1}^5 2$
+
+\item $\prod_{i=1}^3 \frac{1}{2}i \cdot \prod_{i=1}^3 2i$
+
+\item $\prod_{i=1}^3  3i $ 
+
+\end{enumerate}
+
+\color{darkblue}
+Spalten Sie das folgende Produkt in $2$ Produkte auf mit $1 < m < n$ und $m=2$.
+\begin{enumerate}[4]
+\color{darkblue}
+\item $\prod_{i = 1}^5 (7i+3) $
+\end{enumerate}
+
+\color{darkblue}
+Indizieren Sie das folgende Produkt neu mit einem Startindex $j=5$
+\begin{enumerate}[5]
+\color{darkblue}
+\item $\prod_{i = 0}^5 (i^2+9) $
+\end{enumerate}
+
+
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Berechnen sie folgende Produkte unter Anwendung der Rechenregeln für Produkte
+
+\begin{enumerate}
+\color{darkblue}
+\item $\prod_{i=1}^5 2$ \textcolor{black}{$= 2^5 = 32$}
+
+\item $\prod_{i=1}^3 \frac{1}{2}i \cdot \prod_{i=1}^3 2i$ \textcolor{black}{$=\prod_{i=1}^3 \left( \frac{1}{2}i \cdot  2i\right ) = \prod_{i=1}^3  i^2 = 1^2\cdot 2^2 \cdot 3^2 = 36$}
+
+\item $\prod_{i=1}^3  3i $ \textcolor{black}{$=3\prod_{i=1}^3  i = 3\cdot (1\cdot 2\cdot 3) = 18$}
+
+\end{enumerate}
+
+\color{darkblue}
+Spalten Sie das folgende Produkt in $2$ Produkte auf mit $1 < m < n$ und $m=2$.
+\begin{enumerate}[4]
+\color{darkblue}
+\item $\prod_{i = 1}^5 (7i+3) $ \textcolor{black}{$= \prod_{i=1}^2 (7i+3) + \prod_{i=3}^5 (7i+3)$}
+\end{enumerate}
+
+\color{darkblue}
+Indizieren Sie das folgende Produkt neu mit einem Startindex $j=5$
+\begin{enumerate}[5]
+\color{darkblue}
+\item $\prod_{i = 0}^5 (i^2+9) $ \textcolor{black}{$= \prod_{j=5}^7 ((i-5)^2+9)$}
+\end{enumerate}
+
+
+
+
+
+
 
 
 # 
@@ -266,6 +424,39 @@ a^n a^m & = a^{n+m} \\
 
 
 
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Vereinfachen und berechnen Sie folgende Potenzen
+
+\begin{enumerate}
+\color{darkblue}
+\item $3^5\cdot 3^{-3}$
+\item $(5^{-2})^{-1}$
+\item $3^2\cdot2^2$
+\end{enumerate}
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Vereinfachen und berechnen Sie folgende Potenzen
+
+\begin{enumerate}
+\color{darkblue}
+\item $3^5\cdot 3^{-3}$ \textcolor{black}{$= 3^2 = 9$}
+\item $(5^{-2})^{-1}$ \textcolor{black}{$=5^2 = 25$}
+\item $3^2\cdot2^2$ \textcolor{black}{$=(3\cdot 2)^2 = 6^2 = 36$}
+\end{enumerate}
+
+
+
+
+
+
 # Potenzen
 \setstretch{.6}
 \footnotesize
@@ -305,6 +496,40 @@ $\hfill \Box$
 Bemerkung
 
 * Das Rechnen mit Quadratwurzeln wird durch $\sqrt{x} = x^{\frac{1}{2}}$ sehr erleichtert.
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Berechnen Sie folgende Terme
+
+\begin{enumerate}
+\color{darkblue}
+\item $4^{\frac{1}{2}}$ 
+\item $(25^{\frac{1}{4}})^2$ 
+\end{enumerate}
+
+
+
+
+
+
+
+
+# \color{darkblue} Übungsbeispiele
+\small
+
+\color{darkblue}
+Berechnen Sie folgende Terme
+
+\begin{enumerate}
+\color{darkblue}
+\item $4^{\frac{1}{2}}$ \textcolor{black}{$= \sqrt{2} = 4$}
+\item $(25^{\frac{1}{4}})^2$ \textcolor{black}{$25^{\frac{1}{4}\cdot 2} = 25^{\frac{1}{2}} = \sqrt{25} =5$}
+\end{enumerate}
+
 
 
 
