@@ -352,8 +352,82 @@ f^{-1} \circ f : D \to D, x \mapsto (f^{-1} \circ f)(x) := f^{-1}(f(x)) = x
 
 Die inverse Funktion von $f(x) := x^2 =: y$ ist $f^{-1}(y) = \sqrt{y}$
 
+
+\color{darkcyan} Zur Veranschaulichung 
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# 1x2 Plotlayout
+dev.new()
+library(latex2exp)
+par(
+mfcol      = c(1,2),
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.2)
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 15
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x)
+x         = cbind(matrix(seq(  0,xmax, len = res), nrow = res))             # polynomial functions domain
+gx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+matplot(
+x,
+gx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-4,60),
+ylab       = " ",
+xlab       = "x",
+main = TeX("f(x) = x^2")
+)
+grid()
+
+# f(y)
+y         = cbind(matrix(seq(  0,60, len = res), nrow = res))             #  functions domain
+gy        = cbind(sqrt(y))                                                  # f(y) := sqrt(y)
+matplot(
+y,
+gy,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("orange"),
+xlim       = c(-4,60),
+ylim       = c(-xmax,xmax),
+ylab       = " ",
+xlab       = "y",
+main = TeX("f^\\{-1\\}(y) = sqrt(y)")
+)
+grid()
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_8.pdf"),                               # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
 ```{r, echo = FALSE, out.width = "100%"}
-knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_5.pdf"))
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_8.pdf"))
 ```
 
 

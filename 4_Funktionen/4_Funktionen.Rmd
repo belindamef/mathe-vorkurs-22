@@ -135,7 +135,7 @@ knitr::include_graphics(file.path(abb_dir, "glmi_4_def_ziel_bsp.pdf"))
 \color{black}
 Bermerkung: 
 
-* Die aufgeführen Werte in Definitions- und Zielbereich (1,2,3 und 2,4,6) sind natürlich nicht vollständig. Für $\mathbb{R} \to \mathbb{R}$ umfasst das alle Werte in der Menge der reelen Zahlen.
+* Die aufgeführen Werte in Definitions- und Zielbereich (1,2,3 und 2,4,6) sind nicht vollständig, sondern nur beispielhaft. 
 
 # Bild- und Urbildmenge
 \small
@@ -185,10 +185,6 @@ jedes Element der Zielmenge $Z$ ein Urbild in der Definitionsmenge $D$ hat.
 Bemerkungen
 \begin{itemize}
 \justifying
-\item $f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, 
-weil z.B. für $x_1 = 2 \neq -2 = x_2$ gilt, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
-Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
-\item $f : [0,\infty[ \to [0,\infty[, x \mapsto f(x) := x^2$ ist injektiv und surjektiv, also bijektiv.
 \item Bijektive Abbildungen heißen auch \textit{eineindeutige Funktionen} (engl. \textit{one-to-one mappings}).
 \end{itemize}
 
@@ -203,6 +199,109 @@ knitr::include_graphics(file.path(abb_dir, "glmi_4_inj_sur_bij.pdf"))
 ```
 \vfill
 
+
+
+
+
+# \color{darkcyan} Funktionseigenschaften - Beispiel
+
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# 1 x 2 Plotlayout
+dev.new()
+library(latex2exp)
+par(
+mfcol      = c(1,2),
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.5)
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 15
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x)
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-4,60),
+ylab       = " ",
+xlab       = "x",
+main = TeX("f(x) = x^2")
+)
+grid()
+
+# g(x)
+x         = cbind(matrix(seq(  0,xmax, len = res), nrow = res))             # polynomial functions domain
+gx        = cbind(matrix(x^2))                                                  # g(x) := x^2
+matplot(
+x,
+gx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-4,60),
+ylab       = " ",
+xlab       = "x",
+main = TeX("g(x) = x^2")
+)
+grid()
+
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_x2.pdf"),                               # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
+
+\footnotesize
+
+Wir betrachten die Funktionen
+\begin{align*}
+f : \mathbb{R} \to \mathbb{R},  x \mapsto f(x) := x^2
+\end{align*}
+und
+\begin{align*}
+g : [0,\infty[ \; \to [0,\infty[,  x \mapsto g(x) := x^2
+\end{align*}
+
+\vspace{3mm}
+
+```{r, echo = FALSE, out.width = "70%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_x2.pdf"))
+```
+
+\begin{itemize}
+\footnotesize
+\justifying
+\item  $f$ ist nicht injektiv, 
+weil z.B. für $x_1 = 2 \neq -2 = x_2$ gilt, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
+\item Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
+\item $g$ ist injektiv und surjektiv, also bijektiv.
+\end{itemize}
 
 
 
@@ -233,13 +332,22 @@ g \circ f : D \to S, x \mapsto (g \circ f)(x) := g(f(x))
 \end{equation}
 eine Funktion definiert, die die \textit{Verkettung von $f$ und $g$} genannt wird.
 \end{definition}
+
+\footnotesize
 Bemerkungen
 \begin{itemize}
 \item $g \circ f$ bezeichnet die Funktion.
 \item $(g \circ f)(x)$ bezeichnet ein Element in $S$.
 \item Erst wird $f$ auf $x$ angewendet, dann wird $g$ auf $f(x)$ angewendet.
-\item Für $f(x) := -x^2$ und $g(x) := \exp(x)$ ist $(g \circ f)(x) = \exp(-x^2)$.
 \end{itemize}
+
+\color{darkcyan}
+Beispiel:
+
+\begin{itemize}
+\item \color{darkcyan} Für $f(x) := -x^2$ und $g(x) := \exp(x)$ ist $(g \circ f)(x) = \exp(-x^2)$.
+\end{itemize}
+
 
 
 
@@ -260,8 +368,97 @@ Bemerkungen
 \item Weil $f$ bijektiv ist, wird jedem $x \in D$ genau ein $z = f(x) \in Z$ zugeordnet.
 \item Jedem $z \in Z$ wird also auch genau ein $x \in D$ zugeordnet.
 \item Die inverse Funktion einer bijektiven Funktion ist also auch bijektiv.
+\end{itemize}
+
+
+
+
+
+# \color{darkcyan}Inverse - Beispiel
+
+\small
+\color{darkcyan}
+Beispiel:
+\begin{itemize}
+\color{darkcyan}
 \item Beispiel: Die inverse Funktion von $f(x) := 2x =: y$ ist $f^{-1}(y) = y/2$.
 \end{itemize}
+
+
+```{r, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# 1x2 Plotlayout
+dev.new()
+library(latex2exp)
+par(
+mfcol      = c(1,2),
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.2)
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 15
+x         = cbind(matrix(seq(  -5,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x)
+x         = cbind(matrix(seq(  -5,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(2*x))                                                  # f(x) := 2x
+matplot(
+x,
+fx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen"),
+xlim       = c(-5,xmax),
+ylim       = c(-4,30),
+ylab       = " ",
+xlab       = "x",
+main = TeX("f(x) = 2x")
+)
+grid()
+
+# f(y)
+y         = cbind(matrix(seq(  -10,30, len = res), nrow = res))             #  functions domain
+fy        = cbind(y/2)                                                  # f(y) := sqrt(y/2)
+matplot(
+y,
+fy,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("orange"),
+xlim       = c(-5,30),
+ylim       = c(-5,xmax),
+ylab       = " ",
+xlab       = "y",
+main = TeX("f^\\{-1\\}(y) = y/2")
+)
+grid()
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_8.pdf"),                               # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_8.pdf"))
+```
 
 
 
@@ -307,6 +504,7 @@ f(0) = 0.
 \end{equation}
 \end{theorem}
 
+\footnotesize
 \underline{Beweis}
 \vspace{1mm}
 
@@ -382,7 +580,7 @@ Elementare univariate reellwertige Funktion der probabilistischen Datenanalyse s
 \begin{itemize}
 \item die Polynomfunktionen,
 \item die Exponentialfunktion,
-\item der Logarithmusfunktion,
+\item die Logarithmusfunktion,
 \item die Gammafunktion.
 \end{itemize}
 \vspace{3mm}
@@ -453,7 +651,7 @@ fx,
 type       = "l",
 lty        = 1,
 lwd        = 2,
-col        = c("black", "gray50", "gray75", "gray90"),
+col        = c("darkgreen", "darkblue", "orange", "violet"),
 xlim       = c(-xmax,xmax),
 ylim       = c(-xmax,xmax),
 ylab       = " ",
@@ -467,7 +665,7 @@ c("f(x) = 2",
 "f(x) = 2x + 1",
 TeX("f(x) = x^2")),
 cex       = 1,
-col       = c("black", "gray50", "gray75", "gray90"),
+col       = c("darkgreen", "darkblue", "orange", "violet"),
 lty       = 1,
 lwd       = 2,
 bty       = "n")
@@ -616,7 +814,7 @@ fx,
 type      = "l",
 lty       = 1,
 lwd       = 2,
-col       = c("gray30", "gray70"),
+col       = c("darkgreen", "orange"),
 xlim      = c(-xmax,xmax),
 ylim      = c(-xmax,xmax),
 ylab      = " ",
@@ -628,7 +826,7 @@ legend(
 c("exp(x)", "ln(x)"),
 cex       = 1,
 lty       = 1,
-col       = c("gray30", "gray70"),
+col       = c("darkgreen", "orange"),
 lwd       = 2,
 y.intersp = 1.4,
 bty       = "n")
