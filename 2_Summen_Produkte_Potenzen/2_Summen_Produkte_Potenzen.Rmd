@@ -201,7 +201,7 @@ Spalten Sie die folgende Summe in $2$ Summen auf mit $1 < m < n$ und $m=2$.
 Indizieren Sie die folgende Summe neu mit einem Startindex $j=5$
 \begin{enumerate}[5]
 \color{darkblue}
-\item $\sum_{i = 0}^5 2i $ \textcolor{black}{$= \sum_{j=5}^7 2(i-5)$}
+\item $\sum_{i = 0}^5 2i $ \textcolor{black}{$= \sum_{j=5}^{10} 2(i-5)$}
 \end{enumerate}
 
 
@@ -526,7 +526,7 @@ Berechnen Sie folgende Terme
 
 \begin{enumerate}
 \color{darkblue}
-\item $4^{\frac{1}{2}}$ \textcolor{black}{$= \sqrt{2} = 4$}
+\item $4^{\frac{1}{2}}$ \textcolor{black}{$= \sqrt{4} = 2$}
 \item $(25^{\frac{1}{4}})^2$ \textcolor{black}{$25^{\frac{1}{4}\cdot 2} = 25^{\frac{1}{2}} = \sqrt{25} =5$}
 \end{enumerate}
 
@@ -555,7 +555,7 @@ Potenzen
 # Selbstkontrollfragen
 \small
 \setstretch{2.5}
-1. Berechnen Sie die Summen $\sum_{i=1}^3 2$, $\sum_{i=1}^3 i^2$, und $\sum_{i=1}^3 \frac{2}{3}i$.
+1. Berechnen Sie die Summen $\sum_{i=1}^3 2$, $\sum_{i=1}^3 i^2$, und $\sum_{i=1}^3 \frac{2}{3}i$.khkj
 2. Schreiben Sie die Summe $1 + 3 + 5 + 7 + 9 + 11$ mithilfe des Summenzeichens.
 3. Schreiben Sie die Summe $0 + 2 + 4 + 6 + 8 + 10$ mithilfe des Summenzeichens.
 4. Definieren Sie das Produktzeichen.

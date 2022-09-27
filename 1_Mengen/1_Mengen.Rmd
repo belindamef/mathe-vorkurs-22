@@ -244,9 +244,9 @@ Schreiben Sie die nachstehenden Mengen, falls möglich, als Teilmengen anderer M
 \item Es seien $A := \{1\}$, $B := \{1,2\}$, $C := \{1,2\}$. 
 
 \textcolor{black}{$A \subset B, A \subset C, B \subseteq C, C \subseteq B$ und $B = C$.}
-\item Es seien $A := \{5,6,7,8\}$, $B := \{x\in A|x>6\}$, $C := \{5\}$.  
+\item Es seien $A := \{5,6,7,8\}$, $B := \{x\in A|x>6\}$, $C := \{7\}$.  
 
-\textcolor{black}{$\Leftrightarrow A := \{5,6,7,8\}$, $B := \{7,8\}$, $C := \{5\}$}
+\textcolor{black}{$\Leftrightarrow A := \{5,6,7,8\}$, $B := \{7,8\}$, $C := \{7\}$}
 
 \textcolor{black}{$B \subset A, C \subset A, C \subset B$.}
 \end{enumerate}
@@ -286,8 +286,8 @@ Geben Sie jeweils die Kardinalität $|M|$ der Menge $M$ an.
 \begin{enumerate}
 \color{darkblue}
 \item Für $M := \{1,2,3\}$ 
-\item $M := \{a,b\}$
-\item Für $M := \{a,b\}$.
+\item Für $M := \{a,b\}$
+\item Für $M := \{x,y,z,\pi\}$.
 \item Für $M := \emptyset$
 \end{enumerate}
 
@@ -306,7 +306,7 @@ Geben Sie jeweils die Kardinalität $|M|$ der Menge $M$ an.
 \item Für $M := \{1,2,3\}$ \\
 \textcolor{black}{$|M| = 3$.}
 
-\item $M := \{a,b\}$ \\
+\item Für $M := \{a,b\}$ \\
 \textcolor{black}{$|M| = 2$}
 
 \item Für $M := \{x,y,z,\pi\}$. \\
