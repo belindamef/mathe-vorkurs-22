@@ -428,7 +428,13 @@ f'(x) &= \frac{d}{dx}\left(\exp\left(-\frac{1}{2}(x - \mu)^2\right)\right) \\
 &= - (x-\mu) \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 \end{align}
 
-\color{red}
+# \textcolor{darkblue}{SKF 15}. *Extremwert bestimmen*
+\large
+\color{darkblue} (forgeführt).
+
+\vspace{3mm}
+\color{black}
+\footnotesize
 Die zweite Ableitung von $f$ ergibt sich mit der Produktregel zu
 \begin{align}
 f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right) 
@@ -436,7 +442,10 @@ f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 &= -\exp\left(-\frac{1}{2}(x - \mu)^2\right) 
 + (x-\mu) \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)\cdot (x-\mu)\\
 &= -\exp\left(-\frac{1}{2}(x - \mu)^2\right) 
-+ 2(x-\mu) \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
++ (x-\mu)^2 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)\\
+&= (x-\mu)^2 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right) 
+- \exp\left(-\frac{1}{2}(x - \mu)^2\right) \\
+&= (x^2 - 2\mu x + \mu^2 -1) \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 \end{align}
 
 
@@ -448,18 +457,3 @@ f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 \vspace{3mm}
 \color{black}
 \footnotesize
-\color{red}
-Auflösen von $f'(x^*) = 0$ nach $x^*$ ergibt
-\begin{equation}
-f'(x^*) = 0
-\Leftrightarrow
-2x^* - 2 = 0
-\Leftrightarrow
-2x^* = 2
-\Leftrightarrow
-x^* = 1.
-\end{equation}
-
-$x^* = 1$ ist folglich eine Minimalstelle von $f$ mit zugehörigen Minimalwert $f(1) = 0$.
-
-
