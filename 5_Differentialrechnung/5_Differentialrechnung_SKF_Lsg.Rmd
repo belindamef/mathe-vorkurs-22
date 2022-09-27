@@ -420,7 +420,11 @@ Wir betrachten die Funktion
 f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right) \mbox{ mit } \mu \in \mathbb{R}
 \end{equation}
 
+\color{darkcyan}
+\small
+\noindent (1) Berechnen der ersten und zweiten Ableitung von $f$.
 
+\color{black}
 Die erste Ableitung von $f$ ergibt sich mit der Kettenregel zu
 \begin{align}
 f'(x) &= \frac{d}{dx}\left(\exp\left(-\frac{1}{2}(x - \mu)^2\right)\right) \\
@@ -457,3 +461,47 @@ f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 \vspace{3mm}
 \color{black}
 \footnotesize
+
+\color{darkcyan}
+\small
+\noindent (2) Bestimmen von Nullstellen $x^*$ von $f'$ durch Auflösen von $f'(x^*) = 0$ nach $x^*$.
+
+$\Rightarrow$ Nullstellen von $f'$ sind Kandidaten für Extremstellen von $f$.
+
+\color{black}
+Bei $f'(x) = - (x-\mu) \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ geht das einfacher: 
+Die Funktion $f'$ wird null, wenn entweder der erste oder der zweite Produktterm null werden. Der Exponentialterm $\exp\left(-\frac{1}{2}(x - \mu)^2\right)$ kann nicht null werden. Der erste Term $(x-\mu)$ wird null, wenn $x=\mu$. $\Rightarrow f'=0$, wenn $x=\mu$.  
+
+
+
+
+# \textcolor{darkblue}{SKF 15}. *Extremwert bestimmen*
+\large
+\color{darkblue} (forgeführt).
+
+\vspace{3mm}
+\color{black}
+\footnotesize
+
+\color{darkcyan}
+\small
+\noindent (3)  Evaluation von $f''(x^*)$.
+
+$\Rightarrow$ Wenn $f''(x^*) > 0$, dann ist $x^*$ lokale Minimumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) < 0$, dann ist $x^*$ lokale Maximumstelle von $f$.
+
+$\Rightarrow$ Wenn $f''(x^*) = 0$, dann ist $x^*$ keine Extremstelle von $f$.
+
+\color{black}
+
+\begin{align*}
+f''(\mu) &= (\mu^2 - 2\mu \mu + \mu^2 -1) \exp\left(-\frac{1}{2}(\mu - \mu)^2\right) \\
+&= (\mu^2 - 2\mu^2 + \mu^2 -1) \exp\left(-\frac{1}{2}\cdot 0^2\right) \\
+&= (-1) \exp\left(-\frac{1}{2}\cdot 0\right) \\
+&= -\exp(0)\\
+&= -1
+\end{align*}
+
+$\Rightarrow f''(\mu) < 0 \Rightarrow \mu$ ist eine lokale Maximumstelle von $f$.
+
