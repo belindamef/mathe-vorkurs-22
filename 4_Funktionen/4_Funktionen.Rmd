@@ -124,7 +124,7 @@ f : \mathbb{R} \to \mathbb{R}_{\ge 0}, x \mapsto f(x) := x^2.
 
 Beispiel: 
 \begin{align*}
-f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := 2.
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := 2x.
 \end{align*}´
 
 ```{r, echo = FALSE, out.width = "60%"}
