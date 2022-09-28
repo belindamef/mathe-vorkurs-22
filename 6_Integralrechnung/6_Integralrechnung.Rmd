@@ -225,7 +225,7 @@ ergibt dann
 \begin{split}
 \smallint (F(g(x)))' \,dx  & = \smallint f(g(x))g'(x) \,dx				\\
 \Leftrightarrow
-F(g(x)) + c & = \smallint f(g(x))g'(x) \,dx								\\
+F(g(x)) & = \smallint f(g(x))g'(x) \,dx								\\
 \Leftrightarrow
 \smallint f(g(x))g'(x) \,dx & = \smallint f(t)\,dt  \mbox{ mit } t := g(x).
 \end{split}
