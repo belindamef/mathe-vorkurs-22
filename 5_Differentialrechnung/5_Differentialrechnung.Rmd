@@ -476,7 +476,7 @@ Es sei $U \subseteq \mathbb{R}$ und $f : U \to \mathbb{R}$ eine univariate
 reellwertige Funktion. Dann hat $f$ an der Stelle $x_0 \in U$
 \begin{itemize}
 \justifying
-\item ein \textit{lokales Minimum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\item ein \textit{lokales Minimum}, wenn es ein Intervall $I := \; ]a,b[$ gibt mit $x_0 \in \;  ]a,b[$ und
 \begin{equation}
 f(x_0) \le f(x) \mbox{ für alle } x\in I\cap U,
 \end{equation}
@@ -484,11 +484,11 @@ f(x_0) \le f(x) \mbox{ für alle } x\in I\cap U,
 \begin{equation}
 f(x_0) \le f(x) \mbox{ für alle } x\in U,
 \end{equation}
-\item ein \textit{lokales Maximum}, wenn es ein Intervall $I := ]a,b[$ gibt mit $x_0 \in ]a,b[$ und
+\item ein \textit{lokales Maximum}, wenn es ein Intervall $I := \; ]a,b[$ gibt mit $x_0 \in \; ]a,b[$ und
 \begin{equation}
 f(x_0) \ge f(x) \mbox{ für alle }  x\in I\cap U,
 \end{equation}
-\item \textit{lokales Maximum}, wenn gilt, dass
+\item ein \textit{lokales Maximum}, wenn gilt, dass
 \begin{equation}
 f(x_0) \ge f(x) \mbox{ für alle } x\in U.
 \end{equation}
