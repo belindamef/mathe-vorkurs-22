@@ -87,7 +87,7 @@ Selbstkontrollfragen  + Lösungen
 
 # \textcolor{darkblue}{SKF 1}. *Grundlegende Begriffe und Symbole* 
 \large
-\color{darkblue} Diskutieren Sie die Begriffe Definition, Theorem, Beweis.
+\color{darkblue} Diskutieren Sie die Begriffe Definition, Theorem und Beweis.
 
 \vspace{3mm}
 \color{black}
@@ -101,14 +101,14 @@ innerhalb eines logischen Systems bewertet werden.
 
 * Ein **Theorem** (oder auch \textit{Satz}) ist eine Aussage, die 
 mittels eines Beweises als richtig erkannt, dass heißt, aus Definitionen und/oder
-bereits bekannten Sätzen hergeleitet werden kann. Theoreme sind die ``empirischen Ergebnisse'' 
+bereits bekannten Sätzen hergeleitet werden kann. Theoreme sind die "empirischen Ergebnisse"
 der Mathematik. 
 
 * Ein **Beweis** ist eine logische Argumentationskette, die auf bekannte
 Definitionen und Theoreme zurückgreift, um die Richtigkeit eines Theorems zu belegen. 
 Kurze Beweise tragen oft zum Verständnis eines Theorems bei, lange Beweise eher nicht.
 Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt 
-(``Warum ist das so?''). 
+("Warum ist das so?"). 
 
 
 
@@ -124,9 +124,9 @@ Beweise sind die Antwort auf die Frage warum eine mathematische Aussage gilt
 \justifying
 
 Nach Cantor (1895) ist eine \textit{Menge} definiert als
-``eine Zusammenfassung $M$ von bestimmten wohlunterschiedenen Objekten $m$
+"eine Zusammenfassung $M$ von bestimmten wohlunterschiedenen Objekten $m$
 unsere Anschauung oder unseres Denken (welche die Elemente der Menge genannt werden)
-zu einem Ganzen''. Wir schreiben
+zu einem Ganzen". Wir schreiben
 \begin{align*}
 m \in M \mbox{ bzw. } m \notin M
 \end{align*}
@@ -161,9 +161,9 @@ um auszudrücken, dass $m$ ein Element bzw. kein Element von $M$ ist.
 \footnotesize
 \setstretch{1.4}
 
-* $m \in M$ bedeutet $m$ ist ein Element der Menge $M$
-* $m \notin N$ bedeutet $m$ ist *kein* Element der Menge $N$
-* $M \subseteq N$ bedeutet die Menge $M$ ist eine Teilmenge der Menge $N$. Dabei ist $M$ eine *Untermenge* von $N$ und $N$ eine *Obermenge* von $N$
+* $m \in M$ bedeutet $m$ ist ein Element der Menge $M$.
+* $m \notin N$ bedeutet $m$ ist *kein* Element der Menge $N$.
+* $M \subseteq N$ bedeutet die Menge $M$ ist eine Teilmenge der Menge $N$. Dabei ist $M$ eine *Untermenge* von $N$ und $N$ eine *Obermenge* von $N$.
 * $M \subset N$ bedeutet die Menge $M$ ist eine echte Teilmenge der Menge $N$. Das heißt für jedes Element $m \in M$ gilt auch $m \in N$, aber es gibt mindestens ein Element $n \in N$ für das gilt $n \notin M$. Anders ausgedrückt, es gibt mindestens ein Element $n$ der Menge $N$, das *nicht* auch ein Element der Menge $M$ ist. 
 
 
@@ -260,7 +260,7 @@ $M \Delta N = \{b,c,d\}$.
 
 * $\mathbb{N}$ bezeichnet die Menge der natürlichen Zahlen.
 
-* $\mathbb{N}_n$ bezeichnet die Menge der natürlichen Zahlen der Ordnung n  
+* $\mathbb{N}_n$ bezeichnet die Menge der natürlichen Zahlen der Ordnung n.  
 \textcolor{darkcyan}{Bsp. für $n=3$: $\mathbb{N}_3 = \{1,2,3\}$}.
 
 * $\mathbb{N}^0$ bezeichnet die Menge der natürlichen Zahlen inklusive der Null.
@@ -314,11 +314,11 @@ Zusammenhängende Teilmengen der reellen Zahlen heißen \textit{Intervalle}. Fü
 \end{equation}
 \item das \textit{offene Interval}
 \begin{equation}
-]a,b[ := \{x \in \mathbb{R}|a < x < b\},
+]a,b[ \; := \{x \in \mathbb{R}|a < x < b\},
 \end{equation}
 \item die \textit{halboffenen Intervalle}
 \begin{equation}
-]a,b] := \{x \in \mathbb{R}| a < x \le b\} \mbox{ und } [a,b[ := \{x \in \mathbb{R}| a \le x < b\}.
+]a,b] := \{x \in \mathbb{R}| a < x \le b\} \mbox{ und } [a,b[ \; := \{x \in \mathbb{R}| a \le x < b\}.
 \end{equation}
 \end{itemize}
 \end{definition}
