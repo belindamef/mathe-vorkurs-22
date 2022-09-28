@@ -231,7 +231,7 @@ F(g(x)) & = \smallint f(g(x))g'(x) \,dx								\\
 \end{split}
 \end{align}
 Dabei ist die rechte Seite der letzten obigen Gleichung zu verstehen als 
-$F(g(x)) + c$, also als Stammfunktion von $f$ evaluiert an der Stelle $t := g(x)$.
+$F(g(x))$, also als Stammfunktion von $f$ evaluiert an der Stelle $t := g(x)$.
 Das $dt$ ist \underline{nicht} durch $dg(x)$ zu ersetzen, sondern rein
 notationstechnischer Natur.
 
