@@ -525,13 +525,24 @@ x_0 \mbox{ ist Extremstelle von } f \Rightarrow f'(x_0) = 0.
 \footnotesize
 Bemerkungen
 
-* Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die erste Ableitung von $f$ in $x_0$ null.
-* Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$. Dann gilt
-    * \small Links von $x_0$ steigt $f$ an, rechts von $x_0$ fällt $f$ ab.
-    * In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+\begin{itemize}
+\footnotesize 
+\item \textit{Notwendige Bedingung} sagt aus: 
+\begin{itemize} 
+\footnotesize
+\item Wenn $x_0$ eine Extremstelle von $f$ ist, dann ist die erste Ableitung von $f$ in $x_0$ null. 
+\item Aber wenn die erste Ableitung von $f$ in $x_0$ null ist, ist $x_0$ nicht unbedingt eine Extremstelle, weil das auch ein Sattelpunkt sein könnte. 
+\end{itemize}
+\item Sei zum Beispiel $x_0$ eine lokale Maximalstelle von $f$. Dann gilt
+\begin{itemize}
+\footnotesize 
+\item Links von $x_0$ steigt $f$ an, rechts von $x_0$ fällt $f$ ab.
+\item In $x_0$ steigt $f$ weder an, noch fällt $f$ ab, also ist $f'(x_0) = 0$.
+\end{itemize}
+\end{itemize}
 
 
-# Analytische Optimierung
+# \color{darkcyan}Veranschaulichung
 \small
 \begin{definition}[Hinreichende Bedingungen für lokale Extrema]
 $f$ sei eine zweimal differenzierbare univariate reellwertige Funktion.
@@ -587,7 +598,7 @@ p   = matplot(                                                                  
             type        = "l",                                                   # line type for all graphs
             lty         = 1,                                                     # solid and dashed lines
             lwd         = 2,                                                     # linewidth for all graphs
-            col         = c("gray20", "gray50", "gray80"),                       # line colors
+            col         = c("gray20", "orange", "darkcyan"),                       # line colors
             xlim        = c(x_min,x_max),                                        # x-axis limits
             ylim        = c(-2,6),                                               # y-axis limits
             ylab         = " ",                                                  # no y-axis label
@@ -601,7 +612,7 @@ l   = legend(-3.3,                                                              
                 "f''(x) = 2") ,                                                  # labels
              cex = .8,                                                           # size of text multiplier
              lty = 1,                                                            # linetype
-             col = c("gray20", "gray50", "gray80"),                              # colors
+             col = c("gray20", "orange", "darkcyan"),                              # colors
              lwd = 2,                                                            # line width
              y.intersp = 1.5,                                                    # legend line spacing
              bty = "n")
@@ -655,10 +666,9 @@ $\Rightarrow$ Wenn $f''(x^*) = 0$, dann ist $x^*$ keine Extremstelle von $f$.
 \end{definition}
 
 
-# Analytische Optimierung
+# \color{darkcyan} Beispiel für Standardverfahren analytischer Optimierung
 
-\color{darkcyan}
-Beispiel
+
 
 \vspace{2mm}
 \footnotesize
