@@ -204,6 +204,27 @@ GPU (Graphical Processing Unit)
 \color{black}
 \footnotesize
 
+\begin{definition}[Algorithmus]
+\justifying
+Ein \textit{Algorithmus} ist eine Folge von Anweisungen, um aus gewissen Eingabedaten 
+bestimmte Ausgabedaten herzuleiten, wobei folgende Bedingungen erfüllt sein müssen
+
+\begin{itemize}
+\item \textit{Finitheit.} Die Anweisungsfolge muss in einem endlichen Text vollständig beschrieben sein.
+\item \textit{Effektivität.} Jede Anweisung muss tatsächlich ausführbar sein.
+\item \textit{Terminierung.} Der Algorithmus endet nach endlich vielen Anweisungen.
+\item \textit{Determiniertheit.} Der Ablauf des Algorithmus ist zu jedem Punkt fest vorgeschrieben.
+\end{itemize}
+
+Wenn $E$ die Menge der zulässigen Eingabedaten und $A$ die Menge der zulässigen 
+Ausgabedaten bezeichnet, dann ist ein Algorithmus eine Funktion
+\begin{equation}
+f : E \to A, e \mapsto f(e)
+\end{equation}
+Umgekehrt heißen Funktionen, die durch einen Algorithmus beschrieben werden 
+können, \textit{berechenbare Funktionen}.
+\end{definition}
+
 
 
 
