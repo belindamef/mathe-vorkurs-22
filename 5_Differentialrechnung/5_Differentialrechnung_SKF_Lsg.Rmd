@@ -115,7 +115,7 @@ $f : I \to \mathbb{R}, x \mapsto f(x)$ eine univariate reellwertige Funktion.
 Wenn $f$ differenzierbar für alle $x \in I$ ist, bezeichnet $f'$
 die \textit{Ableitung von $f$} und ist definiert als
 \begin{equation}
-f' : I \to \mathbb{R}, x \mapsto f'(x)
+f' : I \to \mathbb{R}, x \mapsto f'(x).
 \end{equation}
 
 
@@ -175,7 +175,7 @@ f'' := (f')'.
 \color{black}
 \footnotesize
 
-$\mbox{Für } f(x) := \sum_{i=1}^n g_i(x) \mbox{ gilt } f'(x) = \sum_{i=1}^n g_i'(x)$
+$\mbox{Für } f(x) := \sum_{i=1}^n g_i(x) \mbox{ gilt } f'(x) = \sum_{i=1}^n g_i'(x)$.
 
 
 
@@ -234,7 +234,7 @@ $\mbox{Für } f(x) := g_1(g_2(x)) \mbox{ gilt } f'(x) = g_1'(g_2(x))g'_2(x).$
 \begin{align*}
 f'(x) &= 2\cdot3x^1 + \exp\left(-x^2\right)\cdot (-2x^1) - (1\cdot\ln(x)+ x \cdot \frac{1}{x} ) \\
 & = 6x - 2x \exp\left(-x^2\right) - ln(x) - \frac{x}{x} \\
-& = 6x - 2x \exp\left(-x^2\right) - ln(x)
+& = 6x - 2x \exp\left(-x^2\right) - ln(x) -1
 \end{align*}
 
 
@@ -250,7 +250,7 @@ f'(x) &= 2\cdot3x^1 + \exp\left(-x^2\right)\cdot (-2x^1) - (1\cdot\ln(x)+ x \cdo
 \footnotesize
 
 \begin{align*}
-f'(x) &=\frac{1}{2}\sum_{i=1}^n 2(x_i - \mu)\cdot 1 \\
+f'(x) &=\frac{1}{2}\sum_{i=1}^n 2(x_i - \mu)\cdot (1 - 0) \\
 & =\frac{1}{2}\sum_{i=1}^n 2(x_i - \mu)
 \end{align*}
 
@@ -425,6 +425,7 @@ f(x) := \exp\left(-\frac{1}{2}(x - \mu)^2\right) \mbox{ mit } \mu \in \mathbb{R}
 \noindent (1) Berechnen der ersten und zweiten Ableitung von $f$.
 
 \color{black}
+\footnotesize
 Die erste Ableitung von $f$ ergibt sich mit der Kettenregel zu
 \begin{align}
 f'(x) &= \frac{d}{dx}\left(\exp\left(-\frac{1}{2}(x - \mu)^2\right)\right) \\
@@ -468,9 +469,11 @@ f''(x) &= -1 \cdot \exp\left(-\frac{1}{2}(x - \mu)^2\right)
 
 $\Rightarrow$ Nullstellen von $f'$ sind Kandidaten für Extremstellen von $f$.
 
+\vspace{3mm}
+\footnotesize
 \color{black}
 Bei $f'(x) = - (x-\mu) \exp\left(-\frac{1}{2}(x - \mu)^2\right)$ geht das einfacher: 
-Die Funktion $f'$ wird null, wenn entweder der erste oder der zweite Produktterm null werden. Der Exponentialterm $\exp\left(-\frac{1}{2}(x - \mu)^2\right)$ kann nicht null werden. Der erste Term $(x-\mu)$ wird null, wenn $x=\mu$. $\Rightarrow f'=0$, wenn $x=\mu$.  
+Die Funktion $f'$ wird null, wenn entweder der erste oder der zweite Produktterm null werden. Der Exponentialterm $\exp\left(-\frac{1}{2}(x - \mu)^2\right)$ kann nicht null werden. Der erste Term $(x-\mu)$ wird null, wenn $x=\mu$. Daraus folgt, dass $f'=0$, wenn $x=\mu$.  
 
 
 
@@ -494,12 +497,13 @@ $\Rightarrow$ Wenn $f''(x^*) < 0$, dann ist $x^*$ lokale Maximumstelle von $f$.
 $\Rightarrow$ Wenn $f''(x^*) = 0$, dann ist $x^*$ keine Extremstelle von $f$.
 
 \color{black}
+\footnotesize
 
 \begin{align*}
-f''(\mu) &= (\mu^2 - 2\mu \mu + \mu^2 -1) \exp\left(-\frac{1}{2}(\mu - \mu)^2\right) \\
+f''(\mu) &= (\mu^2 - 2\mu \cdot \mu + \mu^2 -1) \exp\left(-\frac{1}{2}(\mu - \mu)^2\right) \\
 &= (\mu^2 - 2\mu^2 + \mu^2 -1) \exp\left(-\frac{1}{2}\cdot 0^2\right) \\
 &= (-1) \exp\left(-\frac{1}{2}\cdot 0\right) \\
-&= -\exp(0)\\
+&= -\exp(0)\\        
 &= -1
 \end{align*}
 
