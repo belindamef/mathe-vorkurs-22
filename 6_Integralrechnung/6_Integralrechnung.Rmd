@@ -357,6 +357,7 @@ Z_{\mbox{\tiny max}} := \max_{i \in n} \Delta x_i,
 also die größte der Teilintervalllängen $\Delta x_i$, die \textit{Feinheit} von $Z$.
 \end{definition}
 
+\footnotesize¸
 Bemerkung
 
 * $\Delta x_i$ ist die Breite der Streifen in untenstehender Abbildung.
@@ -486,7 +487,7 @@ Dann gelten folgende Rechenregeln:
 \begin{itemize}
 \item[(1)] Linearität. Für $c_1,c_2\in \mathbb{R}$ gilt
 \begin{equation}
-\int_a^b (c_1 f(x) + c_2g(x))\,dx = c_1 \int_a^b f(x)\,dx + c_2 \int_a^b f(x)\,dx.
+\int_a^b (c_1 f(x) + c_2g(x))\,dx = c_1 \int_a^b f(x)\,dx + c_2 \int_a^b g(x)\,dx.
 \end{equation}
 \item[(2)] Additivität. Für $a < c < b$ gilt
 \begin{equation}
@@ -507,7 +508,7 @@ Bemerkung
 
 
 
-#  Bestimmte Integrale
+#  Bestimmte Integrale - Veranschaulichung Additivität
 
 \vspace{2mm}
 \begin{equation*}
