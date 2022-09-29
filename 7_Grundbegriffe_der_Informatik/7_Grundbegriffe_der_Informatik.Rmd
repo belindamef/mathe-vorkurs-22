@@ -551,7 +551,7 @@ Ein \textit{Algorithmus} ist eine Folge von Anweisungen, um aus gewissen Eingabe
 bestimmte Ausgabedaten herzuleiten, wobei folgende Bedingungen erfüllt sein müssen
 
 \begin{itemize}
-\item \textit{Finitheit.} Die Anweisungsfolge ist in einem endlichen Text vollständig beschrieben sein.
+\item \textit{Finitheit.} Die Anweisungsfolge muss in einem endlichen Text vollständig beschrieben sein.
 \item \textit{Effektivität.} Jede Anweisung muss tatsächlich ausführbar sein.
 \item \textit{Terminierung.} Der Algorithmus endet nach endlich vielen Anweisungen.
 \item \textit{Determiniertheit.} Der Ablauf des Algorithmus ist zu jedem Punkt fest vorgeschrieben.
