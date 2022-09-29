@@ -119,7 +119,7 @@ f(D') := \{z \in Z| \mbox{Es gibt ein } x \in D' \mbox{ mit } z = f(x)\}
 \begin{align*}
 f^{-1}(Z') := \{x \in D | f(x) \in Z'\}
 \end{align*}\\
-\textit{\textcolor{darkcyan}{Die Urbildmenge umfasst die Werte der Definitionsmenge, die auch einen Wert in $Z'$ abbilden.}}
+\textit{\textcolor{darkcyan}{Die Urbildmenge umfasst die Werte der Definitionsmenge, die auf einen Wert in $Z'$ abbilden.}}
 \end{itemize}
 
 
@@ -161,27 +161,21 @@ knitr::include_graphics(file.path(abb_dir,"glmi_4_inj_sur_bij.pdf"))
 \color{black}
 \footnotesize
 
-$f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, 
-weil z.B. für $x_1 = 2 \neq -2 = x_2$ gilt, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
-Weiterhin ist $f$ auch nicht surjektiv, weil z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
+$f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, verschiedene Urbilder auf das gleiche Bild abbilden. 
+
+* z.B. gilt für $x_1 = 2 \neq -2 = x_2$, dass $f(x_1) = 2^2 = 4 = (-2)^2 = f(x_2)$. 
+
+Weiterhin ist $f$ auch nicht surjektiv, weil nicht jedes Element der Zielmenge ein Urbild in der Definitionsmenge hat.
+
+* z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
 
 ```{r, echo = F, eval = F}
 abb_dir = file.path(dirname(getwd()), "Abbildungen")
 graphics.off()
 
-# Definitionen
-res       = 1e3                                                                  # domain resolution
-a         = 2                                                                    # constant
-b         = 1                                                                    # constant
-xmax      = 5
-x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
-fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
-                matrix(x),                                                       # f(x) := x
-                matrix(a * x + b),                                               # f(x) := ax + b
-                matrix(x^2))                                                     # f(x) := x^2
-
-# Visualisierung
+# 1 x 2 Plotlayout
 dev.new()
+library(latex2exp)
 par(
 family     = "sans",
 pty        = "s",
@@ -189,41 +183,47 @@ bty        = "l",
 lwd        = 1,
 las        = 1,
 mgp        = c(2,1,0),
-cex        = 1.2
-)
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.5)
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 15
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x)
 matplot(
 x,
 fx,
 type       = "l",
 lty        = 1,
 lwd        = 2,
-col        = c("black", "gray50", "gray75", "orange"),
+col        = c("black"),
 xlim       = c(-xmax,xmax),
-ylim       = c(-xmax,xmax),
+ylim       = c(-4,60),
 ylab       = " ",
 xlab       = "x",
+main = TeX("f(x) = x^2")
 )
 grid()
-legend(-.5,
-0,
-c("f(x) = 2",
-"f(x) = x",
-"f(x) = 2x + 1",
-TeX("f(x) = x^2")),
-cex       = 1,
-col       = c("black", "gray50", "gray75", "orange"),
-lty       = 1,
-lwd       = 2,
-bty       = "n")
 
-dev.copy2pdf(                                                                    # export to PDF
-    file   = file.path(abb_dir, "glmi_4_skf_4.pdf"),                   # filename
-    width  = 12,                                                                  # PDF width
-    height = 6                                                                   # PDF height
+
+
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_4.pdf"),                               # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
 )
 ```
 
-```{r, echo = FALSE, out.width = "100%"}
+```{r, echo = FALSE, out.width = "80%"}
 knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_4.pdf"))
 ```
 
@@ -232,71 +232,91 @@ knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_4.pdf"))
 \large
 \color{darkblue} Erläutern Sie, warum $f: [0,\infty[ \to [0,\infty[ , x \mapsto f(x) := x^2$ bijektiv ist.
 
-$f : [0,\infty[ \to [0,\infty[, x \mapsto f(x) := x^2$ ist injektiv und surjektiv und somit bijektiv.
+
 
 \vspace{3mm}
 \color{black}
 \footnotesize
 
+$f$ ist injektiv, weil es zu jedem Bild $z \in f(D)$ *genau ein* Urbild $x \in D$ gibt. Formal ausgedrückt, gilt $f(x_1) \neq f(x_2)$ für $x_1, x_2 \in D$, mit $x_1 \neq x_2$.
+
+$f$ ist surjektiv, weil jedes Element der Zielmenge $Z$ ein Urbild in der Definitionsmenge $D$ hat. 
+
+Weil $f$ injektiv und surjektiv, ist $f$ auch bijektiv.
+
 ```{r, echo = F, eval = F}
 abb_dir = file.path(dirname(getwd()), "Abbildungen")
 graphics.off()
 
-# Definitionen
-res       = 1e3                                                                  # domain resolution
-a         = 2                                                                    # constant
-b         = 1                                                                    # constant
-xmax      = 5
-x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))              # polynomial functions domain
-fx        = cbind(matrix(rep(a,res)),                                            # f(x) := a
-                matrix(x),                                                       # f(x) := x
-                matrix(a * x + b),                                               # f(x) := ax + b
-                matrix(x^2))                                                     # f(x) := x^2
-
-# Visualisierung
+# 1 x 2 Plotlayout
 dev.new()
+library(latex2exp)
 par(
+mfcol      = c(1,2),
 family     = "sans",
 pty        = "s",
 bty        = "l",
 lwd        = 1,
 las        = 1,
 mgp        = c(2,1,0),
-cex        = 1.2
-)
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.5)
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 15
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # polynomial functions domain
+fx        = cbind(matrix(x^2))                                                  # f(x) := x^2
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x)
 matplot(
 x,
 fx,
 type       = "l",
 lty        = 1,
 lwd        = 2,
-col        = c("black", "gray50", "gray75", "orange"),
+col        = c("black"),
 xlim       = c(-xmax,xmax),
-ylim       = c(-xmax,xmax),
+ylim       = c(-4,60),
 ylab       = " ",
 xlab       = "x",
+main = TeX("f(x) = x^2")
 )
 grid()
-legend(-.5,
-0,
-c("f(x) = 2",
-"f(x) = x",
-"f(x) = 2x + 1",
-TeX("f(x) = x^2")),
-cex       = 1,
-col       = c("black", "gray50", "gray75", "orange"),
-lty       = 1,
-lwd       = 2,
-bty       = "n")
 
-dev.copy2pdf(                                                                    # export to PDF
-    file   = file.path(abb_dir, "glmi_4_skf_5.pdf"),                   # filename
-    width  = 12,                                                                  # PDF width
-    height = 6                                                                   # PDF height
+# g(x)
+x         = cbind(matrix(seq(  0,xmax, len = res), nrow = res))             # polynomial functions domain
+gx        = cbind(matrix(x^2))                                                  # g(x) := x^2
+matplot(
+x,
+gx,
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("darkgreen"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-4,60),
+ylab       = " ",
+xlab       = "x",
+main = TeX("f(x) = x^2")
+)
+grid()
+
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "glmi_4_skf_5.pdf"),                               # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
 )
 ```
 
-```{r, echo = FALSE, out.width = "100%"}
+
+```{r, echo = FALSE, out.width = "80%"}
 knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_5.pdf"))
 ```
 
@@ -313,9 +333,9 @@ knitr::include_graphics(file.path(abb_dir,"glmi_4_skf_5.pdf"))
 
 \begin{itemize}
 \item $g \circ f$ bezeichnet die Funktion.
-\item $g \circ f: D \to S$ wir gelesen wird als ``die Funktion $g \circ f$ bildet alle Elemente der
-Menge $D$ eindeutig auf Elemente in $S$ ab''
-\item $x \mapsto (g\circ f)(x)$ wird gelesen wird als ``$x$, welches ein Element von $D$ ist, wird durch die Funktion $g \circ f$ auf $(g \circ f)(x)$ abgebildet, wobei $(g \circ f)(x)$ ein Element von $S$ ist''
+\item $g \circ f: D \to S$ wir gelesen wird als "die Funktion $g \circ f$ bildet alle Elemente der
+Menge $D$ eindeutig auf Elemente in $S$ ab".
+\item $x \mapsto (g\circ f)(x)$ wird gelesen wird als "$x$, welches ein Element von $D$ ist, wird durch die Funktion $g \circ f$ auf $(g \circ f)(x)$ abgebildet, wobei $(g \circ f)(x)$ ein Element von $S$ ist".
 \item $(g \circ f)(x)$ bezeichnet ein Element in $S$.
 \end{itemize}
 
@@ -466,11 +486,11 @@ Eine Abbildung, für die obige Eigenschaften nicht gelten, heißt \textit{nicht-
 \begin{itemize}
 \item \textit{univariate reellwertige Funktionen} sind definiert als
 \begin{align*}
-f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x),
+f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x).
 \end{align*}
 \item \textit{multivariate reellwertige Funktionen} sind definiert als
 \begin{align*}
-f : \mathbb{R}^n \to \mathbb{R}, x \mapsto f(x) = f(x_1,...,x_n),
+f : \mathbb{R}^n \to \mathbb{R}, x \mapsto f(x) = f(x_1,...,x_n).
 \end{align*}
 \end{itemize}
 
