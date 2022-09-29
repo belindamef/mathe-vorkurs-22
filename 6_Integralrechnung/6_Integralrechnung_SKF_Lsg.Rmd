@@ -162,6 +162,7 @@ genannt und mit
 bezeichnet.
 \end{theorem}
 
+\color{darkcyan}
 \footnotesize
 Bemerkungen
 
