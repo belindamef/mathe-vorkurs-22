@@ -167,7 +167,7 @@ $f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := x^2$ ist nicht injektiv, versc
 
 Weiterhin ist $f$ auch nicht surjektiv, weil nicht jedes Element der Zielmenge ein Urbild in der Definitionsmenge hat.
 
-* z.B. $-1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
+* z.B. $f(x) = -1 \in \mathbb{R}$ kein Urbild unter $f$ hat.
 
 ```{r, echo = F, eval = F}
 abb_dir = file.path(dirname(getwd()), "Abbildungen")
