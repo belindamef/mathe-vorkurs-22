@@ -15,7 +15,7 @@
 ## Allgemeine Informationen
 Dieses Repository enthält alle Skripte für den Vorkurs "Fit für Psychologie" zum Studienstart im Wintersemester 2022/2023 bei Belinda Fleischmann an der OVGU Magdeburg.
 
-Auf unserer Lehrstuhlseite ist dieser Kurs als ["Grundlagen der Mathematik und Informatik"]() aufgeführt. 
+Auf unserer Lehrstuhlseite ist dieser Kurs als ["Grundlagen der Mathematik und Informatik"](https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Wintersemester+2023/Grundlagen+der+Mathematik+und+Informatik.html) aufgeführt. 
 
 ## Anleitung, wie man beitragen kann
 Im Folgenden finden Sie eine Schritt-für-Schritt Anleitung dafür, wie Sie zu diesem Repository beitragen können (z.B. Typos korrigieren). Das hier beschriebene Vorgehen erfolgt auschließlich online über das github Webinterface. Das heißt, Sie benötigen hierfür keine gesonderte Desktop-App. 
