@@ -283,7 +283,8 @@ Anmerkungen:
 
 * \color{darkcyan}Das Bild der gesamten Defintionsmenge $D$ entspricht dem Wertebereicht $f(D) \subseteq Z$.
 * Bei allen drei Beispielen existieren zu jedem Bild $z$ mehrere Urbilder $f^{-1}(z)$. Solche Funktionen heißen *nicht-injektiv*.
-* Weitere Urbilder von $x=1$ sind $f^{-1}_2(1) = - \frac{3\pi}{2}$,  $g^{-1}_2(1) = 1$ und $h^{-1}_2(1)= -1$ 
+* Ein weiteres Beispiel für ein Urbild von $x=1$ gegeben der Abbildung $f$ ist $f^{-1}_2(1) = - \frac{3\pi}{2}$. Es existieren noch unendlich viele Urbilder von $x=1$ gegeben der Abbildung $f$
+* Für $g$ und $h$ existieren jeweils 2 Urbilder von $x=1$. Neben den oben angegeben sind das  $g^{-1}_2(1) = 1$ und $h^{-1}_2(1)= -1$.
 * Außerdem hat in allen drei Beispielen nicht jedes Element der Zielmengen $Z$ ein Urbild in den Definitionsmengen $D$ (*nicht-surjektiv*). 
 
 
