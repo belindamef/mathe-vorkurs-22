@@ -163,6 +163,152 @@ Bemerkung
 
 
 
+# \color{darkcyan} Abbildung, Bild- und Urbilder - Beispiele
+
+
+```{r Bild und Urbild Beispiele, echo = F, eval = F}
+abb_dir = file.path(dirname(getwd()), "Abbildungen")
+graphics.off()
+
+# 1 x 2 Plotlayout
+dev.new()
+library(latex2exp)
+par(
+mfcol      = c(1,3),
+family     = "sans",
+pty        = "s",
+bty        = "l",
+lwd        = 1,
+las        = 1,
+mgp        = c(2,1,0),
+font.main  = 1,
+cex        = 1.2,
+cex.main   = 1.2,
+col.axis   = "grey16")
+
+# Definitionen
+res       = 1e3                                                                 # domain resolution
+a         = 2                                                                   # constant
+b         = 1                                                                   # constant
+xmax      = 5
+ymax      = 8
+x         = cbind(matrix(seq(  -xmax,xmax, len = res), nrow = res))             # functions domain
+fx        = cbind(matrix(sin(x)),                                               # f(x) := sin(x)
+                  matrix(x^2),                                                  # g(x) := x^2
+                  matrix(1/(x^2))                                               # h(x) := 1/x^2
+                  )                
+
+# Visualisierung
+# -------------------------------------------------------------------------
+# f(x) := sin(x)
+matplot(
+x,
+fx[,1],
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-2,ymax),
+ylab       = " ",
+xlab       = "x",
+main = TeX("f(x) := sin(x)")
+)
+grid()
+
+# f(x) := x^2
+gx        = cbind(matrix(x^2))                                                  # g(x) := x^2
+matplot(
+x,
+fx[,2],
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-2,ymax),
+ylab       = " ",
+xlab       = "x",
+main = TeX("g(x) := x^2")
+)
+grid()
+
+# f(x) := 1/x^2
+gx        = cbind(matrix(x^2))                                                  # g(x) := x^2
+matplot(
+x,
+fx[,3],
+type       = "l",
+lty        = 1,
+lwd        = 2,
+col        = c("black"),
+xlim       = c(-xmax,xmax),
+ylim       = c(-2,ymax),
+ylab       = " ",
+xlab       = "x",
+main = TeX("h(x) := 1/x^2")
+)
+grid()
+
+dev.copy2pdf(                                                                   # export to PDF
+    file   = file.path(abb_dir, "migl_4_weitere_beispiele.pdf"),                # filename
+    width  = 12,                                                                # PDF width
+    height = 6                                                                  # PDF height
+)
+```
+\vspace{-1mm}
+```{r, echo = FALSE, out.width = "80%", fig.align = 'right'}
+knitr::include_graphics(file.path(abb_dir,"migl_4_weitere_beispiele.pdf"))
+```
+\vspace{-10mm}
+\tiny
+\setstretch{1.5}
+
+\begin{tabular}{llll}
+                              & $f : \mathbb{R} \to \mathbb{R},  x \mapsto f(x)$ & $g : \mathbb{R} \to \mathbb{R},  x \mapsto g(x)$   & $h : \mathbb{R}\setminus\{0\} \to \mathbb{R},  x \mapsto h(x)$\\\hline
+Funktionale Form \hspace{8mm} & $f(x):= \sin(x)$                                 & $g(x):= x^2$                                       & $h(x):= \frac{1}{x^2}$   \\
+Definitionsmenge              & $D := \mathbb{R}$                                & $D := \mathbb{R}$                                  & $D := \mathbb{R}\setminus\{0\}$   \\
+Zielmenge                     & $Z := \mathbb{R}$                                & $Z := \mathbb{R}$                                  & $Z := \mathbb{R}$ \\
+Wertebereich                  & $f(D) = [-1,1] \subseteq Z$                      & $g(D) = [0,\infty[ \; \subseteq Z$ \hspace{2.5mm}  & $h(D) = \mathbb{R}^{+} \subseteq Z$ \\
+Bild von $x = 1 \in D$        & $f(1) = \sin(1) = 0.84$           \hspace{2mm}   & $g(1) = 1^2 = 1$                                   & $h(1) = \frac{1}{1^2} = 1$ \\
+\textit{Ein} Urbild von $z = 1 \in Z$ & $f^{-1}_1(1) = \frac{\pi}{2}$            & $g^{-1}_1(1) = 1$                                  & $h^{-1}_1(1)= 1$ \\\hline
+\end{tabular}
+
+
+\vfill
+\color{darkcyan}
+Anmerkungen:
+\vspace{-1mm}
+\setstretch{1.1}
+
+* \color{darkcyan}Das Bild der gesamten Defintionsmenge $D$ entspricht dem Wertebereicht $f(D) \subseteq Z$.
+* Bei allen drei Beispielen existieren zu jedem Bild $z$ mehrere Urbilder $f^{-1}(z)$. Solche Funktionen heißen *nicht-injektiv*.
+* Weitere Urbilder von $x=1$ sind $f^{-1}_2(1) = - \frac{3\pi}{2}$,  $g^{-1}_2(1) = 1$ und $h^{-1}_2(1)= -1$ 
+* Außerdem hat in allen drei Beispielen nicht jedes Element der Zielmengen $Z$ ein Urbild in den Definitionsmengen $D$ (*nicht-surjektiv*). 
+
+
+
+
+# \color{darkcyan} Abbildung, Bilder und Urbilder - Beispiele
+\vspace{-1mm}
+```{r, echo = FALSE, out.width = "80%", fig.align = 'right'}
+knitr::include_graphics(file.path(abb_dir,"migl_4_weitere_beispiele.pdf"))
+```
+\vspace{-10mm}
+\footnotesize
+\setstretch{1.5}
+
+Es seien $D' = \; ]0,2] \subset D$ und $Z' = \; ]0,4] \subset Z$, dann ergeben sich folgende Bild- Urbildmengen.
+
+\tiny
+\begin{tabular}{llll}
+\hline
+Bildmenge von $D'$  \hspace{-5mm}  & $f(D') = \; ]0,1[ \; \subset Z$            & $g(D') = \; ]0,4] \subset Z$  \hspace{3mm}      & $h(D') = \; [0.25,\infty[\; \subset Z$ \\
+Urbildmenge von $Z'$       & $f^{-1}(Z') $    \hspace{-4mm}                     & $g^{-1}(Z') $                             & $h^{-1}(Z')$  \\
+                           & $\;\;\; \; = ... \;]0,\pi[\; \cap \;]2\pi,3\pi[\; ...$       & $\;\;\; \; = [-2,0[\; \cap\; ]0,2]$                 & $\;\;\; \; = \;]-\infty,0.25]\cap[0.25,\infty[$ \\\hline
+\end{tabular}
+
+
 
 
 # Eigenschaften
@@ -198,6 +344,17 @@ Bemerkungen
 knitr::include_graphics(file.path(abb_dir, "glmi_4_inj_sur_bij.pdf"))
 ```
 \vfill
+
+
+
+# \color{darkcyan} Abbildungen - Beispiele
+\vfill
+\center
+```{r, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path(abb_dir, "4_abbildungsbeispiele.pdf"))
+```
+\vfill
+
 
 
 
