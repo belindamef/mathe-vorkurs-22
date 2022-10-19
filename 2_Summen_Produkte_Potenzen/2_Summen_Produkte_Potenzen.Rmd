@@ -201,7 +201,7 @@ Spalten Sie die folgende Summe in $2$ Summen auf mit $1 < m < n$ und $m=2$.
 Indizieren Sie die folgende Summe neu mit einem Startindex $j=5$
 \begin{enumerate}[5]
 \color{darkblue}
-\item $\sum_{i = 0}^5 2i $ \textcolor{black}{$= \sum_{j=5}^{10} 2(i-5)$}
+\item $\sum_{i = 0}^5 2i $ \textcolor{black}{$= \sum_{j=5}^{10} 2(j-5)$}
 \end{enumerate}
 
 
