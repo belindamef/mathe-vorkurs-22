@@ -128,7 +128,7 @@ f : \mathbb{R} \to \mathbb{R}, x \mapsto f(x) := 2x.
 \end{align*}´
 
 ```{r, echo = FALSE, out.width = "60%"}
-knitr::include_graphics(file.path(abb_dir, "glmi_4_def_ziel_bsp.pdf"))
+knitr::include_graphics(file.path(abb_dir, "migl_4_def_ziel_bsp.pdf"))
 ```
 
 
@@ -284,7 +284,7 @@ Anmerkungen:
 * \color{darkcyan}Das Bild der gesamten Defintionsmenge $D$ entspricht dem Wertebereicht $f(D) \subseteq Z$.
 * Bei allen drei Beispielen existieren zu jedem Bild $z$ mehrere Urbilder $f^{-1}(z)$. Solche Funktionen heißen *nicht-injektiv*.
 * Ein weiteres Beispiel für ein Urbild von $x=1$ gegeben der Abbildung $f$ ist $f^{-1}_2(1) = - \frac{3\pi}{2}$. Es existieren noch unendlich viele Urbilder von $x=1$ gegeben der Abbildung $f$
-* Für $g$ und $h$ existieren jeweils 2 Urbilder von $x=1$. Neben den oben angegeben sind das  $g^{-1}_2(1) = 1$ und $h^{-1}_2(1)= -1$.
+* Für $g$ und $h$ existieren jeweils 2 Urbilder von $x=1$. Neben den oben angegeben sind das  $g^{-1}_2(1) = -1$ und $h^{-1}_2(1)= -1$.
 * Außerdem hat in allen drei Beispielen nicht jedes Element der Zielmengen $Z$ ein Urbild in den Definitionsmengen $D$ (*nicht-surjektiv*). 
 
 
@@ -304,9 +304,9 @@ Es seien $D' = \; ]0,2] \subset D$ und $Z' = \; ]0,4] \subset Z$, dann ergeben s
 \tiny
 \begin{tabular}{llll}
 \hline
-Bildmenge von $D'$  \hspace{-5mm}  & $f(D') = \; ]0,1[ \; \subset Z$            & $g(D') = \; ]0,4] \subset Z$  \hspace{3mm}      & $h(D') = \; [0.25,\infty[\; \subset Z$ \\
+Bildmenge von $D'$  \hspace{-5mm}  & $f(D') = \; ]0,1] \; \subset Z$            & $g(D') = \; ]0,4] \subset Z$  \hspace{3mm}      & $h(D') = \; [0.25,\infty[\; \subset Z$ \\
 Urbildmenge von $Z'$       & $f^{-1}(Z') $    \hspace{-4mm}                     & $g^{-1}(Z') $                             & $h^{-1}(Z')$  \\
-                           & $\;\;\; \; = ... \;]0,\pi[\; \cap \;]2\pi,3\pi[\; ...$       & $\;\;\; \; = [-2,0[\; \cap\; ]0,2]$                 & $\;\;\; \; = \;]-\infty,0.25]\cap[0.25,\infty[$ \\\hline
+                           & $\;\;\; \; = ... \;]0,\pi[\; \cup \;]2\pi,3\pi[\; ...$       & $\;\;\; \; = [-2,0[\; \cup\; ]0,2]$                 & $\;\;\; \; = \;]-\infty,-0.25]\cup[0.25,\infty[$ \\\hline
 \end{tabular}
 
 
